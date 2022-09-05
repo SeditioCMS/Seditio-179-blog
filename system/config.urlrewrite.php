@@ -122,28 +122,6 @@ $sed_urlrewrite = array(
          'rule' => 'system/core/pm/pm.php'
     ),
     
-    /*  Forums rewriting */
-    array(
-         'cond' => '#^/forums/topics/([0-9]+)(/?)$#',
-         'rule' => 'system/core/forums/forums.php?m=topics&s=$1'
-    ), 
-    array(
-         'cond' => '#^/forums/posts/([0-9]+)(/?)$#',
-         'rule' => 'system/core/forums/forums.php?m=posts&q=$1'
-    ),
-    array(
-         'cond' => '#^/forums/post/([0-9]+)(/?)$#',
-         'rule' => 'system/core/forums/forums.php?m=posts&p=$1'
-    ),
-    array(
-         'cond' => '#^/forums/([a-zA-Z0-9]+)(/?)$#',
-         'rule' => 'system/core/forums/forums.php?c=$1'
-    ),
-    array(
-         'cond' => '#^/forums(/?)$#',
-         'rule' => 'system/core/forums/forums.php'
-    ), 
-    
     /*  Plugins rewriting */   
     array(
          'cond' => '#^/contact(/?)$#',

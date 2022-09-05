@@ -122,36 +122,6 @@ $sed_urltrans['pm'] = array(
     )
 );  
 
-/*  Forums translation */
-
-$sed_urltrans['forums'] = array(
-    /**/
-    array( 
-          'params' => 'm=topics&s=*', 
-          'rewrite' => 'forums/topics/{s}'
-    ),
-    /**/
-    array( 
-          'params' => 'm=posts&q=*', 
-          'rewrite' => 'forums/posts/{q}'
-    ),
-    /**/
-    array( 
-          'params' => 'm=posts&p=*', 
-          'rewrite' => 'forums/post/{p}'
-    ),
-    /**/
-    array( 
-          'params' => 'c=*', 
-          'rewrite' => 'forums/{c}'
-    ),
-    /**/
-    array( 
-          'params' => '', 
-          'rewrite' => 'forums'
-    )
-);  
-
 /*  Plugins translation */
 
 $sed_urltrans['plug'] = array( 
