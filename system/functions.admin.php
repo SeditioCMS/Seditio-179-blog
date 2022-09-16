@@ -479,7 +479,8 @@ function sed_plugin_install($pl)
 		{
 		$res .= "Found:1<br />";
 		$info = sed_infoget($extplugin_info, 'SED_EXTPLUGIN');
-
+		$info['Auth_members'] = (isset($info['Auth_members'])) ? $info['Auth_members'] : 'R';
+		$info['Lock_members'] = (isset($info['Lock_members'])) ? $info['Lock_members'] : 'W12345A';
 		$handle = opendir("plugins/".$pl);
 		$setupfile = $pl.".setup.php";
 		$res .= "<strong>Looking for parts...</strong><br />";
@@ -507,14 +508,15 @@ function sed_plugin_install($pl)
 				$mhooks = explode(",", $info_part['Hooks']);
 				foreach ($mhooks as $k => $hook)
 				{
-					$morder = explode(",", $info_part['Order']);
-					$order = array_key_exists($k, $morder) ? $morder[$k] : $morder[0];
-					
+					if (isset($info_part['Order'])) 
+						{
+						$morder = explode(",", $info_part['Order']);
+						$order = array_key_exists($k, $morder) ? $morder[$k] : $morder[0];
+						}
+					else { $order = 10; }
 					$sql = sed_sql_query("INSERT into $db_plugins (pl_hook, pl_code, pl_part, pl_title, pl_file, pl_order, pl_active ) VALUES ('".trim($hook)."', '".$info_part['Code']."', '".sed_sql_prep($info_part['Part'])."', '".sed_sql_prep($info['Name'])."', '".$info_part['File']."',  ".(int)$order.", 1)");				
 				}
 				
-				//$sql = sed_sql_query("INSERT into $db_plugins (pl_hook, pl_code, pl_part, pl_title, pl_file, pl_order, pl_active ) VALUES ('".$info_part['Hooks']."', '".$info_part['Code']."', '".sed_sql_prep($info_part['Part'])."', '".sed_sql_prep($info['Name'])."', '".$info_part['File']."',  ".(int)$info_part['Order'].", 1)");
-
 				$res .= " (Hooked at : ".$info_part['Hooks'].")";
 				$res .= " Installed<br />";
 				}
