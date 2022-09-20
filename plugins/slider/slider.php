@@ -18,7 +18,7 @@ Description=
 Code=slider
 Part=main
 File=slider
-Hooks=index.tags,list.tags,page.tags
+Hooks=index.tags
 Tags=index.tpl:{PLUGIN_SLIDER}
 Minlevel=0
 Order=10
@@ -43,7 +43,7 @@ $slider = "<div id=\"slider\">";
 $pcomments = ($cfg['showcommentsonpage']) ? "" : "&comments=1";
 
 $sql = sed_sql_query("SELECT p.page_id, p.page_alias, p.page_cat, p.page_title, p.page_desc, p.page_date, p.page_text, p.page_thumb, 
-					p.page_ownerid, p.page_comcount, u.user_id, u.user_name, u.user_maingrp, u.user_avatar 
+					p.page_ownerid, p.page_comcount, p.page_count, u.user_id, u.user_name, u.user_maingrp, u.user_avatar 
 					FROM $db_pages AS p LEFT JOIN $db_users AS u ON u.user_id = p.page_ownerid 
 					WHERE p.page_state = 0 AND p.page_cat NOT LIKE 'system' AND p.page_slider = 1 
 					ORDER BY p.page_date DESC LIMIT $sliderlimit");
@@ -106,7 +106,7 @@ if (sed_sql_numrows($sql) > 0)
 			$t->parse("MAIN.SLIDER.SLIDER_ROW");
 
 			/* old result view use mask */
-			$slider .= sprintf($mask,
+			$slider .= sprintf($cfg['plu_mask_slider'],
 				"<a href=\"".sed_url("list", "c=".$row['page_cat'])."\">".$sed_cat[$row['page_cat']]['title']."</a>",
 				"<a href=\"".$row['page_pageurl']."\">".sed_cc(sed_cutstring(stripslashes($row['page_title']), 50))."</a>",
 				sed_cc(sed_cutstring(stripslashes($row['page_title']), 50)),

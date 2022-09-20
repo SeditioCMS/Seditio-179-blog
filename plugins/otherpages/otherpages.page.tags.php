@@ -37,13 +37,13 @@ function sed_get_otherpages($pid, $cat, $limit)
 
 	$pcomments = ($cfg['showcommentsonpage']) ? "" : "&comments=1";
 	
-	$sql = sed_sql_query("(SELECT p.page_id, p.page_alias, p.page_cat, p.page_title, p.page_desc, p.page_date, p.page_ownerid, p.page_comcount, 
+	$sql = sed_sql_query("(SELECT p.page_id, p.page_alias, p.page_cat, p.page_title, p.page_desc, p.page_date, p.page_ownerid, p.page_count, p.page_comcount, 
 						p.page_thumb, u.user_id, u.user_name, u.user_maingrp, u.user_avatar 
 						FROM $db_pages AS p LEFT JOIN $db_users AS u ON u.user_id = p.page_ownerid 
 						WHERE p.page_id < ".(int)$pid." AND p.page_state = 0 AND p.page_cat = '".$cat."' 
 						ORDER BY p.page_date DESC LIMIT $limit) 
 						UNION 
-						(SELECT p.page_id, p.page_alias, p.page_cat, p.page_title, p.page_desc, p.page_date, p.page_ownerid, p.page_comcount, 
+						(SELECT p.page_id, p.page_alias, p.page_cat, p.page_title, p.page_desc, p.page_date, p.page_ownerid, p.page_count, p.page_comcount, 
 						p.page_thumb, u.user_id, u.user_name, u.user_maingrp, u.user_avatar 
 						FROM $db_pages AS p LEFT JOIN $db_users AS u ON u.user_id = p.page_ownerid 
 						WHERE p.page_id > ".(int)$pid." AND p.page_state = 0 AND p.page_cat = '".$cat."' 
@@ -68,7 +68,8 @@ function sed_get_otherpages($pid, $cat, $limit)
 					"OTHER_PAGES_ROW_CATTITLE" => $sed_cat[$row['page_cat']]['title'],
 					"OTHER_PAGES_ROW_CATPATH" => sed_build_catpath($row['page_cat'], "<a href=\"%1\$s\">%2\$s</a>"),
 					"OTHER_PAGES_ROW_SHORTTITLE" => sed_cutstring($row['page_title'], 50),
-					"OTHER_PAGES_ROW_TITLE" => $row['page_title'],			
+					"OTHER_PAGES_ROW_TITLE" => $row['page_title'],
+					"OTHER_PAGES_ROW_COUNT" => $row['page_count'],				
 					"OTHER_PAGES_ROW_DATE" => sed_build_date($cfg['formatyearmonthday'], $row['page_date'], $cfg['plu_mask_pages_date']),
 					"OTHER_PAGES_ROW_AUTHOR" => sed_cc($row['user_name']),
 					"OTHER_PAGES_ROW_USERURL" => sed_url("users", "m=details&id=".$row['page_ownerid']),
