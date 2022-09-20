@@ -46,6 +46,7 @@ function sed_get_similarpages($sim_relevance, $sim_maxcount, $sim_category, $mas
 	global $L, $t, $pag, $db_pages, $db_users, $usr, $cfg, $sed_cat, $plu_empty;
 
 	$sql_cat = "";
+	$res = "";
 	if (!empty($sim_category)) 
 		{ 
 		$sim_category = explode(',', $sim_category);
