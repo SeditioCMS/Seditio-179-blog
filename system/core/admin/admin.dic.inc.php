@@ -219,7 +219,7 @@ switch($mn)
 	$urlpaths[sed_url("admin", "m=dic&mn=extra&did=".$did)] = $L['adm_dic_extra'];
 	$admintitle = $L['adm_dic_extra'];
     
-    $location_arr = array('pages' => 'Pages', 'users' => 'Users', 'com' => 'Comments', 'forum_topics' => 'Forum topics');
+    $location_arr = array('pages' => 'Pages', 'users' => 'Users', 'com' => 'Comments');
   	$type_arr = array('varchar' => 'VARCHAR', 'text' => 'TEXT', 'int' => 'INTEGER', 'tinyint' => 'TINY INTEGER', 'boolean' => 'BOOLEAN');
     
     for ($i = 1; $i <= 255; $i++) { $maxsize_arr[$i] = $i; }
