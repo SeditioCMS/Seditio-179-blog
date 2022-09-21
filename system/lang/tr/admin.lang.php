@@ -3,14 +3,14 @@
 /* ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 -----------------------
 Seditio language pack
-Language : English (code:en)
+Language : Türkçe (code:tr)
 Localization done by : Neocrome
 -----------------------
 [BEGIN_SED]
-File=system/core/admin/lang/en/admin.lang.php
+File=system/core/admin/lang/tr/admin.lang.php
 Version=179
 Updated=2022-jul-15
 Type=Lang
@@ -21,486 +21,456 @@ Description=Admin panel
 
 /* ====== Core ====== */
 
-$L['core_main'] = "Main setup";
-$L['core_parser'] = "Parser"; 			// New in v120
-$L['core_rss'] = "RSS feeds"; 			// New in v173
-$L['core_dic'] = "Directories & Extra fields"; 			// New in v173
-$L['core_time'] = "Time and date";
-$L['core_skin'] = "Skins";
-$L['core_lang'] = "Languages";
-$L['core_menus'] = "Menu slots";
-$L['core_comments'] = "Comments";
-$L['core_forums'] = "Forums";
-$L['core_page'] = "Pages";
-$L['core_pfs'] = "Personal file space";
-$L['core_gallery'] = "Gallery";
-$L['core_plug'] = "Plugins";
-$L['core_pm'] = "Private messages";
-$L['core_polls'] = "Polls";
-$L['core_ratings'] = "Ratings";
-$L['core_trash'] = "Trash can";
-$L['core_users'] = "Users";
+$L['core_main'] = "Ana kurulum";
+$L['core_parser'] = "Ayrıştırıcı"; 			// New in v120
+$L['core_rss'] = "RSS beslemeleri"; 			// New in v173
+$L['core_dic'] = "Dizinler ve Ekstra alanlar"; 			// New in v173
+$L['core_time'] = "Saat ve tarih";
+$L['core_skin'] = "Temalar";
+$L['core_lang'] = "Diller";
+$L['core_menus'] = "Menü yuvaları";
+$L['core_comments'] = "Yorumlar";
+$L['core_page'] = "Sayfalar";
+$L['core_pfs'] = "Kişisel dosya alanı";
+$L['core_gallery'] = "Galeri";
+$L['core_plug'] = "Eklentiler";
+$L['core_pm'] = "Özel mesajlar";
+$L['core_polls'] = "Anketler";
+$L['core_ratings'] = "Derecelendirmeler";
+$L['core_trash'] = "Çöp tenekesi";
+$L['core_users'] = "Üyeler";
 $L['core_meta'] = "HTML Meta";
-$L['core_index'] = "Home page";
-$L['core_menu'] = "Menu manager"; // New in v178
+$L['core_index'] = "Ana sayfa";
+$L['core_menu'] = "Menü Yöneticisi"; // New in v178
 
 /* ====== Upgrade ====== */
 
-$L['upg_upgrade'] = "Upgrade";      // New in v130
-$L['upg_codeversion'] = "Code version";     // New in v130
-$L['upg_sqlversion'] = "SQL database version";    // New in v130
-$L['upg_codeisnewer'] = "The code is newer than the SQL  version.";    // New in v130
-$L['upg_codeisolder'] = "The code is older than the SQL  version, this is unusual, and not supported.<br />You should double check that you uploaded all the files from the newest package.";    // New in v130
-$L['upg_codeissame'] = "The code and SQL versions are matching.";    // New in v130
-$L['upg_upgradenow'] = "It is highly recommended to upgrade the SQL database right now, click here to upgrade !";    // New in v130
-$L['upg_upgradenotavail'] = "There's no upgrade available for these version numbers.";       // New in v130
-$L['upg_manual'] = "If you prefer to manually upgrade the database, the SQL scripts are in the folder /docs/upgrade/.";       // New in v130
-$L['upg_success'] = "The upgrade was successful, click here to continue...";       // New in v130
-$L['upg_failure'] = "The upgrade failed, click here to continue...";       // New in v130
-$L['upg_force'] = "For some reasons, it may happen that the Seditio version number written in the SQL database is wrong. Below is a button to force the SQL version number, this will only tag the SQL database, it will NOT perform any other change.<br />Force the SQL version number to : ";	// New in v130
+$L['upg_upgrade'] = "Güncelleme";      // New in v130
+$L['upg_codeversion'] = "Kod sürümü";     // New in v130
+$L['upg_sqlversion'] = "SQL veritabanı sürümü";    // New in v130
+$L['upg_codeisnewer'] = "Kod, SQL sürümünden daha yeni.";    // New in v130
+$L['upg_codeisolder'] = "Kod SQL sürümünden daha eski, bu olağandışı ve desteklenmiyor.<br />Tüm dosyaları en yeni paketten yüklediğinizi iki kez kontrol etmelisiniz..";    // New in v130
+$L['upg_codeissame'] = "Kod ve SQL sürümleri eşleşiyor.";    // New in v130
+$L['upg_upgradenow'] = "SQL veritabanını hemen yükseltmeniz şiddetle tavsiye edilir, yükseltmek için buraya tıklayın !";    // New in v130
+$L['upg_upgradenotavail'] = "Bu sürüm numaraları için yükseltme yok.";       // New in v130
+$L['upg_manual'] = "Veritabanını manuel olarak yükseltmeyi tercih ederseniz, SQL komut dosyaları /docs/upgrade/ klasöründedir..";       // New in v130
+$L['upg_success'] = "Yükseltme başarılı oldu, devam etmek için burayı tıklayın...";       // New in v130
+$L['upg_failure'] = "Yükseltme başarısız oldu, devam etmek için burayı tıklayın...";       // New in v130
+$L['upg_force'] = "Bazı nedenlerden dolayı SQL veritabanında yazılan Seditio sürüm numarası yanlış olabilir.. Aşağıda SQL sürüm numarasını zorlamak için bir düğme bulunmaktadır, bu yalnızca SQL veritabanını etiketleyecektir, başka bir değişiklik YAPMAYACAKTIR.<br />SQL sürüm numarasını zorla : ";	// New in v130
 
 /* ====== General ====== */
 
-$L['editdeleteentries'] = "Edit or delete entries";
-$L['viewdeleteentries'] = "View or delete entries";
-$L['addnewentry'] = "Add a new entry";
-$L['adm_purgeall'] = "Purge all";
-$L['adm_listisempty'] = "List is empty";
-$L['adm_totalsize'] = "Total size";
-$L['adm_showall'] = "Show all";
-$L['adm_area'] = "Area";
-$L['adm_option'] = "Option";
-$L['adm_setby'] = "Set by";
-$L['adm_more'] = "More tools...";
-$L['adm_from'] = "From";
-$L['adm_to'] = "To";
-$L['adm_confirm'] = "Press this button to confirm : ";
-$L['adm_done'] = "Done";
-$L['adm_failed'] = "Failed";
-$L['adm_warnings'] = "Warnings";
-$L['adm_valqueue'] = "Waiting for validation";
-$L['adm_required'] = "(Required)";
-$L['adm_clicktoedit'] = "(Click to edit)";
-$L['adm_manage'] = "Manage";  // New in v150
-$L['adm_pagemanager'] = "Page manager";  // New in v177
-$L['adm_module_name'] = "Module name";  // New in v178
-$L['adm_tool_name'] = "Tool name";  // New in v178
+$L['editdeleteentries'] = "Girişleri düzenleyin veya silin";
+$L['viewdeleteentries'] = "Girişleri görüntüleyin veya silin";
+$L['addnewentry'] = "Yeni bir giriş ekle";
+$L['adm_purgeall'] = "Tümünü temizle";
+$L['adm_listisempty'] = "Liste boş";
+$L['adm_totalsize'] = "Toplam boyut";
+$L['adm_showall'] = "Hepsini Göster ↓";
+$L['adm_area'] = "Alan";
+$L['adm_option'] = "Seçenek";
+$L['adm_setby'] = "Olarak ayarla";
+$L['adm_more'] = "Daha fazla araç...";
+$L['adm_from'] = "Nereden";
+$L['adm_to'] = "Nereye";
+$L['adm_confirm'] = "Onaylamak için bu düğmeye basın : ";
+$L['adm_done'] = "Tamamlandı";
+$L['adm_failed'] = "Hatalı";
+$L['adm_warnings'] = "Uyarılar";
+$L['adm_valqueue'] = "Doğrulama bekleniyor";
+$L['adm_required'] = "(Gerekli)";
+$L['adm_clicktoedit'] = "(Düzenlemek için tıkla)";
+$L['adm_manage'] = "Araçlar";  // New in v150
+$L['adm_pagemanager'] = "Sayfa yöneticisi";  // New in v177
+$L['adm_module_name'] = "Modül Adı";  // New in v178
+$L['adm_tool_name'] = "Araç adı";  // New in v178
 
 /* ====== Banlist ====== */
 
 $L['adm_ipmask'] = "IP mask";
 $L['adm_emailmask'] = "Email mask";
-$L['adm_neverexpire'] = "Never expire";
-$L['adm_help_banlist'] = "Samples for IP masks :194.31.13.41 , 194.31.13.* , 194.31.*.* , 194.*.*.*<br />Samples for email masks : @hotmail.com, @yahoo (Wildcards are not supported)<br />A single entry can contain one IP mask or one email mask or both.<br />IPs are filtered for each and every page displayed, and email masks at user registration only.";
+$L['adm_neverexpire'] = "Hiç bir zaman";
+$L['adm_help_banlist'] = "IP maskeleri için örnekler :194.31.13.41 , 194.31.13.* , 194.31.*.* , 194.*.*.*<br />E-posta maskeleri için örnekler : @hotmail.com, @yahoo (Joker karakterler desteklenmez)<br />Tek bir giriş, bir IP maskesi veya bir e-posta maskesi veya her ikisini birden içerebilir.<br />IP'ler, görüntülenen her sayfa için filtrelenir ve e-posta maskeleri yalnızca kullanıcı kaydı sırasında filtrelenir.";
 
 /* ====== Cache ====== */
 
-$L['adm_internalcache'] = "Internal cache";
-$L['adm_help_cache'] = "Not available";
+$L['adm_internalcache'] = "Dahili önbellek";
+$L['adm_help_cache'] = "Müsait değil";
 
 /* ====== Configuration ====== */
 
-$L['adm_help_config']= "Not available";
-$L['cfg_adminemail'] = array("Administrator's email", "Required");
-$L['cfg_maintitle'] = array("Site title", "Main title for the website, required");
-$L['cfg_subtitle'] = array("Description", "Optional, will be displayed after the title of the site");
-$L['cfg_mainurl'] = array("Site URL", "With http://, and without ending slash !");
-$L['cfg_clustermode'] = array("Cluster of servers", "Set to yes if it's a load balanced setup.");			// New in v125
-$L['cfg_hostip'] = array("Server IP", "The IP of the server, optional.");
-$L['cfg_gzip'] = array("Gzip", "Gzip compression of the HTML output");
-$L['cfg_cache'] = array("Internal cache", "Keep it enabled for better performance");
-$L['cfg_devmode'] = array("Debugging mode", "Don't let this enabled on live sites");
+$L['adm_help_config']= "Müsait değil";
+$L['cfg_adminemail'] = array("Yöneticinin e-postası", "Gerekli");
+$L['cfg_maintitle'] = array("Site Başlığı", "Web sitesi için ana başlık, gerekli");
+$L['cfg_subtitle'] = array("Description", "İsteğe bağlı, site başlığından sonra gösterilecektir");
+$L['cfg_mainurl'] = array("Site URL", "https:// ile ve sonda slash olmayacak !");
+$L['cfg_clustermode'] = array("Sunucu kümesi", "Yük dengeli bir kurulum ise evet olarak ayarlayın.");			// New in v125
+$L['cfg_hostip'] = array("Server IP", "Sunucunun IP'si, isteğe bağlı.");
+$L['cfg_gzip'] = array("Gzip", "HTML çıktısının Gzip sıkıştırması");
+$L['cfg_cache'] = array("Internal cache", "Daha iyi performans için etkin durumda tutun");
+$L['cfg_devmode'] = array("Debugging mode", "Bunun canlı sitelerde etkinleştirilmesine izin verme");
 $L['cfg_doctypeid'] = array("Document Type", "&lt;!DOCTYPE> of the HTML layout");
 $L['cfg_charset'] = array("HTML charset", "");
-$L['cfg_cookiedomain'] = array("Domain for cookies", "Default: empty");
-$L['cfg_cookiepath'] = array("Path for cookies", "Default: empty");
-$L['cfg_cookielifetime'] = array("Maximum cookie lifetime", "In seconds");
-$L['cfg_metakeywords'] = array("HTML Meta keywords (comma separated)", "Search engines");
-$L['cfg_disablesysinfos'] = array("Turn off page creation time", "In footer.tpl");
-$L['cfg_keepcrbottom'] = array("Keep the copyright notice in the tag {FOOTER_BOTTOMLINE}", "In footer.tpl");
-$L['cfg_showsqlstats'] = array("Show SQL queries statistics", "In footer.tpl");
-$L['cfg_shieldenabled'] = array("Enable the Shield", "Anti-spamming and anti-hammering");
-$L['cfg_shieldtadjust'] = array("Adjust Shield timers (in %)", "The higher, the harder to spam");
-$L['cfg_shieldzhammer'] = array("Anti-hammer after * fast hits", "The smaller, the faster the auto-ban 3 minutes happens");
-$L['cfg_maintenance'] = array("Maintenance mode", "Wake up the technical work on the site");  // New in v175
-$L['cfg_maintenancelevel'] = array("User Access Level", "Select the level of access users"); // New in v175
-$L['cfg_maintenancereason'] = array("Reason maintenance", "Describe the cause of maintenance"); // New in v175
-$L['cfg_multihost'] = array("Multihost mode", "To enable multiple hosts");  // New in v175
-$L['cfg_absurls'] = array("Absolute URL", "Enables the use of the absolute URL");  // New in v175
-$L['cfg_sefurls'] = array("SEF URLs", "To enables SEF URLs on the site");  // New in v175
-$L['cfg_sefurls301'] = array("301 redirect to the SEF URLs", "Enable 301 redirect from the old URL to SEF URLs");  // New in v175
-$L['cfg_dateformat'] = array("Main date mask", "Default: Y-m-d H:i");
-$L['cfg_formatmonthday'] = array("Short date mask", "Default: m-d");
-$L['cfg_formatyearmonthday'] = array("Medium date mask", "Default: Y-m-d");
-$L['cfg_formatmonthdayhourmin'] = array("Forum date mask", "Default: m-d H:i");
-$L['cfg_servertimezone'] = array("Server time zone", "Offset of the server from the GMT+00");
-$L['cfg_defaulttimezone'] = array("Default time zone", "For guests and new members, from -12 to +12");
-$L['cfg_timedout'] = array("Idle delay, in seconds", "After this delay, user is away");
-$L['cfg_maxusersperpage'] = array("Maximum lines in userlist", "");
-$L['cfg_regrequireadmin'] = array("Administrators must validate new accounts", "");
-$L['cfg_regnoactivation'] = array("Skip email check for new users", "\"No\"recommended, for security reasons");
-$L['cfg_useremailchange'] = array("Allow users to change their email address", "\"No\" recommended, for security reasons");
-$L['cfg_usertextimg'] = array("Allow images and HTML in user signature", "\"No\" recommended, for security reasons");
-$L['cfg_av_maxsize'] = array("Avatar, maximum file size", "Default: 8000 bytes");
-$L['cfg_av_maxx'] = array("Avatar, maximum width", "Default: 64 pixels");
-$L['cfg_av_maxy'] = array("Avatar, maximum height", "Default: 64 pixels");
-$L['cfg_usertextmax'] = array("Maximum length for user signature", "Default: 300 chars");
-$L['cfg_sig_maxsize'] = array("Signature, maximum file size", "Default: 50000 bytes");
-$L['cfg_sig_maxx'] = array("Signature, maximum width", "Default: 468 pixels");
-$L['cfg_sig_maxy'] = array("Signature, maximum height", "Default: 60 pixels");
-$L['cfg_ph_maxsize'] = array("Photo, maximum file size", "Default: 8000 bytes");
-$L['cfg_ph_maxx'] = array("Photo, maximum width", "Default: 96 pixels");
-$L['cfg_ph_maxy'] = array("Photo, maximum height", "Default: 96 pixels");
-$L['cfg_maxrowsperpage'] = array("Maximum lines in lists", "");
-$L['cfg_showpagesubcatgroup'] = array("Show in groups pages from the subsections", "");   //New Sed171
-$L['cfg_genseourls'] = array("Generate SEO url (auto gen* page alias)? ", "");   //New Sed178
-$L['cfg_maxcommentsperpage'] = array("Maximum comments per page", "");  //New Sed173
-$L['cfg_commentsorder'] = array("Sorting order for comments", "ASC - new bottom, DESC - newest on top");  //New Sed173
-$L['cfg_maxtimeallowcomedit'] = array("The time allowed to edit comments", "In minutes, if 0 - editing is prohibited");  //New Sed173
-$L['cfg_showcommentsonpage'] = array("Show comments on pages", "By default displays comment on the page");   //New Sed171
-$L['cfg_maxcommentlenght'] = array("The maximum length of a comment", "Default: 2000 characters");  //New Sed175
-$L['cfg_countcomments'] = array("Count comments", "Display the count of comments near the icon");
-$L['cfg_hideprivateforums'] = array("Hide private forums", "");
-$L['cfg_hottopictrigger'] = array("Posts for a topic to be 'hot'", "");
-$L['cfg_maxtopicsperpage'] = array("Maximum topics or posts per page", "");
-$L['cfg_antibumpforums'] = array("Anti-bump protection", "Will prevent users from posting twice in a row in the same topic");
-$L['cfg_pfsuserfolder'] = array("Folder storage mode", "If enabled, will store the user files in subfolders /datas/users/USERID/... instead of prepending the USERID to the filename. Must be set at the FIRST setup of the site ONLY. As soon as a file is uploaded to a PFS, it's too late to change this.");
-$L['cfg_th_amode'] = array("Thumbnails generation", "");
-$L['cfg_th_x'] = array("Thumbnails, width", "Default: 112 pixels");
-$L['cfg_th_y'] = array("Thumbnails, height", "Default: 84 pixel, recommended : Width x 0.75");
-$L['cfg_th_border'] = array("Thumbnails, border size", "Default: 4 pixels");
-$L['cfg_th_keepratio'] = array("Thumbnail, keep ratio ?", "");
-$L['cfg_th_jpeg_quality'] = array("Thumbnails, Jpeg quality", "Default: 85");
-$L['cfg_th_colorbg'] = array("Thumbnails, border color", "Default: 000000, hex color code");
-$L['cfg_th_colortext'] = array("Thumbnails, text color", "Default: FFFFFF, hex color code");
-$L['cfg_th_rel'] = array("Thumbnail rel attribute", "Default: sedthumb"); // New in v175
-$L['cfg_th_dimpriority'] = array("Thumbnails, resize by", "Default: Width");       // New in v160
-$L['cfg_th_textsize'] = array("Thumbnails, size of the text", "");
-$L['cfg_pfs_filemask'] = array("File names based on pattern of time", "Generate file names on a pattern of time");  // New in sed172
+$L['cfg_cookiedomain'] = array("Çerezler için alan", "Varsayılan: boş");
+$L['cfg_cookiepath'] = array("Çerezler için yol", "Varsayılan: boş");
+$L['cfg_cookielifetime'] = array("Maksimum çerezlerin ömrü", "Saniye cinsinden");
+$L['cfg_metakeywords'] = array("HTML Meta anahtar sözcükleri (virgülle ayrılmış)", "Arama motorları");
+$L['cfg_disablesysinfos'] = array("Sayfa oluşturma süresini kapat", "footer.tpl de");
+$L['cfg_keepcrbottom'] = array("Telif hakkı bildirimi {FOOTER_BOTTOMLINE}", "footer.tpl de");
+$L['cfg_showsqlstats'] = array("SQL sorgu istatistiklerini göster", "footer.tpl de");
+$L['cfg_shieldenabled'] = array("Kalkanı Etkinleştir", "Anti-spam ve hızlı vuruş");
+$L['cfg_shieldtadjust'] = array("Anti-spam kalkanı ayarla (%)", "Ne kadar yüksek olursa, spam göndermek o kadar zor olur");
+$L['cfg_shieldzhammer'] = array("Hızlı vuruştan sonra Anti-Hammer *", "Ne kadar küçükse, 3 dakika otomatik yasaklama o kadar hızlı gerçekleşir");
+$L['cfg_maintenance'] = array("Bakım Modu", "Sitedeki teknik çalışmaları duyurun");  // New in v175
+$L['cfg_maintenancelevel'] = array("Kullanıcı Erişim Düzeyi", "Kullanıcıların erişim düzeyini seçin"); // New in v175
+$L['cfg_maintenancereason'] = array("Bakım nedeni", "Bakımın nedenini açıklayın"); // New in v175
+$L['cfg_multihost'] = array("Multihost mode", "Birden çok ana bilgisayarı etkinleştirmek için");  // New in v175
+$L['cfg_absurls'] = array("Absolute URL", "Mutlak URL kullanımını etkinleştirir");  // New in v175
+$L['cfg_sefurls'] = array("SEF URLs", "Sitede SEF URL'lerini etkinleştirmek için");  // New in v175
+$L['cfg_sefurls301'] = array("301, SEF URL'lerine yönlendirme", "Eski URL'den SEF URL'lerine 301 yönlendirmesini etkinleştir");  // New in v175
+$L['cfg_dateformat'] = array("Ana tarih maskesi", "Varsayılan: Y-m-d H:i");
+$L['cfg_formatmonthday'] = array("Kısa tarih maskesi", "Varsayılan: m-d");
+$L['cfg_formatyearmonthday'] = array("Orta tarih maskesi", "Varsayılan: Y-m-d");
+$L['cfg_servertimezone'] = array("Sunucu saat dilimi", "Sunucu varsayılan GMT+00");
+$L['cfg_defaulttimezone'] = array("Varsayılan saat dilimi", "-12'den +12'ye kadar misafirler ve yeni üyeler için");
+$L['cfg_timedout'] = array("Boşta kalma süresi", "Bu süreden sonra kullanıcı uzakta olarak ayarlanır");
+$L['cfg_maxusersperpage'] = array("Kullanıcı listesindeki maksimum satır", "");
+$L['cfg_regrequireadmin'] = array("Yeni hesaplar Yönetici tarafından onaylanır", "");
+$L['cfg_regnoactivation'] = array("Yeni kullanıcılar için e-posta kontrolünü atla", "\"Hayır\" güvenlik nedeniyle tavsiye edilir");
+$L['cfg_useremailchange'] = array("Kullanıcıların e-posta adreslerini değiştirmesine izin ver", "\"Hayır\" güvenlik nedeniyle tavsiye edilir");
+$L['cfg_usertextimg'] = array("Kullanıcı imzasında resimlere ve HTML'ye izin ver", "\"Hayır\" güvenlik nedeniyle tavsiye edilir");
+$L['cfg_av_maxsize'] = array("Avatar, maksimum dosya boyutu", "Varsayılan: 8000 bytes");
+$L['cfg_av_maxx'] = array("Avatar, maksimum genişlik", "Varsayılan: 64 pixels");
+$L['cfg_av_maxy'] = array("Avatar, maksimum yükseklik", "Varsayılan: 64 pixels");
+$L['cfg_usertextmax'] = array("Kullanıcı imzası için maksimum uzunluk", "Varsayılan: 300 karakter");
+$L['cfg_sig_maxsize'] = array("İmza, maksimum dosya boyutu", "Varsayılan: 50000 bytes");
+$L['cfg_sig_maxx'] = array("İmza, maksimum genişlik", "Varsayılan: 468 pixels");
+$L['cfg_sig_maxy'] = array("İmza, maksimum yükseklik", "Varsayılan: 60 pixels");
+$L['cfg_ph_maxsize'] = array("Fotoğraf, maksimum dosya boyutu", "Varsayılan: 8000 bytes");
+$L['cfg_ph_maxx'] = array("Fotoğraf, maksimum genişlik", "Varsayılan: 96 pixels");
+$L['cfg_ph_maxy'] = array("Fotoğraf, maksimum yükseklik", "Varsayılan: 96 pixels");
+$L['cfg_maxrowsperpage'] = array("Listelerdeki maksimum satır sayısı", "");
+$L['cfg_showpagesubcatgroup'] = array("Alt bölümlerde grup sayfalarını göster", "");   //New Sed171
+$L['cfg_genseourls'] = array("SEO url'si oluştur (otomatik gen* sayfa alias)? ", "");   //New Sed178
+$L['cfg_maxcommentsperpage'] = array("Sayfa başına maksimum yorum", "");  //New Sed173
+$L['cfg_commentsorder'] = array("Yorumlar için sıralama düzeni", "ASC - new bottom, DESC - en yeni en üstte");  //New Sed173
+$L['cfg_maxtimeallowcomedit'] = array("Yorumları düzenlemek için izin verilen süre", "Dakika içinde, 0 ise - düzenleme yasaktır");  //New Sed173
+$L['cfg_showcommentsonpage'] = array("Sayfalardaki yorumları göster", "Varsayılan olarak sayfada yorumu görüntüler");   //New Sed171
+$L['cfg_maxcommentlenght'] = array("Bir yorumun maksimum uzunluğu", "Varsayılan: 2000 characters");  //New Sed175
+$L['cfg_countcomments'] = array("Yorumları say", "Simgenin yanında yorum sayısını göster");
+$L['cfg_pfsuserfolder'] = array("Klasör depolama modu", "Etkinleştirilirse, dosya adının başına USERID'yi eklemek yerine kullanıcı dosyalarını /datas/users/USERID/... alt klasörlerinde depolar.. SADECE sitenin İLK kurulumunda ayarlanmalıdır. Bir dosya bir PFS'ye yüklenir yüklenmez bunu değiştirmek için çok geç.");
+$L['cfg_th_amode'] = array("Küçük resim oluşturma", "");
+$L['cfg_th_x'] = array("Küçük resimler, genişlik", "Varsayılan: 112 pixels");
+$L['cfg_th_y'] = array("Küçük resimler, yükseklik", "Varsayılan: 84 pixel, recommended : Width x 0.75");
+$L['cfg_th_border'] = array("Küçük resimler, kenarlık boyutu", "Varsayılan: 4 pixels");
+$L['cfg_th_keepratio'] = array("Küçük resim, oranı koru ?", "");
+$L['cfg_th_jpeg_quality'] = array("Küçük resimler, JPEG kalitesi", "Varsayılan: 85");
+$L['cfg_th_colorbg'] = array("Küçük resimler, kenarlık rengi", "Varsayılan: 000000, hex color code");
+$L['cfg_th_colortext'] = array("Küçük resimler, metin rengi", "Varsayılan: FFFFFF, hex color code");
+$L['cfg_th_rel'] = array("Küçük resim rel özelliği", "Varsayılan: sedthumb"); // New in v175
+$L['cfg_th_dimpriority'] = array("Küçük resimler, yeniden boyutlandırma ölçütü", "Varsayılan: Width");       // New in v160
+$L['cfg_th_textsize'] = array("Küçük resimler, metnin boyutu", "");
+$L['cfg_pfs_filemask'] = array("Zaman düzenine göre dosya adları", "Bir zaman düzeninde dosya adları oluşturun");  // New in sed172
 
-$L['cfg_disable_gallery'] = array("Disable the gallery", "");     	// New in v150
-$L['cfg_gallery_gcol'] = array("Number of columns for the galleries", "Default : 4");     // New in v150
-$L['cfg_gallery_bcol'] = array("Number of columns for the pictures", "Default : 6");    	// New in v150
-$L['cfg_gallery_logofile'] = array("Png/jpeg/Gif logo that will be added to all the new PFS images", "Leave empty to disable");    	// New in v150
-$L['cfg_gallery_logopos'] = array("Position of the logo in the PFS images", "Default : Bottom left");    	// New in v150
-$L['cfg_gallery_logotrsp'] = array("Merging level for the logo in %", "Default : 50");    	// New in v150
-$L['cfg_gallery_logojpegqual'] = array("Quality of the final image afer the logo is inserted, if it's a Jpeg", "Default : 90");    	// New in v150
-$L['cfg_gallery_imgmaxwidth'] = array("Max width in pixel for a picture displayed, if it's larger a sized-down copy will be processed", "");     	// New in v150
+$L['cfg_disable_gallery'] = array("Galeriyi devre dışı bırak", "");     	// New in v150
+$L['cfg_gallery_gcol'] = array("Galeriler için sütun sayısı", "Varsayılan : 4");     // New in v150
+$L['cfg_gallery_bcol'] = array("Resimler için sütun sayısı", "Varsayılan : 6");    	// New in v150
+$L['cfg_gallery_logofile'] = array("Tüm yeni PFS görüntülerine eklenecek Png/jpeg/Gif logosu", "Devre dışı bırakmak için boş bırakın");    	// New in v150
+$L['cfg_gallery_logopos'] = array("PFS görüntülerinde logonun konumu", "Varsayılan : Bottom left");    	// New in v150
+$L['cfg_gallery_logotrsp'] = array("Logo için birleştirme seviyesi %", "Varsayılan : 50");    	// New in v150
+$L['cfg_gallery_logojpegqual'] = array("Jpeg ise, logo eklendikten sonraki resim kalitesi", "Varsayılan : 90");    	// New in v150
+$L['cfg_gallery_imgmaxwidth'] = array("Görüntülenen bir resim için piksel cinsinden maksimum genişlik, daha büyükse küçültülmüş bir kopya işlenir", "");     	// New in v150
 
-$L['cfg_pm_maxsize'] = array("Maximum length for messages", "Default: 10000 chars");
-$L['cfg_pm_allownotifications'] = array("Allow PM notifications by email", "");
-$L['cfg_disablehitstats'] = array("Disable hit statistics", "Referers and hits per day");
-$L['cfg_disablereg'] = array("Disable registration process", "Prevent users from registering new accounts");
-$L['cfg_disablewhosonline'] = array("Disable who's online", "Automatically enabled if you turn on the Shield");
-$L['cfg_defaultcountry'] = array("Default country for the new users", "2 letters country code");	// New in v130
-$L['cfg_forcedefaultskin'] = array("Force the default skin for all users", "");
-$L['cfg_forcedefaultlang'] = array("Force the default language for all users", "");
-$L['cfg_separator'] = array("Generic separator", "Default:>");
-$L['cfg_menu1'] = array("Menu slot #1<br />{PHP.cfg.menu1} in all tpl files", "");
-$L['cfg_menu2'] = array("Menu slot #2<br />{PHP.cfg.menu2} in all tpl files", "");
-$L['cfg_menu3'] = array("Menu slot #3<br />{PHP.cfg.menu3} in all tpl files", "");
-$L['cfg_menu4'] = array("Menu slot #4<br />{PHP.cfg.menu4} in all tpl files", "");
-$L['cfg_menu5'] = array("Menu slot #5<br />{PHP.cfg.menu5} in all tpl files", "");
-$L['cfg_menu6'] = array("Menu slot #6<br />{PHP.cfg.menu6} in all tpl files", "");
-$L['cfg_menu7'] = array("Menu slot #7<br />{PHP.cfg.menu7} in all tpl files", "");
-$L['cfg_menu8'] = array("Menu slot #8<br />{PHP.cfg.menu8} in all tpl files", "");
-$L['cfg_menu9'] = array("Menu slot #9<br />{PHP.cfg.menu9} in all tpl files", "");
-$L['cfg_topline'] = array("Top line<br />{HEADER_TOPLINE} in header.tpl", "");
-$L['cfg_banner'] = array("Banner<br />{HEADER_BANNER} in header.tpl", "");
-$L['cfg_motd'] = array("Message of the day<br />{NEWS_MOTD} in index.tpl", "");
-$L['cfg_bottomline'] = array("Bottom line<br />{FOOTER_BOTTOMLINE} in footer.tpl", "");
-$L['cfg_freetext1'] = array("Freetext Slot #1<br />{PHP.cfg.freetext1} in all tpl files", "");
-$L['cfg_freetext2'] = array("Freetext Slot #2<br />{PHP.cfg.freetext2} in all tpl files", "");
-$L['cfg_freetext3'] = array("Freetext Slot #3<br />{PHP.cfg.freetext3} in all tpl files", "");
-$L['cfg_freetext4'] = array("Freetext Slot #4<br />{PHP.cfg.freetext4} in all tpl files", "");
-$L['cfg_freetext5'] = array("Freetext Slot #5<br />{PHP.cfg.freetext5} in all tpl files", "");
-$L['cfg_freetext6'] = array("Freetext Slot #6<br />{PHP.cfg.freetext6} in all tpl files", "");
-$L['cfg_freetext7'] = array("Freetext Slot #7<br />{PHP.cfg.freetext7} in all tpl files", "");
-$L['cfg_freetext8'] = array("Freetext Slot #8<br />{PHP.cfg.freetext8} in all tpl files", "");
-$L['cfg_freetext9'] = array("Freetext Slot #9<br />{PHP.cfg.freetext9} in all tpl files", "");
-$L['cfg_extra1title'] = array("Field #1 (String), title", "");
-$L['cfg_extra2title'] = array("Field #2 (String), title", "");
-$L['cfg_extra3title'] = array("Field #3 (String), title", "");
-$L['cfg_extra4title'] = array("Field #4 (String), title", "");
-$L['cfg_extra5title'] = array("Field #5 (String), title", "");
-$L['cfg_extra6title'] = array("Field #6 (Select box), title", "");
-$L['cfg_extra7title'] = array("Field #7 (Select box), title", "");
-$L['cfg_extra8title'] = array("Field #8 (Select box), title", "");
-$L['cfg_extra9title'] = array("Field #9 (Long text), title", "");
-$L['cfg_extra1tsetting'] = array("Maximum characters in this field", "");
-$L['cfg_extra2tsetting'] = array("Maximum characters in this field", "");
-$L['cfg_extra3tsetting'] = array("Maximum characters in this field", "");
-$L['cfg_extra4tsetting'] = array("Maximum characters in this field", "");
-$L['cfg_extra5tsetting'] = array("Maximum characters in this field", "");
-$L['cfg_extra6tsetting'] = array("Values for the select box, comma separated", "");
-$L['cfg_extra7tsetting'] = array("Values for the select box, comma separated", "");
-$L['cfg_extra8tsetting'] = array("Values for the select box, comma separated", "");
-$L['cfg_extra9tsetting'] = array("Maximum length for the text", "");
-$L['cfg_extra1uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra2uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra3uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra4uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra5uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra6uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra7uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra8uchange'] = array("Editable in user profile ?", "");
-$L['cfg_extra9uchange'] = array("Editable in user profile ?", "");
-$L['cfg_disable_comments'] = array("Disable the comments", "");
-$L['cfg_disable_forums'] = array("Disable the forums", "");
-$L['cfg_disable_pfs'] = array("Disable the PFS", "");
-$L['cfg_disable_polls'] = array("Disable the polls", "");
-$L['cfg_disable_pm'] = array("Disable the private messages", "");
-$L['cfg_disable_ratings'] = array("Disable the ratings", "");
-$L['cfg_disable_page'] = array("Disable the pages", "");
-$L['cfg_disable_plug'] = array("Disable the plugins", "");
-$L['cfg_trash_prunedelay'] = array("Remove the items from the trash can after * days (Zero to keep forever)", ""); 	
-$L['cfg_trash_comment'] = array("Use the trash can for the comments", "");		
-$L['cfg_trash_forum'] = array("Use the trash can for the forums", "");		
-$L['cfg_trash_page'] = array("Use the trash can for the pages", "");		
-$L['cfg_trash_pm'] = array("Use the trash can for the private messages", "");		
-$L['cfg_trash_user'] = array("Use the trash can for the users", "");
+$L['cfg_pm_maxsize'] = array("Mesajlar için maksimum uzunluk", "Varsayılan: 10000 chars");
+$L['cfg_pm_allownotifications'] = array("E-posta ile PM bildirimlerine izin ver", "");
+$L['cfg_disablehitstats'] = array("İsabet istatistiklerini devre dışı bırak", "Referanslar ve günlük isabet sayısı");
+$L['cfg_disablereg'] = array("Kayıt işlemini devre dışı bırak", "Kullanıcıların yeni hesaplar kaydetmesini engelle");
+$L['cfg_disablewhosonline'] = array("Kimin çevrimiçi olduğunu devre dışı bırak", "Kalkanı açarsanız otomatik olarak etkinleştirilir");
+$L['cfg_defaultcountry'] = array("Yeni kullanıcılar için varsayılan ülke", "2 harfli ülke kodu");	// New in v130
+$L['cfg_forcedefaultskin'] = array("Tema değiştirmeye izin verme", "");
+$L['cfg_forcedefaultlang'] = array("Dil değiştirmeye izin verme", "");
+$L['cfg_separator'] = array("Genel ayırıcı", "Default:>");
+$L['cfg_menu1'] = array("Menü yuvası #1<br />{PHP.cfg.menu1} tüm tpl dosyalarında", "");
+$L['cfg_menu2'] = array("Menü yuvası #2<br />{PHP.cfg.menu2} tüm tpl dosyalarında", "");
+$L['cfg_menu3'] = array("Menü yuvası #3<br />{PHP.cfg.menu3} tüm tpl dosyalarında", "");
+$L['cfg_menu4'] = array("Menü yuvası #4<br />{PHP.cfg.menu4} tüm tpl dosyalarında", "");
+$L['cfg_menu5'] = array("Menü yuvası #5<br />{PHP.cfg.menu5} tüm tpl dosyalarında", "");
+$L['cfg_menu6'] = array("Menü yuvası #6<br />{PHP.cfg.menu6} tüm tpl dosyalarında", "");
+$L['cfg_menu7'] = array("Menü yuvası #7<br />{PHP.cfg.menu7} tüm tpl dosyalarında", "");
+$L['cfg_menu8'] = array("Menü yuvası #8<br />{PHP.cfg.menu8} tüm tpl dosyalarında", "");
+$L['cfg_menu9'] = array("Menü yuvası #9<br />{PHP.cfg.menu9} tüm tpl dosyalarında", "");
+$L['cfg_topline'] = array("Üst çizgi<br />{HEADER_TOPLINE} header.tpl de", "");
+$L['cfg_banner'] = array("Banner<br />{HEADER_BANNER} header.tpl de", "");
+$L['cfg_motd'] = array("Günün mesajı<br />{NEWS_MOTD} index.tpl de", "");
+$L['cfg_bottomline'] = array("Alt çizgi<br />{FOOTER_BOTTOMLINE} footer.tpl de", "");
+$L['cfg_freetext1'] = array("Serbest Metin Yuvası #1<br />{PHP.cfg.freetext1} tüm tpl dosyalarında", "");
+$L['cfg_freetext2'] = array("Serbest Metin Yuvası #2<br />{PHP.cfg.freetext2} tüm tpl dosyalarında", "");
+$L['cfg_freetext3'] = array("Serbest Metin Yuvası #3<br />{PHP.cfg.freetext3} tüm tpl dosyalarında", "");
+$L['cfg_freetext4'] = array("Serbest Metin Yuvası #4<br />{PHP.cfg.freetext4} tüm tpl dosyalarında", "");
+$L['cfg_freetext5'] = array("Serbest Metin Yuvası #5<br />{PHP.cfg.freetext5} tüm tpl dosyalarında", "");
+$L['cfg_freetext6'] = array("Serbest Metin Yuvası #6<br />{PHP.cfg.freetext6} tüm tpl dosyalarında", "");
+$L['cfg_freetext7'] = array("Serbest Metin Yuvası #7<br />{PHP.cfg.freetext7} tüm tpl dosyalarında", "");
+$L['cfg_freetext8'] = array("Serbest Metin Yuvası #8<br />{PHP.cfg.freetext8} tüm tpl dosyalarında", "");
+$L['cfg_freetext9'] = array("Serbest Metin Yuvası #9<br />{PHP.cfg.freetext9} tüm tpl dosyalarında", "");
+$L['cfg_extra1title'] = array("Alan #1 (String), title", "");
+$L['cfg_extra2title'] = array("Alan #2 (String), title", "");
+$L['cfg_extra3title'] = array("Alan #3 (String), title", "");
+$L['cfg_extra4title'] = array("Alan #4 (String), title", "");
+$L['cfg_extra5title'] = array("Alan #5 (String), title", "");
+$L['cfg_extra6title'] = array("Alan #6 (Select box), title", "");
+$L['cfg_extra7title'] = array("Alan #7 (Select box), title", "");
+$L['cfg_extra8title'] = array("Alan #8 (Select box), title", "");
+$L['cfg_extra9title'] = array("Alan #9 (Long text), title", "");
+$L['cfg_extra1tsetting'] = array("Bu alandaki maksimum karakter", "");
+$L['cfg_extra2tsetting'] = array("Bu alandaki maksimum karakter", "");
+$L['cfg_extra3tsetting'] = array("Bu alandaki maksimum karakter", "");
+$L['cfg_extra4tsetting'] = array("Bu alandaki maksimum karakter", "");
+$L['cfg_extra5tsetting'] = array("Bu alandaki maksimum karakter", "");
+$L['cfg_extra6tsetting'] = array("Seçim kutusu için değerler, virgülle ayrılmış", "");
+$L['cfg_extra7tsetting'] = array("Seçim kutusu için değerler, virgülle ayrılmış", "");
+$L['cfg_extra8tsetting'] = array("Seçim kutusu için değerler, virgülle ayrılmış", "");
+$L['cfg_extra9tsetting'] = array("Metin için maksimum uzunluk", "");
+$L['cfg_extra1uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra2uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra3uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra4uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra5uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra6uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra7uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra8uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_extra9uchange'] = array("Kullanıcı profilinde düzenlenebilir ?", "");
+$L['cfg_disable_comments'] = array("Yorumları devre dışı bırak", "");
+$L['cfg_disable_pfs'] = array("PFS'yi devre dışı bırakın", "");
+$L['cfg_disable_polls'] = array("Anketleri devre dışı bırak", "");
+$L['cfg_disable_pm'] = array("Özel mesajları devre dışı bırak", "");
+$L['cfg_disable_ratings'] = array("Derecelendirmeleri devre dışı bırak", "");
+$L['cfg_disable_page'] = array("Sayfaları devre dışı bırak", "");
+$L['cfg_disable_plug'] = array("Eklentileri devre dışı bırak", "");
+$L['cfg_trash_prunedelay'] = array("Silinenleri * gün sonra çöp kutusundan sil (Sonsuza kadar saklamak için sıfır)", ""); 	
+$L['cfg_trash_comment'] = array("Yorumlar için çöp kutusunu kullanın", "");			
+$L['cfg_trash_page'] = array("Sayfalar için çöp kutusunu kullanın", "");		
+$L['cfg_trash_pm'] = array("Özel mesajlar için çöp kutusunu kullanın", "");		
+$L['cfg_trash_user'] = array("Kullanıcılar için çöp kutusunu kullanın", "");
 
-$L['cfg_parser_vid'] = array("Allow BBcodes for the videos", "");		// New in v120
-$L['cfg_parser_vid_autolink'] = array("Auto-link URLs to known video sites", "");						// New in v120
-$L['cfg_parsebbcodecom'] = array("Parse BBcode in comments and private messages", "");
-$L['cfg_parsebbcodepages'] = array("Parse BBcode in pages", "");
-$L['cfg_parsebbcodeusertext'] = array("Parse BBcode in user signature", "");
-$L['cfg_parsebbcodeforums'] = array("Parse BBcode in forums", "");
-$L['cfg_parsesmiliescom'] = array("Parse smilies in comments and private messages", "");
-$L['cfg_parsesmiliespages'] = array("Parse smilies in pages", "");
-$L['cfg_parsesmiliesusertext'] = array("Parse smilies in user signature", "");
-$L['cfg_parsesmiliesforums'] = array("Parse smilies in forums", "");
+$L['cfg_parser_vid'] = array("Videolar için BBcode'lara izin ver", "");		// New in v120
+$L['cfg_parser_vid_autolink'] = array("URL'leri bilinen video sitelerine otomatik olarak bağla", "");						// New in v120
+$L['cfg_parsebbcodecom'] = array("Yorumlarda ve özel mesajlarda BBcode'u ayrıştırın", "");
+$L['cfg_parsebbcodepages'] = array("Sayfalarda BBcode ayrıştırma", "");
+$L['cfg_parsebbcodeusertext'] = array("Kullanıcı imzasında BBcode ayrıştırma", "");
+$L['cfg_parsesmiliescom'] = array("Yorumlarda ve özel mesajlarda ifadeleri ayrıştırın", "");
+$L['cfg_parsesmiliespages'] = array("Sayfalardaki ifadeleri ayrıştırın", "");
+$L['cfg_parsesmiliesusertext'] = array("Kullanıcı imzasındaki ifadeleri ayrıştır", "");
 
-$L['cfg_color_group'] = array("Colorize group of users", "Default: No, for better performance");  // New in v175
+$L['cfg_color_group'] = array("Kullanıcı grubunu renklendir", "Varsayılan: Hayır, daha iyi performans için");  // New in v175
 
-$L['cfg_ajax'] = array("Enable AJAX", "");  // New in v175
-$L['cfg_enablemodal'] = array("Enable modal windows", "");  // New in v175
+$L['cfg_ajax'] = array("AJAX'ı etkinleştir", "");  // New in v175
+$L['cfg_enablemodal'] = array("Kalıcı pencereleri etkinleştir", "");  // New in v175
 
-$L['cfg_hometitle'] = array("Homepage title", "Optional, for SEO"); // New in v179
-$L['cfg_homemetadescription'] = array("Homepage meta description", "Optional, for SEO"); // New in v179
-$L['cfg_homemetakeywords'] = array("Homepage meta keywords", "Optional, for SEO"); // New in v179
+$L['cfg_hometitle'] = array("Ana sayfa başlığı", "Opsiyonel, SEO için"); // New in v179
+$L['cfg_homemetadescription'] = array("Ana sayfa meta açıklaması", "Opsiyonel, SEO için"); // New in v179
+$L['cfg_homemetakeywords'] = array("Ana sayfa meta anahtar kelimeleri", "Opsiyonel, SEO için"); // New in v179
 
 /* ====== HTML Meta ====== */
 
-$L['cfg_defaulttitle'] = array("Default Title", "Available options: {MAINTITLE}, {SUBTITLE}");		//Sed 175
-$L['cfg_indextitle'] = array("Title for Homepage", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 179
-$L['cfg_listtitle'] = array("Title for lists of pages", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
-$L['cfg_pagetitle'] = array("Title for pages", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}, {CATEGORY}");		//Sed 175
-$L['cfg_forumstitle'] = array("Title for forums", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
-$L['cfg_userstitle'] = array("Title for users", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
-$L['cfg_pmtitle'] = array("Title for PM", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
-$L['cfg_gallerytitle'] = array("Title for gallery", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
-$L['cfg_pfstitle'] = array("Title for PFS", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		///Sed 175
-$L['cfg_plugtitle'] = array("Title for plugins", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		///Sed 175
+$L['cfg_defaulttitle'] = array("Varsayılan Başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}");		//Sed 175
+$L['cfg_indextitle'] = array("Ana Sayfa Başlığı", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 179
+$L['cfg_listtitle'] = array("Sayfa listeleri için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
+$L['cfg_pagetitle'] = array("Sayfalar için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}, {CATEGORY}");		//Sed 175
+$L['cfg_userstitle'] = array("Kullanıcılar için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
+$L['cfg_pmtitle'] = array("PM için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
+$L['cfg_gallerytitle'] = array("Galeri başlığı", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
+$L['cfg_pfstitle'] = array("PFS için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		///Sed 175
+$L['cfg_plugtitle'] = array("Eklentiler için başlık", "Mevcut seçenekler: {MAINTITLE}, {SUBTITLE}, {TITLE}");		///Sed 175
 
 /* ====== Rss ====== */
 
-$L['cfg_disable_rss'] = array("Disable RSS feeds", "");
-$L['cfg_disable_rsspages'] = array("Disable RSS feed for pages", "");
-$L['cfg_disable_rsscomments'] = array("Disable RSS feed for comments", "");
-$L['cfg_disable_rssforums'] = array("Disable RSS feed for the forums", "");
-$L['cfg_rss_timetolive'] = array("Cash time for RSS feed", "in seconds");
-$L['cfg_rss_defaultcode'] = array("Default RSS feed", "enter the category code");
-$L['cfg_rss_maxitems'] = array("The maximum number of rows in the RSS feed", "");
+$L['cfg_disable_rss'] = array("RSS beslemelerini devre dışı bırak", "");
+$L['cfg_disable_rsspages'] = array("Sayfalar için RSS beslemesini devre dışı bırak", "");
+$L['cfg_disable_rsscomments'] = array("Yorumlar için RSS beslemesini devre dışı bırak", "");
+$L['cfg_rss_timetolive'] = array("RSS beslemesi için zaman", "in seconds");
+$L['cfg_rss_defaultcode'] = array("Varsayılan RSS beslemesi", "kategori kodunu girin");
+$L['cfg_rss_maxitems'] = array("RSS beslemesindeki maksimum satır sayısı", "");
 
-$L['adm_help_config_rss'] = "Links to open RSS feeds: <br />".$cfg['mainurl']."/"."rss (by default, the output of news categories specified in the settings) <br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Category code, the last pages of the category) <br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - ID page, comments page) <br />".$cfg['mainurl']."/"."rss/forums (latest posts from all sections of the forum) <br />".$cfg['mainurl']."/"."rss/forums?s=XX (XX - ID section, recent posts section) <br />".$cfg['mainurl']."/"."rss/forums?q=XX (XX - ID topic, recent posts in the topic) <br />".$cfg['mainurl']."/"."rss/forums?s=XX&q=YY (XX - ID section, YY - ID topic)";
-
-/* ====== Forums ====== */
-
-$L['adm_diplaysignatures'] = "Display signatures";
-$L['adm_enablebbcodes'] = "Enable BBcodes";
-$L['adm_enablesmilies'] = "Enable smilies";
-$L['adm_enableprvtopics'] = "Allow private topics";
-$L['adm_countposts'] = "Count posts";
-$L['adm_autoprune'] = "Auto-prune topics after * days";
-$L['adm_postcounters'] = "Check the counters";
-$L['adm_help_forums'] = "Not available";
-$L['adm_forum_structure'] = "Structure of the forums (categories)";	
-$L['adm_forum_structure_cat'] = "Structure of the forums";	
-$L['adm_help_forums_structure'] = "Not available";	
-$L['adm_defstate'] = "Default state";	
-$L['adm_defstate_0'] = "Folded";	
-$L['adm_defstate_1'] = "Unfolded";
-$L['adm_parentcat'] = "Parent category";	// New in v172	
+$L['adm_help_config_rss'] = "RSS beslemelerini açmak için bağlantılar: <br />".$cfg['mainurl']."/"."rss (varsayılan olarak, ayarlarda belirtilen haber kategorilerinin çıktısı) <br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Kategori kodu, kategorinin son sayfaları) <br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - Sayfa ID, yorumlar sayfası)";
 
 /* ====== IP search ====== */
 
-$L['adm_searchthisuser'] = "Search for this IP in the user database";
-$L['adm_dnsrecord'] = "DNS record for this address";
+$L['adm_searchthisuser'] = "Bu IP'yi kullanıcı veritabanında arayın";
+$L['adm_dnsrecord'] = "Bu adres için DNS kaydı";
 
 /* ====== Smilies ====== */
 
-$L['adm_help_smilies'] = "Not available";
+$L['adm_help_smilies'] = "Müsait değil";
 
 /* ====== Dictionary ====== */
 
-$L['adm_dic_list'] = "Directories list";
-$L['adm_dictionary'] = "Directory";
-$L['adm_dic_title'] = "Title of the directory";
-$L['adm_dic_code'] = "Code of the directory (name of extra field)";
-$L['adm_dic_list'] = "List of the directories";
-$L['adm_dic_term_list'] = "List of terms";
-$L['adm_dic_add'] = "Add new directory";
-$L['adm_dic_edit'] = "Edit directory";
-$L['adm_dic_add_term'] = "Add a new term";
-$L['adm_dic_term_title'] = "Title of the term";
-$L['adm_dic_term_value'] = "Value of the term";
-$L['adm_dic_term_defval'] = "Make a term default?";
-$L['adm_dic_term_edit'] = "Edit term from directory";
-$L['adm_dic_children'] = "Children directory";
+$L['adm_dic_list'] = "Dizin listesi";
+$L['adm_dictionary'] = "Dizin";
+$L['adm_dic_title'] = "Dizinin başlığı";
+$L['adm_dic_code'] = "Extra alan adı";
+$L['adm_dic_list'] = "Dizinlerin listesi";
+$L['adm_dic_term_list'] = "Terimler listesi";
+$L['adm_dic_add'] = "Yeni dizin ekle";
+$L['adm_dic_edit'] = "Dizini düzenle";
+$L['adm_dic_add_term'] = "Yeni bir terim ekle";
+$L['adm_dic_term_title'] = "Terimin başlığı";
+$L['adm_dic_term_value'] = "Terimin değeri";
+$L['adm_dic_term_defval'] = "Terimi varsayılan yap?";
+$L['adm_dic_term_edit'] = "Dizinden terimi düzenle";
+$L['adm_dic_children'] = "Alt dizini";
 
-$L['adm_dic_mera'] = "Unit";
-$L['adm_dic_values'] = "List of values for directory";
+$L['adm_dic_mera'] = "Birim";
+$L['adm_dic_values'] = "Dizin için değer listesi";
 
-$L['adm_dic_form_title'] = "Title for form element";
-$L['adm_dic_form_desc'] = "Text for form element";
-$L['adm_dic_form_size'] = "Size of text field";
-$L['adm_dic_form_maxsize'] = "The maximum size of text field";
-$L['adm_dic_form_cols'] = "The cols of text field";
-$L['adm_dic_form_rows'] = "The rows of text field";
+$L['adm_dic_form_title'] = "Form öğesi için başlık";
+$L['adm_dic_form_desc'] = "Form öğesi için metin";
+$L['adm_dic_form_size'] = "Metin alanının boyutu";
+$L['adm_dic_form_maxsize'] = "Maksimum metin alanı boyutu";
+$L['adm_dic_form_cols'] = "Metin alanının sütunları";
+$L['adm_dic_form_rows'] = "Metin alanı satırları";
 
-$L['adm_dic_extra'] = "Extra field";
-$L['adm_dic_addextra'] = "Add extra field";
-$L['adm_dic_editextra'] = "Edit extra field";
-$L['adm_dic_extra_location'] = "Name of table";
-$L['adm_dic_extra_type'] = "Data type of field";
-$L['adm_dic_extra_size'] = "Length of field";
+$L['adm_dic_extra'] = "Ekstra alan";
+$L['adm_dic_addextra'] = "Fazladan alan ekle";
+$L['adm_dic_editextra'] = "Fazladan alanı düzenle";
+$L['adm_dic_extra_location'] = "Tablonun adı";
+$L['adm_dic_extra_type'] = "Alanın veri türü";
+$L['adm_dic_extra_size'] = "Alan uzunluğu";
 
-$L['adm_dic_comma_separat'] = "(values comma separated)";
+$L['adm_dic_comma_separat'] = "(virgülle ayrılmış değerler)";
 
 $L['adm_help_dic'] = ""; //Need add
 
 /* ====== Menu manager ====== */
 
-$L['adm_menuitems'] = "Menu items";
-$L['adm_additem'] = "Add item";
-$L['adm_position'] = "Position";
-$L['adm_confirm_delete'] = "Confirm delete?";
-$L['adm_addmenuitem'] = "Add menu item";
-$L['adm_editmenuitem'] = "Edit menu item";
-$L['adm_parentitem'] = "Parent item";
+$L['adm_menuitems'] = "Menü öğeleri";
+$L['adm_additem'] = "Öğe eklemek";
+$L['adm_position'] = "Durum";
+$L['adm_confirm_delete'] = "Silmeyi onayla?";
+$L['adm_addmenuitem'] = "Menü öğesi ekle";
+$L['adm_editmenuitem'] = "Menü öğesini düzenle";
+$L['adm_parentitem'] = "Ana öğe";
 $L['adm_url'] = "URL";
-$L['adm_activity'] = "Active?";
+$L['adm_activity'] = "Aktif?";
 
 /* ====== PFS ====== */
 
-$L['adm_gd'] = "GD graphical library";
-$L['adm_allpfs'] = "All PFS";
-$L['adm_allfiles'] = "All files";
-$L['adm_thumbnails'] = "Thumbnails";
+$L['adm_gd'] = "GD grafik kitaplığı";
+$L['adm_allpfs'] = "Tüm PFS";
+$L['adm_allfiles'] = "Tüm dosyalar";
+$L['adm_thumbnails'] = "Küçük resimler";
 $L['adm_orphandbentries'] = "Orphan DB entries";
 $L['adm_orphanfiles'] = "Orphan files";
-$L['adm_delallthumbs'] = "Delete all thumbnails";
-$L['adm_rebuildallthumbs']= "Delete and rebuild all thumbnails";
-$L['adm_help_pfsthumbs'] = "Not available";
-$L['adm_help_check1'] = "Not available";
-$L['adm_help_check2'] = "Not available";
-$L['adm_help_pfsfiles'] = "Not available";
-$L['adm_help_allpfs'] = "Not available";
-$L['adm_nogd'] = "The GD graphical library is not supported by this host, Seditio won't be able to create thumbnails for the PFS images. You must go into the configuration panel, tab 'Personal File Space', and set Thumbnails generation = 'Disabled'.";
+$L['adm_delallthumbs'] = "Tüm küçük resimleri sil";
+$L['adm_rebuildallthumbs']= "Tüm küçük resimleri silin ve yeniden oluşturun";
+$L['adm_help_pfsthumbs'] = "Müsait değil";
+$L['adm_help_check1'] = "Müsait değil";
+$L['adm_help_check2'] = "Müsait değil";
+$L['adm_help_pfsfiles'] = "Müsait değil";
+$L['adm_help_allpfs'] = "Müsait değil";
+$L['adm_nogd'] = "GD grafik kitaplığı bu ana bilgisayar tarafından desteklenmiyor, Seditio PFS görüntüleri için küçük resimler oluşturamayacak. Yapılandırma paneline, 'Kişisel Dosya Alanı' sekmesine gitmeli ve Küçük Resim oluşturma = 'Devre Dışı' olarak ayarlamalısınız.'.";
 
 /* ====== Pages ====== */
 
-$L['adm_structure'] = "Structure of the pages (categories)";
-$L['adm_syspages'] = "View the category 'system'";
-$L['adm_help_page'] = "The pages that belongs to the category 'system' are not displayed in the public listings, it's to make standalone pages.";
-$L['adm_sortingorder'] = "Set a default sorting order for the categories";
-$L['adm_fileyesno'] = "File (yes/no)";
+$L['adm_structure'] = "Sayfaların yapısı (kategoriler)";
+$L['adm_syspages'] = "'Sistem' kategorisini görüntüleyin";
+$L['adm_help_page'] = "'Sistem' kategorisine ait sayfalar genel listelerde gösterilmez, bağımsız sayfalar yapmak içindir..";
+$L['adm_sortingorder'] = "Kategoriler için varsayılan sıralama düzeni";
+$L['adm_fileyesno'] = "Dosya (evet/hayır)";
 $L['adm_fileurl'] = "File URL";
 $L['adm_filesize'] = "File size";
-$L['adm_filecount'] = "File hit count";
+$L['adm_filecount'] = "Dosya indirme";
 
-$L['adm_tpl_mode'] = "Template mode";	
+$L['adm_tpl_mode'] = "Şablon modu";	
 $L['adm_tpl_empty'] = "Default";	
 $L['adm_tpl_forced'] = "Same as";	
-$L['adm_tpl_parent'] = "Same as the parent category";	
+$L['adm_tpl_parent'] = "Ana kategoriyle aynı";	
 
-$L['adm_enablecomments'] = "Enable Comments";   // New v173
-$L['adm_enableratings'] = "Enable Ratings";     // New v173
+$L['adm_enablecomments'] = "Yorumları Etkinleştir";   // New v173
+$L['adm_enableratings'] = "Derecelendirmeleri Etkinleştir";     // New v173
 
 /* ====== Polls ====== */
 
-$L['adm_help_polls'] = "Once you created a new poll topics, select 'Edit' to add options (choices) for this poll.<br />'Delete' will delete the selected poll, the options, and all related votes.<br />'Reset' will delete all votes for the selected poll. It won't delete the poll itself or the options.<br />'Bump' will change the poll creation date to the current date, and so will make the poll 'current', top of the list.";
+$L['adm_help_polls'] = "Yeni bir anket konusu oluşturduktan sonra, bu anket için seçenekler (seçenekler) eklemek için 'Düzenle'yi seçin.<br />'Sil' seçilen anketi, seçenekleri ve ilgili tüm oyları siler.<br />'Sıfırla' seçilen anket için tüm oyları siler. Anketin kendisini veya seçenekleri silmez.<br />'Bump', anket oluşturma tarihini geçerli tarihe değiştirecek ve böylece anketi listenin en üstünde 'geçerli' yapacaktır..";
 $L['adm_poll_title'] = "Poll title";
 
 /* ====== Statistics ====== */
 
-$L['adm_phpver'] = "PHP engine version";
-$L['adm_zendver'] = "Zend engine version";
-$L['adm_interface'] = "Interface between webserver and PHP";
-$L['adm_os'] = "Operating system";
-$L['adm_clocks'] = "Clocks";
-$L['adm_time1'] = "#1 : Raw server time";
-$L['adm_time2'] = "#2 : GMT time returned by the server";
-$L['adm_time3'] = "#3 : GMT time + server offset (Seditio reference)";
-$L['adm_time4'] = "#4 : Your local time, adjusted from your profile";
-$L['adm_help_versions'] = "Adjust the Server time zone to have the clock #3 properlly set.<br />Clock #4 depends of the timezone setting in your profile.<br />Clocks #1 and #2 are ignored by Seditio.";
-$L['adm_log'] = "System log";
-$L['adm_infos'] = "Informations";
-$L['adm_versiondclocks'] = "Versions and clocks";
-$L['adm_checkcoreskins'] = "Check core files and skins";
-$L['adm_checkcorenow'] = "Check core files now !";
-$L['adm_checkingcore'] = "Checking core files...";
-$L['adm_checkskins'] = "Check if all files are present in skins";
-$L['adm_checkskin'] = "Check TPL files for the skin";
-$L['adm_checkingskin'] = "Checking the skin...";
-$L['adm_hits'] = "Hits";
+$L['adm_phpver'] = "PHP sürümü";
+$L['adm_zendver'] = "Zend versiyonu";
+$L['adm_interface'] = "Web sunucusu ve PHP arasındaki arayüz";
+$L['adm_os'] = "İşletim sistemi";
+$L['adm_clocks'] = "Saatler";
+$L['adm_time1'] = "#1 : Ham sunucu zamanı";
+$L['adm_time2'] = "#2 : Sunucu tarafından döndürülen GMT zamanı";
+$L['adm_time3'] = "#3 : GMT zamanı + sunucu ofseti (Seditio referansı)";
+$L['adm_time4'] = "#4 : Profilinizden ayarlanan yerel saatiniz";
+$L['adm_help_versions'] = "3 numaralı saatin doğru şekilde ayarlanması için Sunucu saat dilimini ayarlayın.<br />4 numaralı saat, profilinizdeki saat dilimi ayarına bağlıdır.<br />1 ve 2 numaralı saatler Seditio tarafından yok sayılır.";
+$L['adm_log'] = "Sistem günlüğü";
+$L['adm_infos'] = "Bilgiler";
+$L['adm_versiondclocks'] = "Sürümler ve saatler";
+$L['adm_checkcoreskins'] = "Çekirdek dosyaları ve temayı kontrol edin";
+$L['adm_checkcorenow'] = "Çekirdek dosyaları şimdi kontrol edin !";
+$L['adm_checkingcore'] = "Çekirdek dosyaları kontrol etme...";
+$L['adm_checkskins'] = "Tüm dosyaların temada olup olmadığını kontrol edin";
+$L['adm_checkskin'] = "Tema için TPL dosyalarını kontrol edin";
+$L['adm_checkingskin'] = "Temayı kontrol etmek...";
+$L['adm_hits'] = "Hit";
 $L['adm_check_ok'] = "Ok";
-$L['adm_check_missing'] = "Missing";
-$L['adm_ref_lowhits'] = "Purge entries where hits are lower than 5";
-$L['adm_maxhits'] = "Maximum hitcount was reached %1\$s, %2\$s pages displayed this day."; 
-$L['adm_byyear'] = "By year"; 		
-$L['adm_bymonth'] = "By month"; 	
-$L['adm_byweek'] = "By week"; 		
+$L['adm_check_missing'] = "Eksik";
+$L['adm_ref_lowhits'] = "Reflerin 5'ten düşük olduğu girişleri temizle";
+$L['adm_maxhits'] = "Maksimum isabet sayısına ulaşıldı %1\$s, bu gün görüntülenen %2\$s sayfa."; 
+$L['adm_byyear'] = "Yıla göre"; 		
+$L['adm_bymonth'] = "Aya göre"; 	
+$L['adm_byweek'] = "Haftaya göre"; 		
 
 /* ====== Ratings ====== */
 
-$L['adm_ratings_totalitems'] = "Total pages rated";
-$L['adm_ratings_totalvotes'] = "Total votes";
-$L['adm_help_ratings'] = "To reset a rating, simply delete it. It will be re-created with the first new vote.";
+$L['adm_ratings_totalitems'] = "Puanlanan toplam sayfa sayısı";
+$L['adm_ratings_totalvotes'] = "Toplam oy";
+$L['adm_help_ratings'] = "Bir derecelendirmeyi sıfırlamak için silmeniz yeterlidir. İlk yeni oylama ile yeniden oluşturulacak.";
 
 /* ====== Trash can ====== */
 
-$L['adm_help_trashcan'] = "Here are listed the items recently deleted by the users and moderators.<br />Note that restoring a forum topic will also restore all the posts that belongs to the topic.<br />And restoring a post in a deleted topic will restore the whole topic (if available) and all the child posts.<br />&nbsp;<br />Wipe : Delete the item forever.<br />Restore : Put the item back in the live database."; 
+$L['adm_help_trashcan'] = "Kullanıcılar ve moderatörler tarafından en son silinen öğeler burada listelenmiştir.<br /> &nbsp;<br />Sil : Öğeyi sonsuza kadar silin.<br />Geri Yükle : Öğeyi veritabanına geri yükle."; 
 
 /* ====== Users ====== */
 
-$L['adm_defauth_members'] = "Default rights for the members";
-$L['adm_deflock_members'] = "Lock mask for the members";
-$L['adm_defauth_guests'] = "Default rights for the guests";
-$L['adm_deflock_guests'] = "Lock mask for the guests";
-$L['adm_rightspergroup'] = "Rights per group";
-$L['adm_copyrightsfrom'] = "Set the same rights as the group";
-$L['adm_maxsizesingle'] = "PFS max size for a single file (KB)";
-$L['adm_maxsizeallpfs'] = "Max size of all PFS files together (KB)";
-$L['adm_rights_allow10'] = "Allowed";
-$L['adm_rights_allow00'] = "Denied";
-$L['adm_rights_allow11'] = "Allowed and locked for security reasons";
-$L['adm_rights_allow01'] = "Denied and locked for security reasons";
-$L['adm_color'] = "Color for group"; // New in v175
+$L['adm_defauth_members'] = "Üyeler için varsayılan haklar";
+$L['adm_deflock_members'] = "Üyeler için maskeyi kilitle";
+$L['adm_defauth_guests'] = "Misafirler için varsayılan haklar";
+$L['adm_deflock_guests'] = "Misafirler için maskeyi kilitle";
+$L['adm_rightspergroup'] = "Grup başına haklar";
+$L['adm_copyrightsfrom'] = "Grupla aynı hakları ayarla";
+$L['adm_maxsizesingle'] = "Tek bir dosya için maksimum PFS boyutu (KB)";
+$L['adm_maxsizeallpfs'] = "Tüm PFS dosyalarının maksimum boyutu (KB)";
+$L['adm_rights_allow10'] = "İzin verildi";
+$L['adm_rights_allow00'] = "Reddedildi";
+$L['adm_rights_allow11'] = "Güvenlik nedeniyle izin verildi ve kilitlendi";
+$L['adm_rights_allow01'] = "Güvenlik nedeniyle reddedildi ve kilitlendi";
+$L['adm_color'] = "Grup için renk"; // New in v175
 
 /* ====== Plugins ====== */
 
-$L['adm_extplugins'] = "Extended plugins";
-$L['adm_present'] = "Present";
-$L['adm_missing'] = "Missing";
-$L['adm_paused'] = "Paused";
-$L['adm_running'] = "Running";
-$L['adm_partrunning'] = "Partially running";
-$L['adm_notinstalled'] = "Not installed";
+$L['adm_extplugins'] = "Genişletilmiş eklentiler";
+$L['adm_present'] = "Mevcut";
+$L['adm_missing'] = "Eksik";
+$L['adm_paused'] = "Duraklatıldı";
+$L['adm_running'] = "Çalışıyor";
+$L['adm_partrunning'] = "Kısmen çalışıyor";
+$L['adm_notinstalled'] = "Yüklü değil";
 
-$L['adm_opt_installall'] = "Install all";
-$L['adm_opt_installall_explain'] = "This will install or reset all the parts of the plugin.";
-$L['adm_opt_uninstallall'] = "Un-install all";
-$L['adm_opt_uninstallall_explain'] = "This will disable all the parts of the plugin, but won't physically remove the files.";
-$L['adm_opt_pauseall'] = "Pause all";
-$L['adm_opt_pauseall_explain'] = "This will pause (disable) all the parts of the plugin.";
-$L['adm_opt_unpauseall'] = "Un-pause all";
-$L['adm_opt_unpauseall_explain'] = "This will un-pause (enable) all the parts of the plugin.";
+$L['adm_opt_installall'] = "Hepsini yükle";
+$L['adm_opt_installall_explain'] = "Bu eklentinin tüm parçalarını yükleyecek veya ayarları sıfırlayacaktır..";
+$L['adm_opt_uninstallall'] = "Hepsini kaldır";
+$L['adm_opt_uninstallall_explain'] = "Bu eklentinin tüm bölümlerini devre dışı bırakır, ancak dosyaları fiziksel olarak kaldırmaz.";
+$L['adm_opt_pauseall'] = "Hepsini durdur";
+$L['adm_opt_pauseall_explain'] = "Bu eklentinin tüm bölümlerini duraklatacak (devre dışı bırakacaktır).";
+$L['adm_opt_unpauseall'] = "Tümünü çalıştır";
+$L['adm_opt_unpauseall_explain'] = "Bu eklentinin tüm bölümlerini etkinleştirecek.";
 
 /* ====== Private messages ====== */
 
-$L['adm_pm_totaldb'] = "Private messages in the database";
-$L['adm_pm_totalsent'] = "Total of private messages ever sent";
+$L['adm_pm_totaldb'] = "Veritabanındaki özel mesajlar";
+$L['adm_pm_totalsent'] = "Şimdiye kadar gönderilen toplam özel mesaj";
 
 ?>
