@@ -89,26 +89,26 @@ $L['msg502_3'] = "  burayı tıklayın.";
 
 /* ======== System ======== */
 
-$L['msg900_0'] = "Under construction";
-$L['msg900_1'] = "Page not yet done, come back later please.";
-$L['msg904_0'] = "System pages for administrator eyes only";
-$L['msg904_1'] = "You cannot list system pages with your level.";
-$L['msg907_0'] = "Plug-in not loaded";
-$L['msg907_1'] = "An error occured while attempting to load this plug-in, file(s) missing ?";
-$L['msg911_0'] = "Language file missing";
-$L['msg911_1'] = "An error occured while attempting to check this language pack.";
-$L['msg915_0'] = "Error !";
-$L['msg915_1'] = "At least 1 field is empty.";
-$L['msg916_0'] = "Database updated";
-$L['msg916_1'] = "Done, database successfully updated.<br />Affected entries : ".(isset($num)?$num:'');
-$L['msg917_0'] = "Database updated";
-$L['msg917_1'] = "Done, database successfully updated.";
-$L['msg930_0'] = "Access denied";
-$L['msg930_1'] = "You're not allowed to do this.";
-$L['msg940_0'] = "Section disabled";
-$L['msg940_1'] = "This section of the website is disabled.";
-$L['msg950_0'] = "Error";
-$L['msg950_1'] = "An error occured, maybe a wrong URL ?";
+$L['msg900_0'] = "Yapım halinde";
+$L['msg900_1'] = "Sayfa henüz tamamlanmadı, lütfen daha sonra tekrar gelin.";
+$L['msg904_0'] = "Yalnızca yöneticiler için sistem sayfaları";
+$L['msg904_1'] = "Seviyenize göre sistem sayfalarını listeleyemezsiniz.";
+$L['msg907_0'] = "Eklenti yüklenmedi";
+$L['msg907_1'] = "Bu eklenti yüklenmeye çalışılırken bir hata oluştu, dosya(lar) eksik ?";
+$L['msg911_0'] = "Dil dosyası eksik";
+$L['msg911_1'] = "Bu dil paketini kontrol etmeye çalışırken bir hata oluştu.";
+$L['msg915_0'] = "Hata !";
+$L['msg915_1'] = "En az 1 alan boş.";
+$L['msg916_0'] = "Veritabanı güncellendi";
+$L['msg916_1'] = "Bitti, veritabanı başarıyla güncellendi.<br />Etkilenen girişler : ".(isset($num)?$num:'');
+$L['msg917_0'] = "Veritabanı güncellendi";
+$L['msg917_1'] = "Bitti, veritabanı başarıyla güncellendi.";
+$L['msg930_0'] = "Erişim reddedildi";
+$L['msg930_1'] = "Bunu yapmana izin verilmiyor.";
+$L['msg940_0'] = "Bölüm devre dışı";
+$L['msg940_1'] = "Web sitesinin bu bölümü devre dışı.";
+$L['msg950_0'] = "Hata";
+$L['msg950_1'] = "Bir hata oluştu, belki yanlış bir URL ?";
 
 /* ======== Overall  ======== */
 
