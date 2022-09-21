@@ -27,69 +27,16 @@ $skinlang['comments']['Commentedit'] = "Редактирование комме�
 $skinlang['comments']['Update'] = "Обновить";  //New v173
 $skinlang['comments']['Newcomment'] = "Написать комментарий";  //New v178
 
-//forums.editpost.tpl
-$skinlang['forumseditpost']['Update'] = "Обновить";
-
-//forums.newtopic.tpl
-$skinlang['forumsnewtopic']['Title'] = "Заголовок:";
-$skinlang['forumsnewtopic']['Desc'] = "Описание:";
-$skinlang['forumsnewtopic']['privatetopic'] = "Сделать \"приватную\" тему:";
-$skinlang['forumsnewtopic']['privatetopic2'] = "(тема будет доступна для просмотра и ответов только тебе и модераторам форума)";
-$skinlang['forumsnewtopic']['Submit'] = "Отправить";
-
-//forums.post.tpl
-$skinlang['forumspost']['privatetopic'] = "Это приватная тема, с доступом только для автора и модераторов форума.";
-$skinlang['forumspost']['Author'] = "Автор";
-$skinlang['forumspost']['Message'] = "Сообщение";
-$skinlang['forumspost']['Onlinestatus'] = "Статус";
-$skinlang['forumspost']['posts'] = "сообщений";
-$skinlang['forumspost']['Location'] = "Где:";
-$skinlang['forumspost']['Occupation'] = "Профессия:";
-$skinlang['forumspost']['Age'] = "Возраст:";
-$skinlang['forumspost']['Reply'] = "Ответить";
-
-//forums.sections.tpl
-$skinlang['forumssections']['Options'] = "Опции...";
-$skinlang['forumssections']['Searchinforums'] = "Искать в форумах";
-$skinlang['forumssections']['Statistics'] = "Статистика";
-$skinlang['forumssections']['Moderators'] = "Модераторы";
-$skinlang['forumssections']['Markasread'] = "Отметить всё как прочитанное";
-$skinlang['forumssections']['Sections'] = "Разделы";
-$skinlang['forumssections']['Subforums'] = "Подфорумы"; //New in Sed 172
-$skinlang['forumssections']['Lastpost'] = "Последнее";
-$skinlang['forumssections']['Topics'] = "Тем";
-$skinlang['forumssections']['Posts'] = "Сообщений";
-$skinlang['forumssections']['Views'] = "Просмотров";
-$skinlang['forumssections']['Activity'] = "Активность";
-$skinlang['forumssections']['FoldAll'] = "Свернуть всё";
-$skinlang['forumssections']['UnfoldAll'] = "Развернуть всё";
-
-//forums.topics.tpl
-$skinlang['forumstopics']['Nonewposts'] = "Нет новых сообщений";
-$skinlang['forumstopics']['Newposts'] = "Есть новые сообщения";
-$skinlang['forumstopics']['Sticky'] = "Прикреплено";
-$skinlang['forumstopics']['Nonewpostspopular'] = "Нет новых сообщений (популярная)";
-$skinlang['forumstopics']['Newpostspopular'] = "Новые сообщения (популярная)";
-$skinlang['forumstopics']['Newpostssticky'] = "Новые ответы (прикреплено)";
-$skinlang['forumstopics']['Locked'] = "Обсуждение закрыто";
-$skinlang['forumstopics']['Newpostslocked'] = "Новые сообщения (тема закрыта)";
-$skinlang['forumstopics']['Announcment'] = "Обьявление";
-$skinlang['forumstopics']['Movedoutofthissection'] = "Перенесена в другой раздел";
-$skinlang['forumstopics']['Newannouncment'] = "Новое обьявление";
-$skinlang['forumstopics']['Viewers'] = "Просматривают";	// New in v120
-
 //header.tpl
 $skinlang['header']['Login'] = "Вход";
 $skinlang['header']['Register'] = "Регистрация";
 $skinlang['header']['Lostyourpassword'] = "Напомнить пароль";
 
 //index.tpl
-$skinlang['index']['Newinforums'] = "Обсуждения в форумах...";
 $skinlang['index']['Recentadditions'] = "Что нового?";
 $skinlang['index']['Polls'] = "Опросы";
 $skinlang['index']['Online'] = "Кто здесь?";
 $skinlang['index']['Recentcomments'] = "Последние комментарии"; // New in 175
-$skinlang['index']['Lasttopics'] = "Форумы"; // New in 178
 $skinlang['index']['Lastcomments'] = "Комментарии"; // New in 178
 $skinlang['index']['Lastpages'] = "Страницы"; // New in 178
 $skinlang['index']['Activity'] = "Активность"; // New in 178
