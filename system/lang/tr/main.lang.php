@@ -344,7 +344,7 @@ $L['gallery_details_title'] = "Resim";         // New in v150
 /* ====== Header ====== */
 
 $L['hea_privatemessages'] = "yeni özel mesaj(lar)";
-$L['hea_noprivatemessages'] = "özel mesaj yok";
+$L['hea_noprivatemessages'] = "Özel mesaj yok";
 $L['hea_youareloggedas'] = "olarak giriş yaptı";
 $L['hea_youarenotlogged'] = "Giriş yapmadınız.";
 $L['hea_valqueues'] = "Onay sırasında : ";
