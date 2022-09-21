@@ -30,7 +30,7 @@ Lock_members=W12345A
 [END_SED_EXTPLUGIN]
 
 [BEGIN_SED_EXTPLUGIN_CONFIG]
-generate_password=01:select:yes,no:no:Generate a new password and send to the email?
+generate_password=01:select:yes,no:yes:Generate a new password and send to the email?
 [END_SED_EXTPLUGIN_CONFIG]
 
 ==================== */
