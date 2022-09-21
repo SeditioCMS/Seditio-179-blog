@@ -2654,15 +2654,15 @@ function sed_infoget($file, $limiter = 'SED', $maxsize = 32768)
 				}
 			}
 		elseif (mb_substr(mb_strtolower($file), mb_strlen($file) - 12) == ".install.php")
-			{ $result['Error'] = 'Optional install file'; }
+			{ $result['Error'] = 'İsteğe bağlı yükleme dosyası'; }
 		elseif (mb_substr(mb_strtolower($file), mb_strlen($file) - 14) == ".uninstall.php")
-			{ $result['Error'] = 'Optional uninstall file'; }
+			{ $result['Error'] = 'İsteğe bağlı kaldırma dosyası'; }
 		else
-			{ $result['Error'] = 'Warning: No markers found in '.$file; }
+			{ $result['Error'] = 'Uyarı: Hiçbir işaret bulunamadı '.$file; }
 		@fclose($fp);
 		}
 	else
-		{ $result['Error'] = 'Error: File '.$file.' is missing!'; }	
+		{ $result['Error'] = 'Hata: Dosya '.$file.' yok!'; }	
 	return ($result);
 	}
   
