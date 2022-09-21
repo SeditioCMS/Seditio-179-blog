@@ -87,13 +87,6 @@ $L['msg502_1'] = "Done, your private message was successfully sent.<br />Click "
 $L['msg502_2'] = "here";
 $L['msg502_3'] = " to go back to private messages or to send a new PM.";
 
-/* ======== Forums ======== */
-
-$L['msg602_0'] = "Section locked";
-$L['msg602_1'] = "This section is locked.";
-$L['msg603_0'] = "Topic locked";
-$L['msg603_1'] = "This topic is locked.";
-
 /* ======== System ======== */
 
 $L['msg900_0'] = "Under construction";

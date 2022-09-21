@@ -103,6 +103,7 @@ $L['Filters'] = "Filters";
 $L['Fold'] = "Fold";
 $L['Folder'] = "Folder";
 $L['Folders'] = "Folders";
+$L['Forums'] = "Forums";
 $L['Gallery'] = "Gallery";
 $L['Galleries'] = "Galleries";
 $L['Gender'] = "Gender";
@@ -420,6 +421,20 @@ $L['com_gup'] = " left";
 $L['com_commenteditallowtime'] = "Out occurred time allowed to edit a comment";
 $L['com_commentdeleteallowtime'] = "Out occurred time allowed to delete a comment";
 
+/* ====== Forums ======= */
+
+$L['for_newtopic'] = "New topic";
+$L['for_markallasread'] = "Mark all posts as read";
+$L['for_titletooshort'] = "The title is too short or missing"; // New in v171
+$L['for_msgtooshort'] = "Text of the topic is too short or missing"; // New in v171
+$L['for_updatedby'] = "<br /><em>This post was edited by %1\$s (%2\$s, %3\$s ago)</em>";
+$L['for_antibump'] = "The anti-bump protection is up, you cannot post twice in a row.";
+$L['for_mod_clear'] = "Clear the ratings";    // New in v160
+$L['for_mod_force'] = "Force the rating to ";    // New in v160
+
+$L['for_quickpost'] = "Quick response"; // New in v178
+$L['for_post_text'] = "Текст поста"; // New in v178
+
 /* ====== List ====== */
 
 $L['lis_submitnew'] = "Submit a new entry";
@@ -556,6 +571,10 @@ $L['pro_avatarschoose'] = "Click an image below to set it as your own avatar";
 $L['pro_avataruploadfailed'] = "The upload failed, delete the old avatar before to free the slot !";
 
 /* ====== Rss ====== */
+
+$L['rss_lastforums'] = "Latest on forums"; // New in v173
+$L['rss_lastsections'] = "Latest posts in the forum: "; // New in v173
+$L['rss_lasttopics'] = "Last post in the topic: "; // New in v173
 $L['rss_commentauthor'] = "User Comments"; // New in v173
 $L['rss_lastcomments'] = "Recent Comments"; // New in v173
 

@@ -103,7 +103,6 @@ $L['Filters'] = "Фильтры";
 $L['Fold'] = "Свернуть";                 // New in v110
 $L['Folder'] = "Папка";
 $L['Folders'] = "Папок";
-$L['Forums'] = "Форумы";
 $L['Gallery'] = "Галерея";
 $L['Galleries'] = "Галереи";
 $L['Gender'] = "Пол";
@@ -420,20 +419,6 @@ $L['com_gup'] = " осталось";
 $L['com_commenteditallowtime'] = "Отведенное время на редактирование комментария закончилось";
 $L['com_commentdeleteallowtime'] = "Отведенное время на удаление комментария закончилось";
 
-/* ====== Forums ======= */
-
-$L['for_newtopic'] = "Новая тема";
-$L['for_markallasread'] = "Отметить все сообщения как прочитанные";
-$L['for_titletooshort'] = "Заголовок слишком короткий либо отсутствует"; // New in v171
-$L['for_msgtooshort'] = "Текст топика слишком короткий либо отсутствует"; // New in v171
-$L['for_updatedby'] = "<br /><em>отредактировал(а) %1\$s: %2\$s</em>";
-$L['for_antibump'] = "Включена система защиты от спама. Вы не можете добавлять несколько сообщений подряд.";
-$L['for_mod_clear'] = "Очистить рейтинги";    // New in v160
-$L['for_mod_force'] = "Принудительно установить рейтинг ";    // New in v160
-
-$L['for_quickpost'] = "Быстрый ответ"; // New in v178
-$L['for_post_text'] = "Текст поста"; // New in v178
-
 /* ====== List ====== */
 
 $L['lis_submitnew'] = "Добавить новую запись";
@@ -573,9 +558,6 @@ $L['pro_avataruploadfailed'] = "Загрузка не удалась, снача
 
 /* ====== Rss ====== */
 
-$L['rss_lastforums'] = "Последние сообщения на форуме";	// New in v173
-$L['rss_lastsections'] = "Последние сообщения в форуме: ";	// New in v173
-$L['rss_lasttopics'] = "Последние сообщения в теме: ";	// New in v173
 $L['rss_commentauthor'] = 'Комментарий пользователя';	// New in v173
 $L['rss_lastcomments'] = 'Последние комментарии';	// New in v173
 

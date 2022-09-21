@@ -30,6 +30,7 @@ $L['core_skin'] = "Skins";
 $L['core_lang'] = "Languages";
 $L['core_menus'] = "Menu slots";
 $L['core_comments'] = "Comments";
+$L['core_forums'] = "Forums";
 $L['core_page'] = "Pages";
 $L['core_pfs'] = "Personal file space";
 $L['core_gallery'] = "Gallery";
@@ -131,6 +132,7 @@ $L['cfg_sefurls301'] = array("301 redirect to the SEF URLs", "Enable 301 redirec
 $L['cfg_dateformat'] = array("Main date mask", "Default: Y-m-d H:i");
 $L['cfg_formatmonthday'] = array("Short date mask", "Default: m-d");
 $L['cfg_formatyearmonthday'] = array("Medium date mask", "Default: Y-m-d");
+$L['cfg_formatmonthdayhourmin'] = array("Forum date mask", "Default: m-d H:i");
 $L['cfg_servertimezone'] = array("Server time zone", "Offset of the server from the GMT+00");
 $L['cfg_defaulttimezone'] = array("Default time zone", "For guests and new members, from -12 to +12");
 $L['cfg_timedout'] = array("Idle delay, in seconds", "After this delay, user is away");
@@ -158,6 +160,10 @@ $L['cfg_maxtimeallowcomedit'] = array("The time allowed to edit comments", "In m
 $L['cfg_showcommentsonpage'] = array("Show comments on pages", "By default displays comment on the page");   //New Sed171
 $L['cfg_maxcommentlenght'] = array("The maximum length of a comment", "Default: 2000 characters");  //New Sed175
 $L['cfg_countcomments'] = array("Count comments", "Display the count of comments near the icon");
+$L['cfg_hideprivateforums'] = array("Hide private forums", "");
+$L['cfg_hottopictrigger'] = array("Posts for a topic to be 'hot'", "");
+$L['cfg_maxtopicsperpage'] = array("Maximum topics or posts per page", "");
+$L['cfg_antibumpforums'] = array("Anti-bump protection", "Will prevent users from posting twice in a row in the same topic");
 $L['cfg_pfsuserfolder'] = array("Folder storage mode", "If enabled, will store the user files in subfolders /datas/users/USERID/... instead of prepending the USERID to the filename. Must be set at the FIRST setup of the site ONLY. As soon as a file is uploaded to a PFS, it's too late to change this.");
 $L['cfg_th_amode'] = array("Thumbnails generation", "");
 $L['cfg_th_x'] = array("Thumbnails, width", "Default: 112 pixels");
@@ -240,6 +246,7 @@ $L['cfg_extra7uchange'] = array("Editable in user profile ?", "");
 $L['cfg_extra8uchange'] = array("Editable in user profile ?", "");
 $L['cfg_extra9uchange'] = array("Editable in user profile ?", "");
 $L['cfg_disable_comments'] = array("Disable the comments", "");
+$L['cfg_disable_forums'] = array("Disable the forums", "");
 $L['cfg_disable_pfs'] = array("Disable the PFS", "");
 $L['cfg_disable_polls'] = array("Disable the polls", "");
 $L['cfg_disable_pm'] = array("Disable the private messages", "");
@@ -247,7 +254,8 @@ $L['cfg_disable_ratings'] = array("Disable the ratings", "");
 $L['cfg_disable_page'] = array("Disable the pages", "");
 $L['cfg_disable_plug'] = array("Disable the plugins", "");
 $L['cfg_trash_prunedelay'] = array("Remove the items from the trash can after * days (Zero to keep forever)", ""); 	
-$L['cfg_trash_comment'] = array("Use the trash can for the comments", "");				
+$L['cfg_trash_comment'] = array("Use the trash can for the comments", "");		
+$L['cfg_trash_forum'] = array("Use the trash can for the forums", "");		
 $L['cfg_trash_page'] = array("Use the trash can for the pages", "");		
 $L['cfg_trash_pm'] = array("Use the trash can for the private messages", "");		
 $L['cfg_trash_user'] = array("Use the trash can for the users", "");
@@ -257,9 +265,11 @@ $L['cfg_parser_vid_autolink'] = array("Auto-link URLs to known video sites", "")
 $L['cfg_parsebbcodecom'] = array("Parse BBcode in comments and private messages", "");
 $L['cfg_parsebbcodepages'] = array("Parse BBcode in pages", "");
 $L['cfg_parsebbcodeusertext'] = array("Parse BBcode in user signature", "");
+$L['cfg_parsebbcodeforums'] = array("Parse BBcode in forums", "");
 $L['cfg_parsesmiliescom'] = array("Parse smilies in comments and private messages", "");
 $L['cfg_parsesmiliespages'] = array("Parse smilies in pages", "");
 $L['cfg_parsesmiliesusertext'] = array("Parse smilies in user signature", "");
+$L['cfg_parsesmiliesforums'] = array("Parse smilies in forums", "");
 
 $L['cfg_color_group'] = array("Colorize group of users", "Default: No, for better performance");  // New in v175
 
@@ -276,6 +286,7 @@ $L['cfg_defaulttitle'] = array("Default Title", "Available options: {MAINTITLE},
 $L['cfg_indextitle'] = array("Title for Homepage", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 179
 $L['cfg_listtitle'] = array("Title for lists of pages", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
 $L['cfg_pagetitle'] = array("Title for pages", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}, {CATEGORY}");		//Sed 175
+$L['cfg_forumstitle'] = array("Title for forums", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
 $L['cfg_userstitle'] = array("Title for users", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
 $L['cfg_pmtitle'] = array("Title for PM", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
 $L['cfg_gallerytitle'] = array("Title for gallery", "Available options: {MAINTITLE}, {SUBTITLE}, {TITLE}");		//Sed 175
@@ -287,11 +298,30 @@ $L['cfg_plugtitle'] = array("Title for plugins", "Available options: {MAINTITLE}
 $L['cfg_disable_rss'] = array("Disable RSS feeds", "");
 $L['cfg_disable_rsspages'] = array("Disable RSS feed for pages", "");
 $L['cfg_disable_rsscomments'] = array("Disable RSS feed for comments", "");
+$L['cfg_disable_rssforums'] = array("Disable RSS feed for the forums", "");
 $L['cfg_rss_timetolive'] = array("Cash time for RSS feed", "in seconds");
 $L['cfg_rss_defaultcode'] = array("Default RSS feed", "enter the category code");
 $L['cfg_rss_maxitems'] = array("The maximum number of rows in the RSS feed", "");
 
-$L['adm_help_config_rss'] = "Links to open RSS feeds: <br />".$cfg['mainurl']."/"."rss (by default, the output of news categories specified in the settings) <br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Category code, the last pages of the category) <br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - ID page, comments page)";
+$L['adm_help_config_rss'] = "Links to open RSS feeds: <br />".$cfg['mainurl']."/"."rss (by default, the output of news categories specified in the settings) <br /> ".$cfg['mainurl']."/"."rss/pages?c=XX (XX - Category code, the last pages of the category) <br />".$cfg['mainurl']."/"."rss/comments?id=XX (XX - ID page, comments page) <br />".$cfg['mainurl']."/"."rss/forums (latest posts from all sections of the forum) <br />".$cfg['mainurl']."/"."rss/forums?s=XX (XX - ID section, recent posts section) <br />".$cfg['mainurl']."/"."rss/forums?q=XX (XX - ID topic, recent posts in the topic) <br />".$cfg['mainurl']."/"."rss/forums?s=XX&q=YY (XX - ID section, YY - ID topic)";
+
+/* ====== Forums ====== */
+
+$L['adm_diplaysignatures'] = "Display signatures";
+$L['adm_enablebbcodes'] = "Enable BBcodes";
+$L['adm_enablesmilies'] = "Enable smilies";
+$L['adm_enableprvtopics'] = "Allow private topics";
+$L['adm_countposts'] = "Count posts";
+$L['adm_autoprune'] = "Auto-prune topics after * days";
+$L['adm_postcounters'] = "Check the counters";
+$L['adm_help_forums'] = "Not available";
+$L['adm_forum_structure'] = "Structure of the forums (categories)";	
+$L['adm_forum_structure_cat'] = "Structure of the forums";	
+$L['adm_help_forums_structure'] = "Not available";	
+$L['adm_defstate'] = "Default state";	
+$L['adm_defstate_0'] = "Folded";	
+$L['adm_defstate_1'] = "Unfolded";
+$L['adm_parentcat'] = "Parent category";	// New in v172	
 
 /* ====== IP search ====== */
 
