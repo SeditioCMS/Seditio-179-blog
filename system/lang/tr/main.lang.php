@@ -3,14 +3,14 @@
 /*  ====================
 Seditio - Website engine
 Copyright Neocrome & Seditio Team
-https://seditio.org
+https://seditio.com.tr
 -----------------------
 Seditio language pack
-Language : English (code:en)
+Language : Türkçe (code:tr)
 Localization done by : Neocrome
 -----------------------
 [BEGIN_SED]
-File=system/lang/en/main.lang.php
+File=system/lang/tr/main.lang.php
 Version=179
 Updated=2022-jun-15
 Type=Lang
@@ -21,356 +21,342 @@ Description=Language main
 
 /* ====== Overall ====== */
 
-$L['Access'] = "Access";
-$L['Action'] = "Action";
-$L['Active'] = "Active";
-$L['Add'] = "Add";
+$L['Access'] = "Erişim";
+$L['Action'] = "Eylem";
+$L['Active'] = "Aktif";
+$L['Add'] = "Ekle";
 $L['Admin.'] = "Admin.";
-$L['Administration'] = "Administration";
-$L['Adminpanel'] = "Administration panel";
-$L['Anonymous'] = "Anonymous";
-$L['Age'] = "Age";
-$L['Ago'] = "ago";
+$L['Administration'] = "Yönetim";
+$L['Adminpanel'] = "Yönetim Panel";
+$L['Anonymous'] = "Anonim";
+$L['Age'] = "Yaş";
+$L['Ago'] = "önce";
 $L['AIM'] = "AIM Address";
-$L['Alias'] = "Alias";
-$L['Allcategories'] = "All categories";
-$L['All'] = "All";
-$L['Allpages'] = "All pages";
-$L['Alltimesare'] = "All times are";
-$L['Announcement'] = "Announcement";
-$L['Archives'] = "Archives";
-$L['Ascending'] = "Ascending";
-$L['Author'] = "Author";
-$L['Auth'] = "Authorization"; // New in v178
-$L['Banned'] = "Banned";
-$L['Banlist'] = "Banlist";
+$L['Alias'] = "Takma ad";
+$L['Allcategories'] = "Tüm Kategoriler";
+$L['All'] = "Hepsi";
+$L['Allpages'] = "Tüm sayfalar";
+$L['Alltimesare'] = "Tüm zamanlar";
+$L['Announcement'] = "Duyuru";
+$L['Archives'] = "Arşivler";
+$L['Ascending'] = "Artan";
+$L['Author'] = "Yazar";
+$L['Auth'] = "Yetki"; // New in v178
+$L['Banned'] = "Yasaklı";
+$L['Banlist'] = "Yasaklı listesi";
 $L['BBcode'] = "BBcode";
 $L['BBcodes'] = "BBcodes";
-$L['Begin'] = "Begin";
-$L['Birthdate'] = "Birthdate";
-$L['Birthday'] = "Birthday";
-$L['Body'] = "Body";
+$L['Begin'] = "Başlama";
+$L['Birthdate'] = "Doğum tarihi";
+$L['Birthday'] = "Doğum günü";
+$L['Body'] = "Alan";
 $L['Bump'] = "Bump";
-$L['Byfirstletter'] = "By first letter";
+$L['Byfirstletter'] = "ilk harfle";
 $L['bytes'] = "bytes";
-$L['Cancel'] = "Cancel";
+$L['Cancel'] = "İptal";
 $L['Captcha'] = "Captcha";
-$L['Category'] = "Category";
-$L['Categories'] = "Categories";
-$L['Clearstatus'] = "Clear status";
-$L['Close'] = "Close";
-$L['Clone'] = "Clone"; 
-$L['Code'] = "Code";
-$L['Configuration'] = "Configuration";
+$L['Category'] = "Kategori";
+$L['Categories'] = "Kategoriler";
+$L['Clearstatus'] = "Durumu temizle";
+$L['Close'] = "Kapat";
+$L['Clone'] = "Kopyası"; 
+$L['Code'] = "Kod";
+$L['Configuration'] = "Yapılandırma";
 $L['Configname'] = "Config name";
-$L['Comment'] = "Comment";
-$L['Comments'] = "Comments";
-$L['Confirm'] = "Confirm";
-$L['Copy'] = "Copy";   
-$L['Copyurl'] = "Copy URL";
-$L['Copyright'] = "Copyright";
+$L['Comment'] = "Yorum";
+$L['Comments'] = "Yorumlar";
+$L['Confirm'] = "Onayla";
+$L['Copy'] = "Copya";   
+$L['Copyurl'] = "Copya URL";
+$L['Copyright'] = "Telif hakkı";
 $L['Core'] = "Core";
-$L['Count'] = "Count";
-$L['Country'] = "Country";
-$L['Create'] = "Create";
+$L['Count'] = "Say";
+$L['Country'] = "Ülke";
+$L['Create'] = "Oluştur";
 $L['Custom'] = "Custom";
 $L['Database'] = "Database";
-$L['Date'] = "Date";
-$L['Day'] = "day";
-$L['Days'] = "days";
-$L['Default'] = "Default";
-$L['Delete'] = "Delete";
-$L['Descending'] = "Descending";
-$L['Description'] = "Description";
-$L['Disabled'] = "Disabled";
+$L['Date'] = "Tarih";
+$L['Day'] = "gün";
+$L['Days'] = "gün";
+$L['Default'] = "Varsayılan";
+$L['Delete'] = "Sil";
+$L['Descending'] = "Azalan";
+$L['Description'] = "Açıklama";
+$L['Disabled'] = "Kapalı";
 $L['Download'] = "Download";
-$L['Duplicate'] = "Duplicate";
-$L['Duration'] = "Duration";
-$L['Edit'] = "Edit";
-$L['Error'] = "Error";
+$L['Duplicate'] = "Kopyala";
+$L['Duration'] = "Süre";
+$L['Edit'] = "Düzenle";
+$L['Error'] = "Hata";
 $L['Email'] = "Email";
-$L['Emailmask'] = "Email mask";
-$L['Enabled'] = "Enabled";
-$L['Event'] = "Event";
-$L['Events'] = "Events";
-$L['Expand'] = "Expand";
-$L['Expire'] = "Expire";
-$L['Extrafield'] = "Extra field";
-$L['File'] = "File";
-$L['Files'] = "Files";
-$L['Filter'] = "Filter";
-$L['Filters'] = "Filters";
-$L['Fold'] = "Fold";
-$L['Folder'] = "Folder";
-$L['Folders'] = "Folders";
-$L['Forums'] = "Forums";
-$L['Gallery'] = "Gallery";
-$L['Galleries'] = "Galleries";
-$L['Gender'] = "Gender";
-$L['Picture'] = "Picture";
-$L['Pictures'] = "pictures";
-$L['Ghost'] = "Ghost";
-$L['Group'] = "Group";
-$L['Groups'] = "Groups";
-$L['Gotosite'] = "Go to site";
-$L['Guest'] = "Guest";
-$L['Guests'] = "Guests";
-$L['Headlines'] = "View headlines";
-$L['Help'] = "Help";
-$L['Here'] = "Here";
-$L['Hi'] = "Hi";
-$L['Hide'] = "Hide";
-$L['Hidden'] = "Hidden";
-$L['Hits'] = "Hits";
-$L['Home'] = "Home";
-$L['Hook'] = "Hook";
-$L['Hooks'] = "Hooks";
-$L['Hour'] = "hour";
-$L['Hours'] = "hours";
+$L['Emailmask'] = "Email maskesi";
+$L['Enabled'] = "Açık";
+$L['Event'] = "Etkinlik";
+$L['Events'] = "Etkinlikler";
+$L['Expand'] = "Genişlet";
+$L['Expire'] = "Bitiş";
+$L['Extrafield'] = "Ekstra alan";
+$L['File'] = "Dosya";
+$L['Files'] = "Dosyalar";
+$L['Filter'] = "Filtre";
+$L['Filters'] = "Filtreler";
+$L['Fold'] = "Katla";
+$L['Folder'] = "Dosya";
+$L['Folders'] = "Dosyalar";
+$L['Gallery'] = "Galeri";
+$L['Galleries'] = "Galeriler";
+$L['Gender'] = "Cinsiyet";
+$L['Picture'] = "Resim";
+$L['Pictures'] = "resimler";
+$L['Ghost'] = "Hayalet";
+$L['Group'] = "Grup";
+$L['Groups'] = "Gruplar";
+$L['Gotosite'] = "Siteye git";
+$L['Guest'] = "konuk";
+$L['Guests'] = "konuklar";
+$L['Headlines'] = "Başlıkları görüntüle";
+$L['Help'] = "Yardım";
+$L['Here'] = "Burada";
+$L['Hi'] = "Merhaba";
+$L['Hide'] = "Gizli";
+$L['Hidden'] = "Gizlenmiş";
+$L['Hits'] = "Hit";
+$L['Home'] = "Anasayfa";
+$L['Hook'] = "Kanca";
+$L['Hooks'] = "Kancalar";
+$L['Hour'] = "saat";
+$L['Hours'] = "saat";
 $L['Icon'] = "Icon (URL)";
 $L['ICQ'] = "ICQ Number";
 $L['Id'] = "ID";
 $L['Image'] = "Image";
 $L['ImageURL'] = "Image URL";
-$L['Install'] = "Installing";
+$L['Install'] = "Yükle";
 $L['Ip'] = "IP";
 $L['Ipsearch'] = "IP search";
 $L['Ipmask'] = "IP mask";
-$L['Inactive'] = "Inactive";
+$L['Inactive'] = "Etkin değil";
 $L['IRC'] = "IRC";
-$L['Item'] = "Item";
-$L['Items'] = "Items";
-$L['Journal'] = "Weblog";
-$L['Journals'] = "Weblogs";
-$L['Journalpage'] = "Weblog page";
+$L['Item'] = "Öğe";
+$L['Items'] = "Öğeler";
 $L['Key'] = "Key";
 $L['kb'] = "KB";
 $L['Left']	= "Left";
 $L['Level']	= "Level";
 $L['Levels']	= "Levels";
 $L['Lastlogged'] = "Last logged";
-$L['Lastpost'] = "Last post";
 $L['Link']	= "Link";
 $L['Links']	= "Links";
-$L['Location'] = "Location";
-$L['Lock'] = "Lock";
-$L['Locked'] = "Locked";
+$L['Location'] = "Konum";
+$L['Lock'] = "Kilit";
+$L['Locked'] = "Kilitli";
 $L['Log'] = "Log";
-$L['Login'] = "Login";
-$L['Logout'] = "Logout";
-$L['Main'] = "Main";
-$L['Maingroup'] = "Main group";
-$L['Maintenance'] = "Maintenance Mode"; //New in v175
+$L['Login'] = "Giriş";
+$L['Logout'] = "Çıkış";
+$L['Main'] = "Ana";
+$L['Maingroup'] = "Main grup";
+$L['Maintenance'] = "Bakım Modu"; //New in v175
 $L['Mainmenu'] = "Main menu";
-$L['Makesticky'] = "Sticky";
+$L['Makesticky'] = "Yapışkan";
 $L['Menu'] = "Menu";
 $L['Menus'] = "Menus";
-$L['Member'] = "Member";
-$L['Members'] = "Members";
-$L['Message'] = "Message";
-$L['Messages'] = "Messages";
+$L['Member'] = "Üye";
+$L['Members'] = "Üyeler";
+$L['Message'] = "Mesaj";
+$L['Messages'] = "Mesajlar";
 $L['Meta'] = "Metadata";   //New in v175
 $L['Minlevel'] = "Min.level";
-$L['Minute'] = "minute";
-$L['Minutes'] = "minutes";
-$L['Moderators'] = "Moderators";
-$L['Module'] = "Module";
-$L['Modules'] = "Modules";
+$L['Minute'] = "dakika";
+$L['Minutes'] = "dakika";
+$L['Moderators'] = "Moderatörler";
+$L['Module'] = "Modül";
+$L['Modules'] = "Modüller";
 $L['MSN'] = "MSN Messenger";
-$L['More'] = "More...";
+$L['More'] = "Daha...";
 $L['Move'] = "Move";
 $L['Moved'] = "Moved";
-$L['Mypfs'] = "My files";
-$L['Myjournal'] = "My weblog";
-$L['na'] = "Not available";
-$L['Name'] = "Name";
-$L['Names'] = "Names";
-$L['Next'] = "Next page";
-$L['New'] = "New";
-$L['News'] = "News";
-$L['Newspost'] = "News post";
-$L['Newsposts'] = "News posts";
+$L['Mypfs'] = "Dosyalarım";
+$L['na'] = "Müsait değil";
+$L['Name'] = "İsim";
+$L['Names'] = "İsimler";
+$L['Next'] = "Sonraki Sayfa";
+$L['New'] = "Yeni";
+$L['News'] = "Haberler";
+$L['Newspost'] = "Haber gönderisi";
+$L['Newsposts'] = "Haber gönderileri";
 $L['No'] = "No";
 $L['None'] = "None";
 $L['Normal'] = "No";
 $L['Notes'] = "Notes";
-$L['Occupation'] = "Occupation";
-$L['Online'] = "Online"; 				// New in v130
-$L['Offline'] = "Offline"; 				// New in v130
-$L['Open'] = "Open";
-$L['Option'] = "Option";
-$L['Options'] = "Options";
-$L['Order'] = "Order";
-$L['Originalmessage'] = "Original message";
-$L['Other'] = "Other";
-$L['Overview'] = "Overview";
-$L['Owner'] = "Owner";
-$L['Page'] = "Page";
-$L['Pages'] = "Pages";
-$L['Part'] = "Part";
-$L['Parts'] = "Parts";
-$L['Path'] = "Path";
-$L['Password'] = "Password";
-$L['PFS'] = "Personal File Space";
-$L['Plugins'] = "Plugins";
-$L['Plugin'] = "Plugin";
-$L['Poll'] = "Poll";
-$L['Polls'] = "Polls";
-$L['Post'] = "Post";
-$L['Posts'] = "Posts";
-$L['Poster'] = "Poster";
-$L['Preview'] = "Preview";
-$L['Previous'] = "Previous page";
-$L['Private'] = "Private";
-$L['Private_Messages'] = "Private messages";
-$L['Print'] = "Print"; // New in v175
-$L['Printversion'] = "Print version";  // New in v175
-$L['Profile'] = "Profile";
-$L['Prune'] = "Prune";
-$L['Public'] = "Public";
-$L['Putinvalidationqueue'] = "Put in validation queue";
-$L['Quote'] = "Quote";
-$L['Rank'] = "Rank";
-$L['Rated'] = "Rated";
-$L['Rating'] = "Rating";
-$L['Ratings'] = "Ratings";
-$L['Read'] = "Read";
-$L['ReadMore'] = "Read more...";
-$L['Reason'] = "Reason";
-$L['Referer'] = "Referer";
-$L['Referers'] = "Referers";
-$L['Refresh'] = "Refresh";
-$L['Reply'] = "Reply";
-$L['Replies'] = "Replies";
-$L['Register'] = "Register";
-$L['Registered'] = "Registered";
-$L['Registration'] = "Registration";
-$L['Remove'] = "Remove";
-$L['Reset'] = "Reset";
-$L['Restore'] = "Restore";
-$L['Resync'] = "Resync";
-$L['Right'] = "Right";
-$L['Rights'] = "Rights";
-$L['Show'] = "Show";
+$L['Occupation'] = "Meslek";
+$L['Online'] = "Çevrimiçi"; 				// New in v130
+$L['Offline'] = "Çevrimdışı"; 				// New in v130
+$L['Open'] = "Açık";
+$L['Option'] = "Seçenek";
+$L['Options'] = "Seçenekler";
+$L['Order'] = "Emir";
+$L['Originalmessage'] = "Orijinal mesaj";
+$L['Other'] = "Diğer";
+$L['Overview'] = "Genel bakış";
+$L['Owner'] = "Sahip";
+$L['Page'] = "Sayfa";
+$L['Pages'] = "Sayfalar";
+$L['Part'] = "Bölüm";
+$L['Parts'] = "Bölümler";
+$L['Path'] = "Yol";
+$L['Password'] = "Şifre";
+$L['PFS'] = "Kişisel Dosya Alanı";
+$L['Plugins'] = "Eklentiler";
+$L['Plugin'] = "Eklenti";
+$L['Poll'] = "Anket";
+$L['Polls'] = "Anketler";
+$L['Preview'] = "Ön izleme";
+$L['Previous'] = "Önceki sayfa";
+$L['Private'] = "Özel";
+$L['Private_Messages'] = "Özel mesajlar";
+$L['Print'] = "Yazdır"; // New in v175
+$L['Printversion'] = "Baskı versiyonu";  // New in v175
+$L['Profile'] = "Profil";
+$L['Prune'] = "Kes";
+$L['Public'] = "Genel";
+$L['Putinvalidationqueue'] = "Onay sırasına koy";
+$L['Quote'] = "Alıntı";
+$L['Rank'] = "Derece";
+$L['Rated'] = "Oy";
+$L['Rating'] = "Değerlendirme";
+$L['Ratings'] = "Derecelendirmeler";
+$L['Read'] = "Oku";
+$L['ReadMore'] = "Devamını oku...";
+$L['Reason'] = "Sebep";
+$L['Referer'] = "Gönderen";
+$L['Referers'] = "Gönderenler";
+$L['Refresh'] = "Yenile";
+$L['Reply'] = "Cevapla";
+$L['Replies'] = "Yanıt";
+$L['Register'] = "Kayıt ol";
+$L['Registered'] = "Kayıtlı";
+$L['Registration'] = "Kayıt";
+$L['Remove'] = "Kaldır";
+$L['Reset'] = "Sıfırla";
+$L['Restore'] = "Eski haline getir";
+$L['Resync'] = "Yeniden senkronize et";
+$L['Right'] = "Yetki";
+$L['Rights'] = "Haklar";
+$L['Show'] = "Göster";
 $L['Spoiler'] = "Spoiler";
-$L['Standalone'] = "Standalone";
-$L['Statistics'] = "Statistics";
-$L['StatsLogs'] = "Statistics & logs";
-$L['Structure'] = "Structure";
-$L['Search'] = "Search";
-$L['Second'] = "second";
-$L['Seconds'] = "seconds";
-$L['Section'] = "Section";
-$L['Sections'] = "Sections";
-$L['Security'] = "Security";
+$L['Standalone'] = "Bağımsız";
+$L['Statistics'] = "İstatistik";
+$L['StatsLogs'] = "İstatistikler ve günlükler";
+$L['Structure'] = "Yapı";
+$L['Search'] = "Arama";
+$L['Second'] = "saniye";
+$L['Seconds'] = "saniye";
+$L['Section'] = "Bölüm";
+$L['Sections'] = "Bölümler";
+$L['Security'] = "Güvenlik";
 $L['Set'] = "Set";
-$L['Setup'] = "Setup";
-$L['SFS'] = "Site File Space";
+$L['Setup'] = "Kurulum";
+$L['SFS'] = "Site Dosya Alanı";
 $L['Size'] = "Size";
-$L['Skin'] = "Skin";
-$L['Skins'] = "Skins";
+$L['Skin'] = "Tema";
+$L['Skins'] = "Temalar";
 $L['Skype'] = "Skype Number";  // New in v175
-$L['Smilies'] = "Smilies";
-$L['Started'] = "Started";
-$L['Status'] = "Status";
-$L['Sub'] = "Sub";    // New in v161
-$L['Submit'] = "Submit";
-$L['System'] = "System";
-$L['Tag'] = "Tag";
-$L['Tags'] = "Tags";
-$L['Text'] = "Text";
-$L['Thumbnail'] = "Thumbnail";
-$L['Thumbnails'] = "Thumbnails";
-$L['Timezone'] = "Timezone";
-$L['Title'] = "Title";
-$L['Tool'] = "Tool";
-$L['Tools'] = "Tools";
-$L['Topic'] = "Topic";
-$L['Topics'] = "Topics";
-$L['Topicoptions'] = "Topic options";
-$L['Topiclocked'] = "This topic is locked, new posts are not allowed.";
+$L['Smilies'] = "İfadeler";
+$L['Started'] = "Başladı";
+$L['Status'] = "Durum";
+$L['Sub'] = "Alt";    // New in v161
+$L['Submit'] = "Gönder";
+$L['System'] = "Sistem";
+$L['Tag'] = "Etiket";
+$L['Tags'] = "Etiketler";
+$L['Text'] = "Metin";
+$L['Thumbnail'] = "Küçük resim";
+$L['Thumbnails'] = "Küçük resimler";
+$L['Timezone'] = "Saat dilimi";
+$L['Title'] = "Başlık";
+$L['Tool'] = "Araçlar";
+$L['Tools'] = "Araçlar";
 $L['Total'] = "Total";
 $L['TPL'] = "TPL";		// New in v110
-$L['Trash'] = "Trash"; 		// New in v110
-$L['Trashcan'] = "Trash can";
-$L['Type'] = "Type";
-$L['Unfold'] = "Unfold";
+$L['Trash'] = "Çöp"; 		// New in v110
+$L['Trashcan'] = "Çöp tenekesi";
+$L['Type'] = "Tip";
+$L['Unfold'] = "Aç";
 $L['Unknown'] = "?";
-$L['Unlock'] = "Unlock";
-$L['Unlocked'] = "Unlocked";
-$L['Until'] = "Until";
-$L['Update'] = "Update";
-$L['Updated'] = "Updated";
-$L['Upload'] = "Upload";
+$L['Unlock'] = "Kilidi aç";
+$L['Unlocked'] = "Kilidi açıldı";
+$L['Until'] = "Asla";
+$L['Update'] = "Güncelleme";
+$L['Updated'] = "Güncellenmiş";
+$L['Upload'] = "Yükle";
 $L['URL'] = "URL";
-$L['User'] = "User";
-$L['Userid'] = "User ID";
-$L['Users'] = "Users";
-$L['Username'] = "Login";
-$L['Userfirstname'] = "First name";
-$L['Userlastname'] = "Last name";
-$L['Validate'] = "Validate";
-$L['Value'] = "Value";
-$L['Values'] = "Values";
-$L['Version'] = "Version";
-$L['View'] = "View";
-$L['Views'] = "Views";
-$L['Vote'] = "Vote";
-$L['Voteto'] = "Vote";
-$L['Votes'] = "Votes";
+$L['User'] = "Üye";
+$L['Userid'] = "Üye ID";
+$L['Users'] = "Üyeler";
+$L['Username'] = "Giriş";
+$L['Userfirstname'] = "İlk adı";
+$L['Userlastname'] = "Soyadı";
+$L['Validate'] = "Doğrula";
+$L['Value'] = "Değer";
+$L['Values'] = "Değerler";
+$L['Version'] = "Sürüm";
+$L['View'] = "İzlenim";
+$L['Views'] = "izlenimler";
+$L['Vote'] = "Oy";
+$L['Voteto'] = "Oy";
+$L['Votes'] = "Oylar";
 $L['Website'] = "Website";
-$L['Wipe'] = "Wipe";
-$L['Wipeall'] = "Wipe all";
-$L['Write'] = "Write";
-$L['Uninstall'] = "Uninstalling";
-$L['Yes'] = "Yes";
+$L['Wipe'] = "Sil";
+$L['Wipeall'] = "Hepsini sil";
+$L['Write'] = "Yaz";
+$L['Uninstall'] = "Kaldır";
+$L['Yes'] = "Evet";
 $L['YIM'] = "Yahoo Messenger";
+$L['January'] = "Ocak";
+$L['February'] = "Şubat";
+$L['March'] = "Mart";
+$L['April'] = "Nisan";
+$L['May'] = "Mayıs";
+$L['June'] = "Haziran";
+$L['July'] = "Temmuz";
+$L['August'] = "Ağustos";
+$L['September'] = "Eylül";
+$L['October'] = "Ekim";
+$L['November'] = "Kasım";
+$L['December'] = "Aralık";
 
-$L['January'] = "January";
-$L['February'] = "February";
-$L['March'] = "March";
-$L['April'] = "April";
-$L['May'] = "May";
-$L['June'] = "June";
-$L['July'] = "July";
-$L['August'] = "August";
-$L['September'] = "September";
-$L['October'] = "October";
-$L['November'] = "November";
-$L['December'] = "December";
-
-$L['Gender_F'] = "Female";
-$L['Gender_M'] = "Male";
+$L['Gender_F'] = "Kadın";
+$L['Gender_M'] = "Erkek";
 $L['Gender_U'] = "Unknown";
 
 /* ====== Common ====== */
 
-$L['com_skinfail'] = "Warning, failed to load your prefered skin, check your profile.";
-$L['com_members'] = "member(s)";
-$L['com_guests'] = "guest(s)";
+$L['com_skinfail'] = "Uyarı, tercih ettiğiniz tema yüklenemedi, profilinizi kontrol edin.";
+$L['com_members'] = "üye";
+$L['com_guests'] = "misafir";
 
 /* ====== Gallery ====== */
 
-$L['gallery_home_title'] = "Galleries";         // New in v150
-$L['gallery_browse_title'] = "Gallery";         // New in v150
-$L['gallery_details_title'] = "Picture";         // New in v150
+$L['gallery_home_title'] = "Galeriler";         // New in v150
+$L['gallery_browse_title'] = "Galeri";         // New in v150
+$L['gallery_details_title'] = "Resim";         // New in v150
 
 /* ====== Header ====== */
 
-$L['hea_privatemessages'] = "new private message(s)";
-$L['hea_noprivatemessages'] = "No private messages";
-$L['hea_youareloggedas'] = "Logged in as";
-$L['hea_youarenotlogged'] = "You're not logged in.";
-$L['hea_valqueues'] = "In validation queues : ";
+$L['hea_privatemessages'] = "yeni özel mesaj(lar)";
+$L['hea_noprivatemessages'] = "özel mesaj yok";
+$L['hea_youareloggedas'] = "olarak giriş yaptı";
+$L['hea_youarenotlogged'] = "Giriş yapmadınız.";
+$L['hea_valqueues'] = "Onay sırasında : ";
 
-$L['hea_logout'] = "Logout";  // New in v175
-$L['hea_profile'] = "Profile"; // New in v175
-$L['hea_private_messages'] = "Private messages";  // New in v175
-$L['hea_mypfs'] = "My files"; // New in v175
-$L['hea_users'] = "Users"; // New in v175
-$L['hea_administration'] = "Administration";  // New in v175
+$L['hea_logout'] = "Çıkış";  // New in v175
+$L['hea_profile'] = "Profil"; // New in v175
+$L['hea_private_messages'] = "Özel mesajlar";  // New in v175
+$L['hea_mypfs'] = "Dosyalarım"; // New in v175
+$L['hea_users'] = "Üyeler"; // New in v175
+$L['hea_administration'] = "Yönetim";  // New in v175
 
-$L['hea_pageadd'] = "Add new page"; // New in v178
+$L['hea_pageadd'] = "Yeni sayfa ekle"; // New in v178
 
 /* ====== Footer ====== */
 
@@ -387,57 +373,38 @@ $L['foo_sqlaverage'] = "Average SQL time";
 
 /* ====== Auth ====== */
 
-$L['aut_usernametooshort']= "The user name must be at least 2 chars long";
-$L['aut_passwordtooshort'] = "The password must be at least 4 chars long and must consist of alphanumerical characters and underscore only.";
-$L['aut_emailtooshort'] = "The email is not valid.";
-$L['aut_usernamealreadyindb'] = "The user name you provided is already in the database";
-$L['aut_emailalreadyindb'] = "The email you provided is already in the database";
-$L['aut_passwordmismatch'] = "The password fields do not match !";
-$L['aut_emailbanned'] = "This email (or this host) is banned, reason is : ";
-
-$L['aut_contactadmin'] = "If you have any difficulties please contact the board administrator";
-
-$L['aut_regrequesttitle'] = "Registration request";
-$L['aut_regrequest'] = "Hi %1\$s,\n\nYou are receiving this email because you have (or someone pretending to be you has) registered a new account on our website. If you did not request this email then please ignore it, if you keep receiving it please contact the site administrator. \n\nYour account is currently inactive, an administrator will need to activate it before you can log in. You will receive another email when this has occured. Then you will be able to login with : \n\nUsername = %1\$s \nPassword = %2\$s";
-
-$L['aut_regreqnoticetitle'] = "New account request";
-$L['aut_regreqnotice'] = "Hi,\n\nYou are receiving this email because %1\$s requested a new account.\nThis user won't be able to login until you manually set the account as 'active', here :\n\n %2\$s";
-
-$L['aut_emailreg'] = "Hi %1\$s,\n\nYou are receiving this email because you have (or someone pretending to be you has) registered a new account on our website. If you did not request this email then please ignore it, if you keep receiving it please contact the site administrator.\n\nTo use your account you need to activate it with this link :\n\n %3\$s \n\n Then you'll be able to login with : \n\nUsername = %1\$s \nPassword = %2\$s";
-
-$L['aut_registertitle'] = "Register a new member account";
+$L['aut_usernametooshort']= "Kullanıcı adı en az 4 karakter uzunluğunda olmalıdır";
+$L['aut_passwordtooshort'] = "Şifre en az 8 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterlerden ve alt çizgiden oluşmalıdır.";
+$L['aut_emailtooshort'] = "E-posta geçerli değil.";
+$L['aut_usernamealreadyindb'] = "Bu kullanıcı adı veritabanında var.";
+$L['aut_emailalreadyindb'] = "Bu e-posta veritabanında var.";
+$L['aut_passwordmismatch'] = "Şifre alanları eşleşmiyor !";
+$L['aut_emailbanned'] = "Bu e-posta (veya bu ana bilgisayar) yasaklandı, nedeni : ";
+$L['aut_contactadmin'] = "Herhangi bir zorluk yaşarsanız, lütfen site yöneticisiyle iletişime geçin.";
+$L['aut_regrequesttitle'] = "Kayıt talebi";
+$L['aut_regrequest'] = "Merhaba %1\$s,\n\nBu e-postayı, web sitemizde yeni bir hesap açmış olduğunuz (veya sizin gibi davranan biri) olduğu için alıyorsunuz. Bu e-postayı siz istemediyseniz lütfen dikkate almayın, almaya devam ederseniz lütfen site yöneticisiyle iletişime geçin. \n\nHesabınız şu anda etkin değil, oturum açabilmeniz için bir yöneticinin hesabı etkinleştirmesi gerekecek. Bu gerçekleştiğinde başka bir e-posta alacaksınız. O zaman ile giriş yapabileceksiniz : \n\nÜye adı = %1\$s \nŞifre = %2\$s";
+$L['aut_regreqnoticetitle'] = "Yeni hesap isteği";
+$L['aut_regreqnotice'] = "Merhaba,\n\nBu e-postayı alıyorsunuz çünkü %1\$s yeni bir hesap istedi.\nBu kullanıcı, hesabı manuel olarak 'etkin' olarak ayarlayana kadar giriş yapamayacak, burada :\n\n %2\$s";
+$L['aut_emailreg'] = "Merhaba %1\$s,\n\nBu e-postayı, web sitemizde yeni bir hesap açmış olduğunuz (veya sizin gibi davranan biri) olduğu için alıyorsunuz. Bu e-postayı siz istemediyseniz lütfen dikkate almayın, almaya devam ederseniz lütfen site yöneticisiyle iletişime geçin.\n\nHesabınızı kullanmak için bu bağlantıyla etkinleştirmeniz gerekir :\n\n %3\$s \n\n O zaman giriş yapabileceksiniz : \n\nÜye adı = %1\$s \nŞifre = %2\$s";
+$L['aut_registertitle'] = "Yeni bir üye hesabı kaydedin";
 $L['aut_registersubtitle'] = "";
-$L['aut_logintitle'] = "Login form";
+$L['aut_logintitle'] = "Giriş Formu";
 
 /* ====== Comments ====== */
 
-$L['com_disable'] = "Commenting is disabled!"; // New in v173
-$L['com_commenttooshort'] = "The comment is too short or missing";
-$L['com_commenttoolong'] = "The comment is too long";
-$L['com_commentadded'] = "Done, comment added";
-$L['com_regonly'] = "Only registered users can post new comments";
-$L['com_nocommentsyet'] = "No comments yet";
+$L['com_disable'] = "Yorum yapma devre dışı!"; // New in v173
+$L['com_commenttooshort'] = "Yorum çok kısa veya eksik";
+$L['com_commenttoolong'] = "Yorum çok uzun";
+$L['com_commentadded'] = "Bitti, yorum eklendi";
+$L['com_regonly'] = "Sadece kayıtlı kullanıcılar yeni yorum gönderebilir";
+$L['com_nocommentsyet'] = "henüz yorum yok";
 $L['com_gup'] = " left";
-$L['com_commenteditallowtime'] = "Out occurred time allowed to edit a comment";
-$L['com_commentdeleteallowtime'] = "Out occurred time allowed to delete a comment";
-
-/* ====== Forums ======= */
-
-$L['for_newtopic'] = "New topic";
-$L['for_markallasread'] = "Mark all posts as read";
-$L['for_titletooshort'] = "The title is too short or missing"; // New in v171
-$L['for_msgtooshort'] = "Text of the topic is too short or missing"; // New in v171
-$L['for_updatedby'] = "<br /><em>This post was edited by %1\$s (%2\$s, %3\$s ago)</em>";
-$L['for_antibump'] = "The anti-bump protection is up, you cannot post twice in a row.";
-$L['for_mod_clear'] = "Clear the ratings";    // New in v160
-$L['for_mod_force'] = "Force the rating to ";    // New in v160
-
-$L['for_quickpost'] = "Quick response"; // New in v178
-$L['for_post_text'] = "Текст поста"; // New in v178
+$L['com_commenteditallowtime'] = "Bir yorumu düzenlemek için kalan eden süre";
+$L['com_commentdeleteallowtime'] = "Bir yorumu silmek için kalan eden süre";
 
 /* ====== List ====== */
 
-$L['lis_submitnew'] = "Submit a new entry";
+$L['lis_submitnew'] = "Yeni bir giriş gönder";
 
 /* ====== Messages ====== */
 
@@ -445,41 +412,41 @@ $L['lis_submitnew'] = "Submit a new entry";
 
 /* ====== Pages ====== */
 
-$L['pag_catmissing'] = "The category code is missing";
-$L['pag_titletooshort'] = "The title is too short or missing";
-$L['pag_desctooshort'] = "The description is too short or missing";
-$L['pag_authortooshort'] = "The author name is too short or missing";
-$L['pagadd_title'] = "New page submission form";
-$L['pagadd_subtitle'] = "Submit a new page";
-$L['paged_title'] = "Page properties";
-$L['paged_subtitle'] = "Update values for this page";
+$L['pag_catmissing'] = "Kategori kodu eksik";
+$L['pag_titletooshort'] = "Başlık çok kısa veya eksik";
+$L['pag_desctooshort'] = "Açıklama çok kısa veya eksik";
+$L['pag_authortooshort'] = "Yazar adı çok kısa veya eksik";
+$L['pagadd_title'] = "Yeni sayfa gönderim formu";
+$L['pagadd_subtitle'] = "Yeni bir sayfa gönder";
+$L['paged_title'] = "Sayfa özellikleri";
+$L['paged_subtitle'] = "Bu sayfanın değerlerini güncelle";
 
 /* ====== Personal file space ====== */
 
-$L['pfs_title'] = "My Personal File Space";
-$L['pfs_filetoobigorext'] = "The upload failed, this file is too big maybe, or the extension is not allowed ?";
-$L['pfs_fileexists'] = "The upload failed, there's already a file with this name ?";
-$L['pfs_filelistempty'] = "List is empty.";
-$L['pfs_folderistempty'] = "This folder is empty.";
-$L['pfs_totalsize'] = "Total size";
-$L['pfs_maxspace'] = "Maximum space allowed";
-$L['pfs_maxsize'] = "Maximum size for a file";
-$L['pfs_filesintheroot'] = "File(s) in the root";
-$L['pfs_filesinthisfolder'] = "File(s) in this folder";
-$L['pfs_newfile'] = "Upload a file :";
-$L['pfs_newfolder'] = "Create a new folder :";
-$L['pfs_editfolder'] = "Editing a folder";
-$L['pfs_editfile'] = "Editing a file";
-$L['pfs_extallowed'] = "Extensions allowed";
+$L['pfs_title'] = "Kişisel Dosya Alanım";
+$L['pfs_filetoobigorext'] = "Yükleme başarısız oldu, bu dosya çok büyük olabilir veya uzantıya izin verilmiyor ?";
+$L['pfs_fileexists'] = "Yükleme başarısız oldu, bu ada sahip bir dosya zaten var ?";
+$L['pfs_filelistempty'] = "Liste boş.";
+$L['pfs_folderistempty'] = "Bu klasör boş.";
+$L['pfs_totalsize'] = "Toplam boyut";
+$L['pfs_maxspace'] = "İzin verilen maksimum alan";
+$L['pfs_maxsize'] = "Bir dosya için maksimum boyut";
+$L['pfs_filesintheroot'] = "Kökteki dosya(lar)";
+$L['pfs_filesinthisfolder'] = "Bu klasördeki dosya(lar)";
+$L['pfs_newfile'] = "Bir dosya yükle :";
+$L['pfs_newfolder'] = "Yeni bir klasör oluştur :";
+$L['pfs_editfolder'] = "Bir klasörü düzenleme";
+$L['pfs_editfile'] = "Dosya düzenleme";
+$L['pfs_extallowed'] = "İzin verilen uzantılar";
 
-$L['pfs_insertasthumbnail'] = "Insert as thumbnail"; // New in v175
-$L['pfs_insertasimage'] = "Insert as full size image"; // New in v175
-$L['pfs_insertaslink'] = "Insert as a link to the file"; // New in v175
-$L['pfs_multiuploading'] = "Multiple File Upload"; // New in v175
+$L['pfs_insertasthumbnail'] = "Küçük resim olarak ekle"; // New in v175
+$L['pfs_insertasimage'] = "Tam boyutlu resim olarak ekle"; // New in v175
+$L['pfs_insertaslink'] = "Dosyaya bağlantı olarak ekle"; // New in v175
+$L['pfs_multiuploading'] = "Çoklu Dosya Yükleme"; // New in v175
 
-$L['pfs_setassample'] = "Set as sample";  // New in v150
-$L['pfs_addlogo'] = "Add the logo";  // New in v150
-$L['pfs_resize'] = "Resize if larger than %1\$s pixels";  // New in v150
+$L['pfs_setassample'] = "Örnek olarak ayarla";  // New in v150
+$L['pfs_addlogo'] = "Logo ekle";  // New in v150
+$L['pfs_resize'] = "Şundan büyükse yeniden boyutlandır %1\$s pixels";  // New in v150
 
 /* ====== Plug ====== */
 
@@ -487,109 +454,106 @@ $L['pfs_resize'] = "Resize if larger than %1\$s pixels";  // New in v150
 
 /* ====== Pm ====== */
 
-$L['pm_titletooshort'] = "The title is too short or missing";
-$L['pm_bodytooshort'] = "The body of the private message is too short or missing";
-$L['pm_bodytoolong'] = "The body of the private message is too long, ".$cfg['pm_maxsize']." chars maximum";
-$L['pm_wrongname'] = "At least one recipient was wrong, and so removed from the list";
-$L['pm_toomanyrecipients'] = "%1\$s recipients maximum please";
-$L['pmsend_title'] = "Send a new private message";
+$L['pm_titletooshort'] = "Başlık çok kısa veya eksik";
+$L['pm_bodytooshort'] = "Özel mesajın gövdesi çok kısa veya eksik";
+$L['pm_bodytoolong'] = "Özel mesajın gövdesi çok uzun, ".$cfg['pm_maxsize']." maksimum karakter";
+$L['pm_wrongname'] = "En az bir alıcı hatalı olduğu için listeden kaldırıldı";
+$L['pm_toomanyrecipients'] = "%1\$s maksimum alıcı lütfen";
+$L['pmsend_title'] = "Yeni bir özel mesaj gönder";
 $L['pmsend_subtitle'] = "";
-$L['pm_sendnew'] = "Send a new private message";
-$L['pm_inbox'] = "In-box";
-$L['pm_inboxsubtitle'] = "Private messages, newest is at top";
-$L['pm_sentbox'] = "Sent-box";
-$L['pm_sentboxsubtitle'] = "Messages sent and not yet displayed by the recipient";
-$L['pm_archives'] = "Archives";
-$L['pm_arcsubtitle'] = "Old messages, newest is at top";
-$L['pm_replyto'] = "Reply to this user";
-$L['pm_putinarchives'] = "Put in archives";
-$L['pm_notifytitle'] = "New private message";
-$L['pm_notify'] = "Hi %1\$s,\n\nYou are receiving this email because there is a new private message in your inbox.\nThe sender is : %2\$s\nClick this link to read it : %3\$s";
-$L['pm_multiplerecipients'] = "This private messages was also sent to %1\$s other recipient(s).";
+$L['pm_sendnew'] = "Gönder";
+$L['pm_inbox'] = "Gelen kutusu";
+$L['pm_inboxsubtitle'] = "Özel mesajlar, en yenisi en üstte";
+$L['pm_sentbox'] = "Gönderilen";
+$L['pm_sentboxsubtitle'] = "Gönderilen ve alıcı tarafından henüz görüntülenmeyen mesajlar";
+$L['pm_archives'] = "Arşivler";
+$L['pm_arcsubtitle'] = "Eski mesajlar, en yenisi en üstte";
+$L['pm_replyto'] = "Bu kullanıcıyı yanıtla";
+$L['pm_putinarchives'] = "Arşivlere koy";
+$L['pm_notifytitle'] = "Yeni özel mesaj";
+$L['pm_notify'] = "Merhaba %1\$s,\n\nBu e-postayı, gelen kutunuzda yeni bir özel mesaj olduğu için alıyorsunuz..\nGönderen : %2\$s\nOkumak için bu bağlantıya tıklayın : %3\$s";
+$L['pm_multiplerecipients'] = "Bu özel mesaj şu adrese de gönderildi: %1\$s diğer alıcı(lar).";
 
 /* ====== Polls ====== */
 
-$L['polls_viewresults'] = "View results";
-$L['polls_viewarchives'] = "View all polls";
-$L['polls_Vote'] = "Vote";
-$L['polls_votes'] = "votes";
+$L['polls_viewresults'] = "Sonuçları Görüntüle";
+$L['polls_viewarchives'] = "Tüm anketleri görüntüle";
+$L['polls_Vote'] = "Oy";
+$L['polls_votes'] = "oylar";
 $L['polls_since'] = "since";
-$L['polls_alreadyvoted'] = "You've already voted for this poll.";
-$L['polls_notyetvoted'] = "You can vote by clicking a line above.";
-$L['polls_votecasted'] = "Done, vote succesfully recorded";
-$L['polls_add'] = "Add poll";
-$L['polls_edit'] = "Edit poll";
-$L['polls_title'] = "Poll title";
-$L['polls_option'] = "Poll option";
-$L['polls_addoption'] = "Add poll option";
-$L['polls_options'] = "Poll options";
-$L['polls_emptytitle'] = "Poll title is empty or there are less than 2 answer options";
+$L['polls_alreadyvoted'] = "Bu ankete zaten oy verdiniz.";
+$L['polls_notyetvoted'] = "Yukarıdaki bir satıra tıklayarak oy verebilirsiniz.";
+$L['polls_votecasted'] = "Tamamlandı, oy başarıyla kaydedildi";
+$L['polls_add'] = "Anket ekle";
+$L['polls_edit'] = "Anketi düzenle";
+$L['polls_title'] = "Anket başlığı";
+$L['polls_option'] = "Anket seçeneği";
+$L['polls_addoption'] = "Anket seçeneği ekle";
+$L['polls_options'] = "Anket seçenekleri";
+$L['polls_emptytitle'] = "Anket başlığı boş veya 2'den az cevap seçeneği var";
 
 /* ====== Ratings ====== */
 
-$L['rat_choice1'] = "Very poor";
-$L['rat_choice2'] = "Poor";
-$L['rat_choice3'] = "Not that bad";
-$L['rat_choice4'] = "Fair";
-$L['rat_choice5'] = "Average";
-$L['rat_choice6'] = "Almost good";
-$L['rat_choice7'] = "Good";
-$L['rat_choice8'] = "Very good";
-$L['rat_choice9'] = "Excellent";
-$L['rat_choice10'] = "Perfect";
-$L['rat_votecasted'] = "Done, vote successfully recorded";
+$L['rat_choice1'] = "Çok kötü";
+$L['rat_choice2'] = "Kötü";
+$L['rat_choice3'] = "o kadar da kötü değil";
+$L['rat_choice4'] = "Orta";
+$L['rat_choice5'] = "Ortalama";
+$L['rat_choice6'] = "Hemen hemen iyi";
+$L['rat_choice7'] = "İyi";
+$L['rat_choice8'] = "Çok iyi";
+$L['rat_choice9'] = "Harika";
+$L['rat_choice10'] = "Mükemmel";
+$L['rat_votecasted'] = "Tamamlandı, oy başarıyla kaydedildi";
 $L['rat_since'] = "since";
-$L['rat_notyetrated'] = "Not yet rated";
-$L['rat_alreadyvoted'] = "You've already voted for this item.";
-$L['rat_registeredonly'] = "Only registered users can rate items.";
+$L['rat_notyetrated'] = "Henüz derecelendirilmedi";
+$L['rat_alreadyvoted'] = "Bu öğe için zaten oy verdiniz.";
+$L['rat_registeredonly'] = "Yalnızca kayıtlı kullanıcılar derecelendirebilir.";
 
-$L['rat_disable'] = "Rating change is disabled!"; // New in v173
+$L['rat_disable'] = "Derecelendirme değişikliği devre dışı bırakıldı!"; // New in v173
 
 /* ====== Users ====== */
 
-$L['use_title'] = "Users";
-$L['use_subtitle'] = "Registered members";
-$L['useed_accountactivated'] = "Account activated";
-$L['useed_email'] = "You are receiving this email because an administrator activated your account.\nYou may now login using the username and password you received in a previous email.\n\n";
-$L['useed_title'] = "Edit";
+$L['use_title'] = "Üyeler";
+$L['use_subtitle'] = "Kayıtlı üyeler";
+$L['useed_accountactivated'] = "Hesap etkinleştirildi";
+$L['useed_email'] = "Bu e-postayı, bir yönetici hesabınızı etkinleştirdiği için alıyorsunuz.\nArtık bir önceki e-postada aldığınız kullanıcı adı ve şifreyi kullanarak giriş yapabilirsiniz..\n\n";
+$L['useed_title'] = "Düzenle";
 $L['useed_subtitle'] = "&nbsp;";
-$L['use_byfirstletter'] = "Name starting by";
-$L['use_allusers'] = "All users";
-$L['use_allbannedusers'] = "Users banned";
-$L['use_allinactiveusers'] = "Users inactive";
+$L['use_byfirstletter'] = "Ad ile başlayan";
+$L['use_allusers'] = "Tüm kullanıcılar";
+$L['use_allbannedusers'] = "Kullanıcılar yasaklandı";
+$L['use_allinactiveusers'] = "Kullanıcılar etkin değil";
 
-$L['pro_title'] = "Profile";
-$L['pro_subtitle'] = "Your personal account";
-$L['pro_passtoshort'] = "The password must be at least 4 chars long and must consist of alphanumerical characters and underscore only.";
-$L['pro_passdiffer'] = "The 2 password fields do not match";
-$L['pro_wrongpass'] = "You didn't enter your present password, or it's wrong";
-$L['pro_avatarsupload'] = "Upload an avatar";
-$L['pro_sigupload'] = "Upload a signature";
-$L['pro_photoupload'] = "Upload a photography";
-$L['pro_avatarspreset'] = "...or click here to display a gallery of pre-loaded avatars";
-$L['pro_avatarschoose'] = "Click an image below to set it as your own avatar";
-$L['pro_avataruploadfailed'] = "The upload failed, delete the old avatar before to free the slot !";
+$L['pro_title'] = "Profil";
+$L['pro_subtitle'] = "Kişisel hesabınız";
+$L['pro_passtoshort'] = "Şifre en az 8 karakter uzunluğunda olmalı ve yalnızca alfasayısal karakterlerden ve alt çizgiden oluşmalıdır.";
+$L['pro_passdiffer'] = "2 şifre alanı eşleşmiyor";
+$L['pro_wrongpass'] = "Mevcut şifrenizi girmediniz veya yanlış";
+$L['pro_avatarsupload'] = "Bir avatar yükleyin";
+$L['pro_sigupload'] = "İmza yükle";
+$L['pro_photoupload'] = "Fotoğraf yükleyin";
+$L['pro_avatarspreset'] = "...veya önceden yüklenmiş avatarların bir galerisini görüntülemek için buraya tıklayın";
+$L['pro_avatarschoose'] = "Kendi avatarınız olarak ayarlamak için aşağıdaki resme tıklayın";
+$L['pro_avataruploadfailed'] = "Yükleme başarısız oldu, yuvayı boşaltmak için önce eski avatarı silin !";
 
 /* ====== Rss ====== */
 
-$L['rss_lastforums'] = "Latest on forums"; // New in v173
-$L['rss_lastsections'] = "Latest posts in the forum: "; // New in v173
-$L['rss_lasttopics'] = "Last post in the topic: "; // New in v173
-$L['rss_commentauthor'] = "User Comments"; // New in v173
-$L['rss_lastcomments'] = "Recent Comments"; // New in v173
+$L['rss_commentauthor'] = "Kullanıcı Yorumları"; // New in v173
+$L['rss_lastcomments'] = "Son Yorumlar"; // New in v173
 
 /* ====== Metadata information ====== */
 
-$L['mt_title'] = "Title"; // New in v175
-$L['mt_description'] = "Meta description"; // New in v175
+$L['mt_title'] = "Başlık"; // New in v175
+$L['mt_description'] = "Meta açıklama"; // New in v175
 $L['mt_keywords'] = "Meta keywords"; // New in v175
 
 /* ====== Captcha Errors ====== */
-$L['captcha_error_many_incorrect'] = "You have entered too many incorrect captchas! Contact your administrator for help!";
-$L['captcha_error_you_robot_or_too_fast'] = "You or a robot or are entering captcha too fast!";
-$L['captcha_error_go_bad_robot'] = "Robot, go away!";
-$L['captcha_error_incorrect'] = "Incorrect captcha!";
-$L['captcha_error_hacker_go_home'] = "Hacker, go away!";
+$L['captcha_error_many_incorrect'] = "Çok fazla yanlış captcha girdiniz! Yardım için yöneticinize başvurun!";
+$L['captcha_error_you_robot_or_too_fast'] = "Siz veya bir robot veya captcha'ya çok hızlı giriyorsunuz!";
+$L['captcha_error_go_bad_robot'] = "Robot, git buradan!";
+$L['captcha_error_incorrect'] = "Yanlış Captcha!";
+$L['captcha_error_hacker_go_home'] = "Hacker, defol git!";
 
 $sed_translit = array(
 	//cyr
@@ -614,18 +578,18 @@ $sed_translit = array(
 	//turk
 	'Ç' => 'c', 'Ş' => 's', 'Ğ' => 'g', 'Ü' => 'u', 'İ' => 'i', 
 	'Ö' => 'o', 'ç' => 'c', 'ş' => 's', 'ğ' => 'g', 'ü' => 'u', 
-	'ö' => 'o', 'ı' => 'i', '+' => 'plus', '#' => 'sharp'
+	'ö' => 'o', 'ı' => 'i', '+' => '+', '#' => '#'
 );
 
 $sed_months_list = array(
-	1 => 'january', 2 => 'february', 3 => 'march', 4 => 'april',
-	5 => 'may', 6 => 'june', 7 => 'july', 8 => 'august',
-	9 => 'september', 10 => 'october', 11 => 'november', 12 => 'december'
+	1 => 'ocak', 2 => 'şubat', 3 => 'mart', 4 => 'nisan',
+	5 => 'mayıs', 6 => 'haziran', 7 => 'temmuz', 8 => 'ağustos',
+	9 => 'eylül', 10 => 'ekim', 11 => 'kasım', 12 => 'aralık'
 );
 
 $sed_daysweek_list = array(
-   'sunday', 'monday', 'tuesday', 'wednesday',
-   'thursday', 'friday', 'saturday'
+   'pazar', 'pazartesi', 'salı', 'çarşamba',
+   'perşembe', 'cuma', 'cumartesi'
 );
 
 ?>
