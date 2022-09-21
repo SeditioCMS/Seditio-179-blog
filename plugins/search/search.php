@@ -114,49 +114,7 @@ if ($a == 'search')
 				}
 			}
 	  
-		if (!$cfg['disable_forums'])
-			{
-			$frm_sub = sed_import('frm_sub','P','ARR');
-
-			if (!is_array($frm_sub) || $frm_sub[0] == 9999)
-				{ $sqlsections = ''; }
-			else
-				{
-				foreach($frm_sub as $i => $k)
-					{ $sections1[] = "s.fs_id='".sed_sql_prep($k)."'"; }
-				$sqlsections = "AND (".implode(' OR ', $sections1).")";
-				}
-
-			$sql = sed_sql_query("SELECT p.fp_id, t.ft_firstposterid, t.ft_firstpostername, t.ft_title, t.ft_id, t.ft_updated, s.fs_id, s.fs_title, s.fs_category
-			FROM $db_forum_posts p, $db_forum_topics t, $db_forum_sections s
-			WHERE 1 AND (p.fp_text LIKE '".sed_sql_prep($sqlsearch)."' OR t.ft_title LIKE '".sed_sql_prep($sqlsearch)."')
-			AND p.fp_topicid=t.ft_id AND p.fp_sectionid=s.fs_id $sqlsections 
-			GROUP BY t.ft_id ORDER BY ft_updated DESC
-			LIMIT $cfg_maxitems");
-
-			$items = sed_sql_numrows($sql);
-			
-			if ($items > 0)
-				{			
-				while ($row = sed_sql_fetchassoc($sql))
-					{
-					if (sed_auth('forums', $row['fs_id'], 'R'))
-						{					
-						$t->assign(array(
-							"PLUGIN_SEARCH_ROW_FORUM_SECTION" => sed_build_forums($row['fs_id'], $row['fs_title'], $row['fs_category'], TRUE),
-							"PLUGIN_SEARCH_ROW_FORUM_TOPIC_TITLE" => sed_cc($row['ft_title']),
-							"PLUGIN_SEARCH_ROW_FORUM_TOPIC_URL" => sed_url("forums", "m=posts&p=".$row['fp_id'], "#".$row['fp_id']),
-							"PLUGIN_SEARCH_ROW_FORUM_DATE" => @date($cfg['dateformat'], $row['ft_updated'] + $usr['timezone'] * 3600),
-							"PLUGIN_SEARCH_ROW_FORUM_POSTER" =>	sed_build_user($row['ft_firstposterid'],$row['ft_firstpostername'])	
-						));	
-						$t->parse("MAIN.PLUGIN_SEARCH_FORUMS.PLUGIN_SEARCH_FORUMS_ROW");					
-						}
-					}   
-				$total_items += $items;
-				$t->assign("PLUGIN_SEARCH_FORUM_FOUND", $items);										
-				$t->parse("MAIN.PLUGIN_SEARCH_FORUMS");					
-				}    
-			}
+	
 		}
 	}
 	
@@ -180,27 +138,7 @@ if (!$cfg['disable_page'])
 	$t->parse("MAIN.PLUGIN_SEARCH_FORM.PLUGIN_SEARCH_FORM_PAGES");
 	}
 
-if (!$cfg['disable_forums'])
-	{
-	$sql1 = sed_sql_query("SELECT s.fs_id, s.fs_title, s.fs_category FROM $db_forum_sections AS s 
-			LEFT JOIN $db_forum_structure AS n ON n.fn_code=s.fs_category
-			ORDER by fn_path ASC, fs_order ASC");
 
-	$forums_sections = "<select multiple name=\"frm_sub[]\" size=\"5\">";
-	$forums_sections .= "<option value=\"9999\" selected=\"selected\">".$L['plu_allsections']."</option>";
-
-	while ($row1 = sed_sql_fetchassoc($sql1))
-		{
-		if (sed_auth('forums', $row1['fs_id'], 'R'))
-			{
-			$forums_sections .= "<option value=\"".$row1['fs_id']."\">".sed_build_forums($row1['fs_id'], $row1['fs_title'], $row1['fs_category'], FALSE)."</option>";
-			}
-		}
-
-	$forums_sections .= "</select>";
-	$t->assign("PLUGIN_SEARCH_FORM_FORUMS", $forums_sections);
-	$t->parse("MAIN.PLUGIN_SEARCH_FORM.PLUGIN_SEARCH_FORM_FORUMS");
-	}
 	
 $t->assign(array(
 	"PLUGIN_SEARCH_FORM_SEND" => sed_url("plug", "e=search&a=search"),
