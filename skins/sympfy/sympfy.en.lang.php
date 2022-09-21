@@ -27,69 +27,16 @@ $skinlang['comments']['Commentedit'] = "Edit comment";   //New v173
 $skinlang['comments']['Update'] = "Update";  //New v173
 $skinlang['comments']['Newcomment'] = "New comment";  //New v178
 
-//forums.editpost.tpl
-$skinlang['forumseditpost']['Update'] = "Update";
-
-//forums.newtopic.tpl
-$skinlang['forumsnewtopic']['Title'] = "Title:";
-$skinlang['forumsnewtopic']['Desc'] = "Short description (optional):";
-$skinlang['forumsnewtopic']['privatetopic'] = "Check this box to mark this topic as \"private\":";
-$skinlang['forumsnewtopic']['privatetopic2'] = "Only forums moderators and the starter of the topic (so you) will be allowed to read and reply.";
-$skinlang['forumsnewtopic']['Submit'] = "Submit";
-
-//forums.post.tpl
-$skinlang['forumspost']['privatetopic'] = "This topic is private, only moderators and the starter of the topic can read and reply here.";
-$skinlang['forumspost']['Author'] = "Author";
-$skinlang['forumspost']['Message'] = "Message";
-$skinlang['forumspost']['Onlinestatus'] = "Online status";
-$skinlang['forumspost']['posts'] = "posts";
-$skinlang['forumspost']['Location'] = "Location:";
-$skinlang['forumspost']['Occupation'] = "Occupation:";
-$skinlang['forumspost']['Age'] = "Age:";
-$skinlang['forumspost']['Reply'] = "Reply";
-
-//forums.sections.tpl
-$skinlang['forumssections']['Options'] = "Options...";
-$skinlang['forumssections']['Searchinforums'] = "Search in forums";
-$skinlang['forumssections']['Statistics'] = "Statistics";
-$skinlang['forumssections']['Moderators'] = "Moderators";
-$skinlang['forumssections']['Markasread'] = "Mark all posts as read";
-$skinlang['forumssections']['Sections'] = "Sections";
-$skinlang['forumssections']['Subforums'] = "Subforums"; //New in Sed 172
-$skinlang['forumssections']['Lastpost'] = "Last post";
-$skinlang['forumssections']['Topics'] = "Topics";
-$skinlang['forumssections']['Posts'] = "Posts";
-$skinlang['forumssections']['Views'] = "Views";
-$skinlang['forumssections']['Activity'] = "Activity";
-$skinlang['forumssections']['FoldAll'] = "Fold all";
-$skinlang['forumssections']['UnfoldAll'] = "Unfold all";
-
-//forums.topics.tpl
-$skinlang['forumstopics']['Nonewposts'] = "No new posts";
-$skinlang['forumstopics']['Newposts'] = "New posts";
-$skinlang['forumstopics']['Sticky'] = "Sticky";
-$skinlang['forumstopics']['Nonewpostspopular'] = "No new posts (popular)";
-$skinlang['forumstopics']['Newpostspopular'] = "New posts (popular)";
-$skinlang['forumstopics']['Newpostssticky'] = "New posts (sticky)";
-$skinlang['forumstopics']['Locked'] = "Locked";
-$skinlang['forumstopics']['Newpostslocked'] = "New posts (locked)";
-$skinlang['forumstopics']['Announcment'] = "Announcement";
-$skinlang['forumstopics']['Movedoutofthissection'] = "Moved out of this section";
-$skinlang['forumstopics']['Newannouncment'] = "New announcement";
-$skinlang['forumstopics']['Viewers'] = "Viewers";	// New in v120
-
 //header.tpl
 $skinlang['header']['Login'] = "Login here";
 $skinlang['header']['Register'] = "Register";
 $skinlang['header']['Lostyourpassword'] = "Lost your password?";
 
 //index.tpl
-$skinlang['index']['Newinforums'] = "From our forums...";
 $skinlang['index']['Recentadditions'] = "What's new ?";
 $skinlang['index']['Polls'] = "Polls";
 $skinlang['index']['Online'] = "Who's online ?";
 $skinlang['index']['Recentcomments'] = "Recent comments";  // New in 175
-$skinlang['index']['Lasttopics'] = "Forums"; // New in 178
 $skinlang['index']['Lastcomments'] = "Comments"; // New in 178
 $skinlang['index']['Lastpages'] = "Pages"; // New in 178
 $skinlang['index']['Activity'] = "Activity"; // New in 178
