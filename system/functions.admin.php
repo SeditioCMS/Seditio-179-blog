@@ -267,7 +267,7 @@ function sed_loadconfigmap()
 	$result = array();
 	$result[] = array ('main', '01', 'maintitle', 1, 'Title of your site', '');
 	$result[] = array ('main', '02', 'subtitle', 1, 'Subtitle', '');
-	$result[] = array ('main', '03', 'mainurl', 1, 'http://www.yourdomain.com', '');
+	$result[] = array ('main', '03', 'mainurl', 1, 'https://seditio.com.tr', '');
 	$result[] = array ('main', '03', 'multihost', 3, '1', '');    // New in v175
 	$result[] = array ('main', '04', 'absurls', 3, '0', '');   // New in v175
 	$result[] = array ('main', '04', 'sefurls', 3, '1', '');   // New in v175
@@ -289,7 +289,7 @@ function sed_loadconfigmap()
 	$result[] = array ('main', '20', 'shieldzhammer', 2, '25', array(5,10,15,20,25,30,40,50,100));
 	$result[] = array ('main', '21', 'maintenance', 3, '0', ''); //Sed 175
 	$result[] = array ('main', '22', 'maintenancelevel', 2, '95', array(0,1,2,3,4,5,7,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,99)); //Sed 175
-	$result[] = array ('main', '23', 'maintenancereason', 1, 'The site is in maintenance mode!', ''); //Sed 175
+	$result[] = array ('main', '23', 'maintenancereason', 1, 'Site bakım modunda!', ''); //Sed 175
 	
 	$result[] = array ('index', '01', 'hometitle', 1, '', ''); // ---- New in v179
 	$result[] = array ('index', '02', 'homemetadescription', 1, '', ''); // ---- New in v179
@@ -463,41 +463,41 @@ function sed_plugin_install($pl)
   global $db_plugins, $db_config, $db_auth, $db_users, $sed_groups, $usr, $cfg;
 
 	$sql = sed_sql_query("DELETE FROM $db_plugins WHERE pl_code='$pl'");
-	$res = "<h3>Installing : plugins/".$pl."</h3>";
-	$res .= "<strong>Deleting old installation of this plugin...</strong> ";
-	$res .= "Found:".sed_sql_affectedrows()."<br />";
+	$res = "<h3>Yükleme : plugins/".$pl."</h3>";
+	$res .= "<strong>Bu eklentinin eski kurulumunu siliniyor...</strong> ";
+	$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 
 	$sql = sed_sql_query("DELETE FROM $db_config WHERE config_owner='plug' and config_cat='$pl'");
-	$res .= "<strong>Deleting old configuration entries...</strong> ";
-	$res .= "Found:".sed_sql_affectedrows()."<br />";
+	$res .= "<strong>Eski yapılandırma ayarları siliniyor...</strong> ";
+	$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 
 	$extplugin_info = "plugins/".$pl."/".$pl.".setup.php";
 
-	$res .= "<strong>Looking for the setup file...</strong> ";
+	$res .= "<strong>Kurulum dosyasını arıyorum...</strong> ";
 
 	if (file_exists($extplugin_info))
 		{
-		$res .= "Found:1<br />";
+		$res .= "Bulundu: 1<br />";
 		$info = sed_infoget($extplugin_info, 'SED_EXTPLUGIN');
 		$info['Auth_members'] = (isset($info['Auth_members'])) ? $info['Auth_members'] : 'R';
 		$info['Lock_members'] = (isset($info['Lock_members'])) ? $info['Lock_members'] : 'W12345A';
 		$handle = opendir("plugins/".$pl);
 		$setupfile = $pl.".setup.php";
-		$res .= "<strong>Looking for parts...</strong><br />";
+		$res .= "<strong>Dosya arıyorum...</strong><br />";
 		while ($f = readdir($handle))
 			{
 			if ($f != "." && $f != ".." && $f != $setupfile && mb_strtolower(mb_substr($f, mb_strrpos($f, '.') + 1, 4)) == 'php')
 				{
-				$res .= "- Found : ".$f."<br />";
+				$res .= "- Bulundu : ".$f."<br />";
 				$parts[] = $f;
 				}
 			}
 		closedir($handle);
 
-		$res .= "<strong>Installing the parts...</strong><br />";
+		$res .= "<strong>Dosyalar çalıştırılıyor...</strong><br />";
 		foreach ($parts as $i => $x)
 			{
-			$res .= "- Part ".$x." ...";
+			$res .= "- Dosya: ".$x." ...";
 			$extplugin_file = "plugins/".$pl."/".$x;
 			$info_part = sed_infoget($extplugin_file, 'SED_EXTPLUGIN');
 
@@ -517,20 +517,20 @@ function sed_plugin_install($pl)
 					$sql = sed_sql_query("INSERT into $db_plugins (pl_hook, pl_code, pl_part, pl_title, pl_file, pl_order, pl_active ) VALUES ('".trim($hook)."', '".$info_part['Code']."', '".sed_sql_prep($info_part['Part'])."', '".sed_sql_prep($info['Name'])."', '".$info_part['File']."',  ".(int)$order.", 1)");				
 				}
 				
-				$res .= " (Hooked at : ".$info_part['Hooks'].")";
-				$res .= " Installed<br />";
+				$res .= " (Kancalar : ".$info_part['Hooks'].")";
+				$res .= " Kurulmuş<br />";
 				}
 			else
 				{
         if (mb_substr($x, -11, 11) == 'install.php')
-          {  $res .= "Ignoring.<br />"; }
+          {  $res .= "Yoksay.<br />"; }
         else
-          { $res .= "Error !<br />"; }
+          { $res .= "Hata !<br />"; }
 				}
 			}
 
 		$info_cfg = sed_infoget($extplugin_info, 'SED_EXTPLUGIN_CONFIG');
-		$res .= "<strong>Looking for configuration entries in the setup file...</strong> ";
+		$res .= "<strong>Kurulum dosyasında yapılandırma girdileri aranıyor...</strong> ";
 
 		/* ===== */
 		$path_lang_setup = SED_ROOT . "/plugins/".$pl."/lang/".$pl.".".$cfg['defaultlang'].".lang.php";
@@ -540,7 +540,7 @@ function sed_plugin_install($pl)
     
 		if (empty($info_cfg['Error']))
 			{
-			$res .= "Found at least 1<br/>";
+			$res .= "En az bulundu 1<br/>";
 			$j = 0;
 			foreach($info_cfg as $i => $x)
 				{
@@ -555,29 +555,29 @@ function sed_plugin_install($pl)
 					/* ===== */
 
 					sed_config_add('plug', $pl, $line[0], $i, $line[1], $line[3], $line[2], $line[4] );
-					$res .= "- Entry #$j : $i (".$line[1].") Installed<br />";
+					$res .= "- Kayıt #$j : $i (".$line[1].") Kurulmuş<br />";
 					}
 				}
 			}
 		else
 			{
-			$res .= "None found<br />";
+			$res .= "Bulunamadı<br />";
 			}
 		}
 	else
 		{
-		$res .= "Not found ! Installation failed !<br />";
+		$res .= "Bulunamadı ! Yükleme başarısız !<br />";
 		}
 
 	$sql = sed_sql_query("DELETE FROM $db_auth WHERE auth_code='plug' and auth_option='$pl'");
-	$res .= "<strong>Deleting any old rights about this plugin...</strong> ";
-	$res .= "Found:".sed_sql_affectedrows()."<br />";
+	$res .= "<strong>Bu eklentiyle ilgili eski hakların silinmesi...</strong> ";
+	$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 
-	$res .= "<strong>Adding the rights for the user groups...</strong><br />";
+	$res .= "<strong>Kullanıcı grupları için haklar ekleme...</strong><br />";
 
 	foreach ($sed_groups as $k => $v)
 		{
-		$comment = ' (Plugin setup)';
+		$comment = ' (eklenti kurulumu)';
 
 		if ($v['id'] == 1 || $v['id'] == 2)
 			{
@@ -588,20 +588,20 @@ function sed_plugin_install($pl)
 				{
 				$ins_auth = ($ins_auth > 127) ? $ins_auth-128 : $ins_auth;
 				$ins_lock = 128;
-				$comment = ' (System override, guests and inactive are not allowed to admin)';
+				$comment = ' (Misafirler ve etkin olmayanların yönetici olmasına izin verilmez)';
 				}
 			}
 		elseif ($v['id'] == 3)
 			{
 			$ins_auth = 0;
 			$ins_lock = 255;
-			$comment = ' (System override, Banned)';
+			$comment = ' (Yasaklı için haklar)';
 			}
 		elseif ($v['id'] == 5)
 			{
 			$ins_auth = 255;
 			$ins_lock = 255;
-			$comment = ' (System override, Administrators)';
+			$comment = ' (Yöneticiler için haklar)';
 			}
 		else
 			{
@@ -611,25 +611,25 @@ function sed_plugin_install($pl)
 
 		$sql = sed_sql_query("INSERT into $db_auth (auth_groupid, auth_code, auth_option, auth_rights, auth_rights_lock, auth_setbyuserid) VALUES (".(int)$v['id'].", 'plug', '$pl', ".(int)$ins_auth.", ".(int)$ins_lock.", ".(int)$usr['id'].")");
 		
-		$res .= "Group #".$v['id'].", ".$sed_groups[$v['id']]['title']." : Auth=".sed_build_admrights($ins_auth)." / Lock=".sed_build_admrights($ins_lock).$comment."<br />";
+		$res .= "Grup #".$v['id'].", ".$sed_groups[$v['id']]['title']." : Yetki=".sed_build_admrights($ins_auth)." / Bloke=".sed_build_admrights($ins_lock).$comment."<br />";
 		}
 	
 	sed_auth_reset();
-	$res .= "<strong>Resetting the auth column for all the users...</strong><br />";
+	$res .= "<strong>Tüm kullanıcılar için yetki sütununu sıfırlama...</strong><br />";
 
 	$extplugin_install = "plugins/".$pl."/".$pl.".install.php";
-	$res .= "<strong>Looking for the optional PHP file : ".$extplugin_install."...</strong> ";
+	$res .= "<strong>İsteğe bağlı PHP dosyasını arıyorum : ".$extplugin_install."...</strong> ";
 	if (file_exists($extplugin_install))
 		{
-		$res .= "Found, executing...<br />";
+		$res .= "Bulundu, yürütülüyor...<br />";
 		include($extplugin_install);
 		}
 	else
-		{ $res .= "Not found.<br />"; 	}
+		{ $res .= "Bulunamadı.<br />"; 	}
 
 	sed_auth_reorder();
 	sed_cache_clearall();
-	$res .= (isset($j) && $j > 0) ? "<strong><a href=\"".sed_url("admin", "m=config&n=edit&o=plug&p=".$pl)."\">There was configuration entries, click here to open the configuration panel</a></strong><br />" : '';
+	$res .= (isset($j) && $j > 0) ? "<strong><a href=\"".sed_url("admin", "m=config&n=edit&o=plug&p=".$pl)."\">Konfigürasyon girişleri var, konfigürasyon panelini açmak için buraya tıklayın</a></strong><br />" : '';
 	return ($res);
 	}
   
@@ -652,29 +652,29 @@ function sed_plugin_uninstall($pl, $all = FALSE)
 	while($row = sed_sql_fetchassoc($sql0))
 		{
 		$pl = $row['pl_code'];		
-		$res .= "<h3>Removing : plugins/".$pl."</h3>"; 
+		$res .= "<h3>Kaldırma : plugins/".$pl."</h3>"; 
 		$sql = sed_sql_query("DELETE FROM $db_plugins WHERE pl_code='$pl'");
-		$res .= "Deleting old installation of this plugin... ";
-		$res .= "Found:".sed_sql_affectedrows()."<br />";
+		$res .= "Bu eklentinin eski kurulumunu silme... ";
+		$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 		$sql = sed_sql_query("DELETE FROM $db_config WHERE config_owner='plug' AND config_cat='$pl'");
-		$res .= "Deleting old configuration entries... ";
-		$res .= "Found:".sed_sql_affectedrows()."<br />";
+		$res .= "Eski yapılandırma girişlerini silme... ";
+		$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 		$sql = sed_sql_query("DELETE FROM $db_auth WHERE auth_code='plug' and auth_option='$pl'");
-		$res .= "Deleting any old rights about this plugin... ";
-		$res .= "Found:".sed_sql_affectedrows()."<br />";
+		$res .= "Bu eklentiyle ilgili eski hakların silinmesi... ";
+		$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";
 		$sql = sed_sql_query("UPDATE $db_users SET user_auth='' WHERE 1");
-		$res .= "Resetting the auth column for all the users... ";     
-		$res .= "Found:".sed_sql_affectedrows()."<br />";		
+		$res .= "Tüm kullanıcılar için yetki sütununu sıfırlama... ";     
+		$res .= "Bulundu: ".sed_sql_affectedrows()."<br />";		
 	
 		$extplugin_uninstall = "plugins/".$pl."/".$pl.".uninstall.php";
-		$res .= "Looking for the optional PHP file : ".$extplugin_uninstall."... ";
+		$res .= "İsteğe bağlı PHP dosyasını arıyorum : ".$extplugin_uninstall."... ";
 		if (file_exists($extplugin_uninstall))
 			{
-			$res .= "Found, executing...<br />";
+			$res .= "Bulundu, yürütme...<br />";
 			include($extplugin_uninstall);
 			}
 		else
-			{ $res .= "Not found.<br />"; 	}		
+			{ $res .= "Bulunamadı.<br />"; 	}		
 		}
 	sed_cache_clearall();
 	return ($res);
