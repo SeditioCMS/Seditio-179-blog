@@ -31,7 +31,7 @@ $m = sed_import('m','G','TXT');
 if ($m == 'share')
 	{
 	$output = "Seditio - Website engine<br />Copyright Neocrome & Seditio Team<br />";
-	$output .= "<a href=\"https://seditiocms.com\">https://seditiocms.com</a><br />";
+	$output .= "<a href=\"https://seditio.com.tr\">https://seditio.com.tr</a><br />";
 	$output .= "&nbsp;<br />[BEGIN_SED]<br />Title=".$cfg['maintitle']."<br />";
 	$output .= "Subtitle=".$cfg['subtitle']."<br />Version=".$cfg['version']."<br />";
 	$output .= "Pages=".sed_sql_rowcount($db_pages)."<br />Users=".sed_sql_rowcount($db_users)."<br />";
