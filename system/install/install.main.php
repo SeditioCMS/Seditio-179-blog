@@ -22,7 +22,7 @@ session_start();
 $langinstall = sed_import('langinstall','P','TXT',10);
 if (!empty($langinstall)) { $_SESSION['ilang'] = $langinstall;
 } elseif (isset($_SESSION['ilang'])) { $langinstall = $_SESSION['ilang'];
-} else { $langinstall = "en"; }
+} else { $langinstall = "tr"; }
 
 require(SED_ROOT . '/system/install/lang/'.$langinstall.'/install.'.$langinstall.'.lang.php');
 
