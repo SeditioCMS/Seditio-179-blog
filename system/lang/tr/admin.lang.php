@@ -324,10 +324,10 @@ $L['adm_dic_values'] = "Dizin için değer listesi";
 
 $L['adm_dic_form_title'] = "Form öğesi için başlık";
 $L['adm_dic_form_desc'] = "Form öğesi için metin";
-$L['adm_dic_form_size'] = "Metin alanının boyutu";
-$L['adm_dic_form_maxsize'] = "Maksimum metin alanı boyutu";
-$L['adm_dic_form_cols'] = "Metin alanının sütunları";
-$L['adm_dic_form_rows'] = "Metin alanı satırları";
+$L['adm_dic_form_size'] = "Input uzunluğu (size = 56)";
+$L['adm_dic_form_maxsize'] = "Input maxlength (max = 255)";
+$L['adm_dic_form_cols'] = "Textarea uzunluk (örnek = 60)";
+$L['adm_dic_form_rows'] = "Textarea genişlik (örnek = 3)";
 
 $L['adm_dic_extra'] = "Ekstra alan";
 $L['adm_dic_addextra'] = "Fazladan alan ekle";
