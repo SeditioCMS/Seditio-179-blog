@@ -343,7 +343,7 @@ $L['adm_help_dic'] = ""; //Need add
 /* ====== Menu manager ====== */
 
 $L['adm_menuitems'] = "Menü öğeleri";
-$L['adm_additem'] = "Öğe eklemek";
+$L['adm_additem'] = "Menü Ekle";
 $L['adm_position'] = "Durum";
 $L['adm_confirm_delete'] = "Silmeyi onayla?";
 $L['adm_addmenuitem'] = "Menü öğesi ekle";
