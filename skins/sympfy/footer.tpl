@@ -77,7 +77,7 @@
 						<p>{FOOTER_BOTTOMLINE}</p>
 					</div>
 					<div class="footer-bottom-dev">
-						<p><a href="https://seditio.org" target="_blank" title="CMS Seditio">Merci, Olivier!</a></p>
+						<p><a href="https://seditio.com.tr" target="_blank" title="CMS Seditio">Merci, Olivier!</a></p>
 					</div>
 				</div>
 				<div class="footer-stat">
