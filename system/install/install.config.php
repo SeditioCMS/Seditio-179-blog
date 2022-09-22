@@ -19,7 +19,7 @@ if ( !defined('SED_CODE') || !defined('SED_INSTALL') ) { die('Wrong URL.'); }
 $cfg_data = "<?PHP\n\n/* ====================\n";
 $cfg_data .= "Seditio - Website engine\n";
 $cfg_data .= "Copyright Neocrome & Seditio Team\n";
-$cfg_data .= "https://seditio.org\n";
+$cfg_data .= "https://seditio.com.tr\n";
 $cfg_data .= "[BEGIN_SED]\n";
 $cfg_data .= "File=datas/config.php\n";
 $cfg_data .= "Version=".$cfg['version']."\n";
