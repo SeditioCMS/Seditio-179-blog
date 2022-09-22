@@ -72,13 +72,13 @@ $L['install_least8chars'] = "En az 8 karakter";
 $L['install_email'] = "Email :";
 $L['install_doublecheck'] = "İki kez kontrol edin, önemli!";
 $L['install_country'] = "Ülke :";
-$L['install_validate'] = "Doğrula";
+$L['install_validate'] = "Onayla";
 $L['install_auto_installer'] = "Bu Seditio için otomatik yükleyicidir (derleme ".@$cfg['version'].")";
 $L['install_create_configfile'] = "Yapılandırma dosyasını oluşturacak <strong>".@$cfg['config_file']."</strong>, \n
 	         daha sonra MySQL veritabanınızdaki tabloları oluşturacak ve dolduracaktır.<br /> \n
 	         Bu aracı çalıştırmadan önce, hosting paneliniz ile veritabanının kendisini oluşturmalısınız., \n
 	         ve tüm PHP ve sistem dosyalarının web sunucunuza yüklenmesi gerekir.<br />&nbsp<br /> \n
-	         Yükleme işlemi sırasında bir şeyler ters giderse dosyayı silin <strong>".@$cfg['config_file']."</strong> FTP istemcinizle ve tarayıcınızda web kök URL'sini yeniden açın.<br />&nbsp<br /> \n
+	         Yükleme işlemi sırasında bir şeyler ters giderse dosyayı <strong>datas/config.php</strong> yi silin. <strong>".@$cfg['config_file']."</strong> Kurulumu yeniden açın.<br />&nbsp<br /> \n
 	         Şu anda, CHMOD 0777, FTP istemcinizle aşağıda listelenen ve zaten yazılabilir olmayan herhangi bir klasör :<br />";
 $L['install_folder'] = "Dosya";
 $L['install_writable'] = "Yazılabilir";
