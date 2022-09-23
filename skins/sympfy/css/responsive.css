@@ -289,6 +289,10 @@
 	.brnomobile {
 		display:none;
 	}
+	
+	.commentlist .comment .comment-container .comment-entry {
+		margin-left: 0;
+	}	
 }
 
 @media (max-width: 768px) {
