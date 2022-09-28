@@ -14,6 +14,16 @@ Description=Url translation config
 [END_SED]
 ==================== */
 
+/*  External URL redirect translation */                                               
+
+$sed_urltrans['go'] = array(
+    array( 
+          'params' => 'url=*', 
+          'rewrite' => 'go/?url={url}'
+    )
+);
+
+
 /*  Installation translation */
 
 $sed_urltrans['install'] = array(
