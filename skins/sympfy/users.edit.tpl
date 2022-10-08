@@ -134,11 +134,7 @@
 						<div class="form-field">{USERS_EDIT_GENDER}</div>
 					</li>
 					
-					<li class="form-row">
-						<div class="form-label"><label>{USERS_EDIT_INSTAGRAM_TITLE}</label></div>
-						<div class="form-field">{USERS_EDIT_INSTAGRAM} {USERS_EDIT_INSTAGRAM_MERA}</div>
-					</li>	
-
+					
 					<li class="form-row">
 						<div class="form-label"><label>{PHP.skinlang.usersedit.Signature}</label></div>
 						<div class="form-field">{USERS_EDIT_TEXT}</div>
