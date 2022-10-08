@@ -67,11 +67,6 @@
 				</div>
 
 				<div class="table-tr">
-					<div class="table-td">{PHP.skinlang.usersdetails.Weblog}</div>
-					<div class="table-td">{USERS_DETAILS_JOURNAL}</div>
-				</div>
-
-				<div class="table-tr">
 					<div class="table-td">{PHP.skinlang.usersdetails.Website}</div>
 					<div class="table-td">{USERS_DETAILS_WEBSITE}</div>
 				</div>
