@@ -208,8 +208,7 @@
 						<div class="inline-menu">
 							<ul class="tabs-nav">
 								<li class="active"><a href="#tab-1">{PHP.skinlang.index.Lastcomments}</a></li>         		
-								<li><a href="#tab-2">{PHP.skinlang.index.Lasttopics}</a></li> 
-								<li><a href="#tab-3">{PHP.skinlang.index.Lastpages}</a></li> 							
+								<li><a href="#tab-2">{PHP.skinlang.index.Lastpages}</a></li> 							
 							</ul>
 						</div>				
 					</div>					
@@ -240,34 +239,8 @@
 					
 					</div>
 					
+									
 					<div id="tab-2" class="tab" style="display: none;">
-					
-						<!-- BEGIN: LATEST_TOPICS -->
-						
-							<ul class="recent-items">
-						
-							<!-- BEGIN: LATEST_TOPICS_ROW -->
-
-								<li class="recent-item">
-									<div class="recent-info">
-										<div class="recent-author"><a href="{LATEST_TOPICS_ROW_USERURL}">{LATEST_TOPICS_ROW_AVATAR}<span>{LATEST_TOPICS_ROW_AUTHOR}</span></a></div>
-										<div class="recent-date">{LATEST_TOPICS_ROW_DATE}</div>						 
-									</div>
-									<div class="recent-title">
-										{LATEST_TOPICS_ROW_FORUMPATH} {PHP.cfg.separator} <a href="{LATEST_TOPICS_ROW_URL}">{LATEST_TOPICS_ROW_SHORTTITLE}</a> 
-										<span class="recent-comments"><i class="ic-message-circle"></i><a href="{LATEST_TOPICS_ROW_URL}">{LATEST_TOPICS_ROW_TOPIC_COUNT}</a></span>
-									</div>
-								</li>							
-							
-							<!-- END: LATEST_TOPICS_ROW -->
-							
-							</ul>
-						
-						<!-- END: LATEST_TOPICS -->					
-					
-					</div>	
-					
-					<div id="tab-3" class="tab" style="display: none;">
 					
 						<!-- BEGIN: LATEST_PAGES -->
 						
