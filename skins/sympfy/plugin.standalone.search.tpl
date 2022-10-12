@@ -1,5 +1,5 @@
 <!-- BEGIN: MAIN -->
-  
+
 <main id="plugins">
 	
 	<div class="container">
@@ -28,21 +28,27 @@
 			
 			<form action="{PLUGIN_SEARCH_FORM_SEND}" method="post" name="search" id="search">
 
-				
+				<ul class="form responsive-form search-form"> 
+					
+					<li class="form-row">
 						<div class="form-label"><label>{PHP.L.plu_searchin}</label></div>
 						<div class="form-field">{PLUGIN_SEARCH_FORM_INPUT}</div>
-					
+					</li>
 					
 					<!-- BEGIN: PLUGIN_SEARCH_FORM_PAGES -->
-					
+					<li class="form-row">
 						<div class="form-label"><label>{PHP.L.Pages}</label></div>
 						<div class="form-field">{PLUGIN_SEARCH_FORM_PAGES}</div>
-					
+					</li>
 					<!-- END: PLUGIN_SEARCH_FORM_PAGES -->
 
+					<li class="form-row">
 						<div class="form-field-100 text-center">
 							<button type="submit" class="submit btn">{PHP.L.Search}</button>		
 						</div>
+					</li>					
+					
+				</ul>
 				
 			</form>
 
@@ -97,7 +103,6 @@
 			<!-- END: PLUGIN_SEARCH_PAGES -->
 			
 			
-		
 		</div>
 		
 	</div>	
