@@ -29,7 +29,6 @@ $log_groups = array (
 	'all' => $L['All'],
 	'def' => $L['Default'],
 	'adm' => $L['Administration'],
-	'for' => $L['Forums'],
 	'sec' => $L['Security'],
 	'usr' => $L['Users'],
 	'plg' => $L['Plugins']
