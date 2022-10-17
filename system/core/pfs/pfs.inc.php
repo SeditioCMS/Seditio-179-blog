@@ -668,7 +668,7 @@ if ($usr['auth_write'])
 		}
 
 	$t->assign(array(
-		"PFS_UPLOAD_SEND" => sed_url("pfs", "a=upload"."&".$more),
+		"PFS_UPLOAD_SEND" => sed_url("pfs", "a=upload"."&f=".$f."&".$more),
 		"PFS_UPLOAD_MAXFILESIZE" => sed_textbox_hidden('MAX_FILE_SIZE', $maxfile*1024),
 		"PFS_UPLOAD_FOLDERS" => sed_selectbox_folders($userid, "", $f),
 	));
