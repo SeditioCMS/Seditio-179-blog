@@ -204,6 +204,7 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."pages (
   page_seo_keywords varchar(255) default NULL, 
   page_seo_h1 varchar(255) default NULL, 
   page_thumb varchar(255) NOT NULL default '',
+  page_poll int(11) default '0',
   PRIMARY KEY  (page_id),
   KEY page_cat (page_cat)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
