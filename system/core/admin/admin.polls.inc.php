@@ -129,8 +129,8 @@ else
 		$sql = sed_sql_query("INSERT INTO $db_polls (poll_state, poll_creationdate, poll_text, poll_ownerid) VALUES (0, ".(int)$sys['now_offset'].", '".sed_sql_prep($ntext)."', ".$usr['id'].")");
 		}
 
-	$sql = sed_sql_query("SELECT p.*, t.ft_id FROM $db_polls AS p
-		LEFT JOIN $db_forum_topics AS t ON t.ft_poll = p.poll_id
+	$sql = sed_sql_query("SELECT p.*, t.page_id FROM $db_polls AS p
+		LEFT JOIN $db_pages AS t ON t.page_poll = p.poll_id
 		WHERE 1 ORDER BY p.poll_type ASC, p.poll_id DESC LIMIT 20");
 
 	$ii = 0;
@@ -152,7 +152,7 @@ else
 			"POLLS_LIST_OPTIONS_URL" => sed_url("admin", "m=polls&n=options&id=".$row['poll_id']),
 			"POLLS_LIST_POLLTEXT" => sed_cc($row['poll_text']),
 			"POLLS_LIST_TOTALVOTES" => $totalvotes,
-			"POLLS_LIST_OPEN_URL" => ($type==0) ? sed_url("polls", "id=".$row['poll_id']) : sed_url("forums", "m=posts&q=".$row['ft_id'])
+			"POLLS_LIST_OPEN_URL" => ($type==0) ? sed_url("polls", "id=".$row['poll_id']) : sed_url("page", "id=".$row['page_id'])
 		));
 		$t -> parse("ADMIN_POLLS.POLLS.POLLS_LIST"); 
 
