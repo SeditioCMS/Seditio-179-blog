@@ -46,9 +46,9 @@ if ($a == 'delete')
 					$com_grp = ($usr['isadmin']) ? "adm" : "usr";	
 					sed_log("Deleted comment #".$id." in '".$row['com_code']."'", $com_grp);
 					
-header("Location: ".$_SERVER['HTTP_REFERER']."");
-exit;
-	}
+				header("Location: ".$_SERVER['HTTP_REFERER']."");
+				exit;
+					}
 
 $d = sed_import('d', 'G', 'INT');
 if(empty($d)) $d = 0;

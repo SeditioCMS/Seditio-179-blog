@@ -784,7 +784,8 @@ function sed_build_comments($code, $url, $display, $allow = TRUE)
 			$post_main = '';
 			
 			if ($usr['auth_write_com'] && $allow)
-				{  
+				{ 
+				$rtext = sed_import('rtext','P','HTM');			
 				if ($quote > 0)
 					{
 					$sqlq = sed_sql_query("SELECT com_id, com_author, com_text FROM $db_com WHERE com_id = '$quote' LIMIT 1");
@@ -793,7 +794,6 @@ function sed_build_comments($code, $url, $display, $allow = TRUE)
 						$rtext = "<blockquote><a href=\"".sed_url($url_part, $url_params.$lurl, "#".$rowq['com_id'])."\">#".$rowq['com_id']."</a> <strong>".$rowq['com_author']." :</strong><br />".$rowq['com_text']."</blockquote><br />";
 						}
 					}  			
-				$rtext = sed_import('rtext','P','HTM');
 				$pfs = ($usr['id'] > 0) ? sed_build_pfs($usr['id'], "newcomment", "rtext", $L['Mypfs']) : '';
 				$pfs .= (sed_auth('pfs', 'a', 'A')) ? " &nbsp; ".sed_build_pfs(0, "newcomment", "rtext", $L['SFS']) : '';
 				$post_main = sed_textarea('rtext', $rtext, 6, $cfg['textarea_default_width'], 'Micro')." ".$pfs;
