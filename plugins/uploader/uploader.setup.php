@@ -37,8 +37,8 @@ use_sortable=03:select:yes,no:yes:If set to yes, the sorting setting will be ena
 use_dragndrop=04:select:yes,no:yes:If set to yes, the Drag & Drop setting will be enabled.
 use_rotation=05:select:yes,no:yes:If set to yes, the image rotation setting will be enabled.
 maximum_uploads=08:string::100:The maximum number of files that can be uploaded at a time.
-buildfolder=015:select:yes,no:no:Create a folder with the name of the month.
-buildfilename=016:select:timestamp,autoincrement:autoincrement:Timestamp in the file name or mask with autoincrement
+buildfolder=09:select:yes,no:no:Create a folder with the name of the month.
+buildfilename=10:select:timestamp,autoincrement:autoincrement:Timestamp in the file name or mask with autoincrement
 [END_SED_EXTPLUGIN_CONFIG]
 
 ==================== */
