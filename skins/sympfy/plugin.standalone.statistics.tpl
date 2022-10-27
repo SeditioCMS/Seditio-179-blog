@@ -77,30 +77,6 @@
 				
 			</div>
 			
-			<h4>{PHP.L.Forums}:</h4>
-			
-			<div class="table cells striped">
-							
-				<div class="table-body">
-				
-					<div class="table-row">
-						<div class="table-td">{PHP.L.plu_viewsforums}</div>
-						<div class="table-td text-center" style="width:100px;">{PLUGIN_STATISTICS_TOTALDBVIEWS}</div>
-					</div>
-					
-					<div class="table-row">
-						<div class="table-td">{PHP.L.plu_postsforums} ({PHP.L.plu_pruned})</div>
-						<div class="table-td text-center">{PLUGIN_STATISTICS_TOTALDBPOSTS_AND_TOTALDBPOSTSPRUNED} ({PLUGIN_STATISTICS_TOTALDBPOSTSPRUNED})</div>
-					</div>
-					
-					<div class="table-row">
-						<div class="table-td">{PHP.L.plu_topicsforums} ({PHP.L.plu_pruned})</div>
-						<div class="table-td text-center">{PLUGIN_STATISTICS_TOTALDBTOPICS_AND_TOTALDBTOPICSPRUNED} ({PLUGIN_STATISTICS_TOTALDBTOPICSPRUNED})</div>
-					</div>
-			
-				</div>
-				
-			</div>	
 
 			<h4>{PHP.L.plu_pollsratings}:</h4>
 			
@@ -159,15 +135,6 @@
 				<div class="table-body">
 				
 					<!-- BEGIN: PLUGIN_STATISTICS_IS_USER -->
-					<div class="table-row">
-						<div class="table-td">{PHP.L.Posts}</div>
-						<div class="table-td text-center" style="width:100px;">{PLUGIN_STATISTICS_USER_POSTSCOUNT}</div>
-					</div>
-					
-					<div class="table-row">
-						<div class="table-td">{PHP.L.Topics}</div>
-						<div class="table-td text-center">{PLUGIN_STATISTICS_USER_TOPICSCOUNT}</div>
-					</div>
 					
 					<div class="table-row">
 						<div class="table-td">{PHP.L.Comments}</div>
