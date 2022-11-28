@@ -203,6 +203,7 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."pages (
   page_seo_keywords varchar(255) default NULL, 
   page_seo_h1 varchar(255) default NULL, 
   page_thumb varchar(255) NOT NULL default '',
+  page_poll int(11) default '0',
   PRIMARY KEY  (page_id),
   KEY page_cat (page_cat)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
@@ -404,6 +405,7 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."users (
   user_sid char(32) NOT NULL default '',
   user_lostpass char(32) NOT NULL default '',
   user_auth text,
+  user_poll int(11) default '0',
   PRIMARY KEY (user_id)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
 
@@ -595,6 +597,6 @@ $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."polls_options VALUES(1, 1, 
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."polls_options VALUES(2, 1, 'No', 0);");
 
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."pages VALUES
-(1, 0, 'news', '', 'Welcome !', '...', 'Congratulations, your website is up and running !<br />\r\n<br />\r\nThe next step is to go in the <a href=\"/admin/\">Administration panel</a>, tab <a href=\"admin/config\">Configuration</a>, and there tweak the settings for the system.<br />\r\nYou''ll find more instructions and tutorials in the <a href=\"https://seditio.com.tr\">Documentation page for Seditio at Seditio.org</a>, and technical support in our <a href=\"https://seditio.com.tr\">discussion forums</a>.', '', '', 1, 1263945600, 1263942000, 1861959600, 0, '', '', 38, 1, 1, 0.00, 0, 0, '', '', '', '', '', '');");
+(1, 0, 'news', '', 'Welcome !', '...', 'Congratulations, your website is up and running !<br />\r\n<br />\r\nThe next step is to go in the <a href=\"/admin/\">Administration panel</a>, tab <a href=\"admin/config\">Configuration</a>, and there tweak the settings for the system.<br />\r\nYou''ll find more instructions and tutorials in the <a href=\"https://seditio.com.tr\">Documentation page for Seditio at Seditio.org</a>, and technical support in our <a href=\"https://seditio.com.tr\">discussion forums</a>.', '', '', 1, 1263945600, 1263942000, 1861959600, 0, '', '', 38, 1, 1, 0.00, 0, 0, '', '', '', '', '', '', '');");
 
 ?>
