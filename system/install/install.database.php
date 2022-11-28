@@ -123,7 +123,6 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."dic_items (
   PRIMARY KEY  (ditem_id)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
 
-
 $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."groups (
   grp_id int(11) NOT NULL auto_increment,
   grp_alias varchar(24) NOT NULL default '',
@@ -204,7 +203,6 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."pages (
   page_seo_keywords varchar(255) default NULL, 
   page_seo_h1 varchar(255) default NULL, 
   page_thumb varchar(255) NOT NULL default '',
-  page_poll int(11) default '0',
   PRIMARY KEY  (page_id),
   KEY page_cat (page_cat)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
@@ -402,6 +400,7 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."users (
   user_lastvisit int(11) NOT NULL default '0',
   user_lastip varchar(16) NOT NULL default '',
   user_logcount int(11) unsigned NOT NULL default '0',
+  user_postcount int(11) default '0',
   user_sid char(32) NOT NULL default '',
   user_lostpass char(32) NOT NULL default '',
   user_auth text,
@@ -584,7 +583,7 @@ $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."auth VALUES (106, 5, 'menu'
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."auth VALUES (107, 6, 'menu', 'a', 131, 0, 1);");
 
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(1, 0, 'Menu', '', 1, 1);");
-$sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(2, 1, 'Home', '', 2, 1);");
+$sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(2, 1, 'Home', '/', 2, 1);");
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(4, 1, 'Articles', 'articles/', 4, 0);");
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(5, 1, 'Galleries', 'gallery/', 5, 0);");
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."menu VALUES(6, 1, 'Contact', 'plug/contact', 6, 1);");
@@ -596,6 +595,6 @@ $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."polls_options VALUES(1, 1, 
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."polls_options VALUES(2, 1, 'No', 0);");
 
 $sql = sed_sql_query("INSERT INTO ".$cfg['mysqldb']."pages VALUES
-(1, 0, 'news', '', 'Welcome !', '...', 'Congratulations, your website is up and running !<br />\r\n<br />\r\nThe next step is to go in the <a href=\"/admin/\">Administration panel</a>, tab <a href=\"admin/config\">Configuration</a>, and there tweak the settings for the system.<br />\r\nYou''ll find more instructions and tutorials in the <a href=\"https://seditio.com.tr/doc/\">Documentation page for Seditio at Seditio.com.tr</a>, and technical support in our <a href=\"https://seditio.com.tr\">discussion forums</a>.', '', '', 1, 1263945600, 1263942000, 1861959600, 0, '', '', 38, 1, 1, 0.00, 0, 0, '', '', '', '', '', '');");
+(1, 0, 'news', '', 'Welcome !', '...', 'Congratulations, your website is up and running !<br />\r\n<br />\r\nThe next step is to go in the <a href=\"/admin/\">Administration panel</a>, tab <a href=\"admin/config\">Configuration</a>, and there tweak the settings for the system.<br />\r\nYou''ll find more instructions and tutorials in the <a href=\"https://seditio.com.tr\">Documentation page for Seditio at Seditio.org</a>, and technical support in our <a href=\"https://seditio.com.tr\">discussion forums</a>.', '', '', 1, 1263945600, 1263942000, 1861959600, 0, '', '', 38, 1, 1, 0.00, 0, 0, '', '', '', '', '', '');");
 
 ?>
