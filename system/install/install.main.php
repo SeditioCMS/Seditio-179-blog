@@ -346,7 +346,7 @@ switch($m)
 		}
 
 	$res .= "<br />".$j." ".$L['install_installed_plugins'];
-	$res .= "<a onclick=\"return toggleblock('logf')\" href=\"#\">".$L['install_display_log']."</a>).<br />";
+	$res .= "<a onclick=\"return toggleblock('logf')\" href=\"".$sys['request_uri']."#\">".$L['install_display_log']."</a>).<br />";
 	$res .= "<div name=\"log\" id=\"logf\" style=\"display:none;\" >";
 	$res .= $log."</div>";
 
