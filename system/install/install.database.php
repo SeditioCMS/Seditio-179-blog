@@ -405,9 +405,6 @@ $sql = sed_sql_query("CREATE TABLE ".$cfg['mysqldb']."users (
   user_sid char(32) NOT NULL default '',
   user_lostpass char(32) NOT NULL default '',
   user_auth text,
-  user_token varchar(255) NOT NULL default '',
-  user_oauth_provider varchar(50) NOT NULL default '',
-  user_oauth_uid text NOT NULL,  
   PRIMARY KEY (user_id)
 ) ENGINE=".$cfg['mysqlengine']." DEFAULT CHARSET=".$cfg['mysqlcharset']." COLLATE=".$cfg['mysqlcollate'].";");
 
