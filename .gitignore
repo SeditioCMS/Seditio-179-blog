@@ -211,12 +211,4 @@ pip-log.txt
 #Translations
 *.mo
 
-#Mr Developer
-.mr.developer.cfg
-docs/upgrade/sed_parser.sql
-datas/config.php
-datas/users/*
-datas/thumbs/*
-datas/avatars/*
-datas/resized/*
 
