@@ -45,6 +45,7 @@ $sys['dir_uri'] = (mb_strlen(dirname($_SERVER['PHP_SELF'])) > 1) ? dirname($_SER
 if ($sys['dir_uri'][mb_strlen($sys['dir_uri']) - 1] != '/') { $sys['dir_uri'] .= '/'; }   
 $sys['abs_url'] = $sys['scheme'].'://'.$sys['host'].$sys['dir_uri'];
 $sys['request_uri'] = $_SERVER['REQUEST_URI'];
+
 $res = "";
 
 // ------------------------------------
@@ -279,8 +280,9 @@ switch($m)
 	{
 		$extplugin_info = "plugins/".$v."/".$v.".setup.php";
 		$info = sed_infoget($extplugin_info, 'SED_EXTPLUGIN');
-		$checked = (isset($info['Installer_skip']) && $info['Installer_skip'] == 1) ? '' : "checked=\"checked\"";
 		
+		$checked = (isset($info['Installer_skip']) && $info['Installer_skip'] == 1) ? '' : "checked=\"checked\"";
+	
 		$res .= "<tr><td style=\"width:6%; text-align:center;\">";
 		$res .= sed_plugin_icon($v);  
 		$res .= "</td><td><strong>".$info['Name']."</strong><br /><spab class=\"desc\">".$info['Description']."</span></td>";
@@ -344,7 +346,7 @@ switch($m)
 		}
 
 	$res .= "<br />".$j." ".$L['install_installed_plugins'];
-	$res .= "<a onclick=\"return toggleblock('logf')\" href=\"".$sys['request_uri']."#\">".$L['install_display_log']."</a>).<br />";
+	$res .= "<a onclick=\"return toggleblock('logf')\" href=\"#\">".$L['install_display_log']."</a>).<br />";
 	$res .= "<div name=\"log\" id=\"logf\" style=\"display:none;\" >";
 	$res .= $log."</div>";
 
@@ -490,7 +492,10 @@ switch($m)
 	$res .= (extension_loaded('gd')) ? '<span class="yes">'.$L['install_available'].'</span>' : '<span class="no">'.$L['install_missing'].'</span>';
 	$res .= "</td></tr>";	
 
-
+/*	$res .= "<tr><td style=\"width:150px;\">".$L['install_mysql_extension']."</td><td>";
+	$res .= (extension_loaded('mysql')) ? '<span class="yes">'.$L['install_available'].'</span>' : '<span class="no">'.$L['install_missing'].'</span>';
+	$res .= "</td></tr>";
+*/	
 	$res .= "<tr><td style=\"width:150px;\">".$L['install_mysqli_extension']."</td><td>";
 	$res .= (extension_loaded('mysqli')) ? '<span class="yes">'.$L['install_available'].'</span>' : '<span class="no">'.$L['install_missing'].'</span>';
 	$res .= "</td></tr>";
