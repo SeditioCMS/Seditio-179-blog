@@ -46,7 +46,7 @@ function sed_get_rss($rss_content) {
 $sednews_maxitems = $cfg['plugin']['sednews']['maxitems'];
 $sednews_rssfeed = $cfg['plugin']['sednews']['rssfeed'];
 
-$sednews_rssfeed = (!empty($sednews_rssfeed)) ? $sednews_rssfeed : "https://ntka.org/rss";
+$sednews_rssfeed = (!empty($sednews_rssfeed)) ? $sednews_rssfeed : "https://seditio.com.tr/rss";
 
 $t->assign(array(
 	"ADMIN_RSS_NEWS_TAB_TITLE" => $L['sednews_title']
