@@ -31,7 +31,7 @@ Lock_members=W12345A
 [END_SED_EXTPLUGIN]
 
 [BEGIN_SED_EXTPLUGIN_CONFIG]
-rssfeed=01:string:::RSS Feed URL
+rssfeed=01:string::https://seditio.com.tr/rss:RSS Feed URL
 maxitems=01:select:0,1,2,3,4,5,6,7,8,9,10:3:Recent item displayed
 [END_SED_EXTPLUGIN_CONFIG]
 
