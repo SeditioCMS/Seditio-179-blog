@@ -22,7 +22,7 @@
 			</div>
 
 			<div class="message-go-home"> 
-				<a href="/" class="main-btn">{PHP.skinlang.message.gohome}</a>
+				<a href="{PHP.cfg.mainurl}" class="main-btn">{PHP.skinlang.message.gohome}</a>
 			</div>
 		 
 		</div> 
