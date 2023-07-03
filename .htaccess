@@ -2,6 +2,11 @@ Options -Indexes
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+RewriteCond %{REQUEST_URI} ^(.*?)\/{2,}(.*?)$
+RewriteRule . %1/%2 [L,R=301]
+RewriteCond %{THE_REQUEST} //
+RewriteRule .* /$0 [R=301,L]
+
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
