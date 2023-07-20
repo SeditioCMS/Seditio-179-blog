@@ -27,7 +27,7 @@ $pg = sed_import('pg','G','INT');
 
 $comments = sed_import('comments','G','BOL');
 $ratings = sed_import('ratings','G','BOL');
-
+$comments = 1; // comment show
 /* === Hook === */
 $extp = sed_getextplugins('page.first');
 if (is_array($extp))
