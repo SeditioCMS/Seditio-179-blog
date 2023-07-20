@@ -27,7 +27,7 @@ $pg = sed_import('pg','G','INT');
 
 $comments = sed_import('comments','G','BOL');
 $ratings = sed_import('ratings','G','BOL');
-$comments = 1; // comment show
+
 /* === Hook === */
 $extp = sed_getextplugins('page.first');
 if (is_array($extp))
@@ -152,9 +152,9 @@ if ($pag['page_totaltabs']>1)
 		else
 			{ $pag['page_tabtitle'][$i] = $i == 1 ? $pag['page_title'] : $L['Page'] . ' ' . ($i + 1); }
 		
-    $tab_url = empty($pag['page_alias']) ? sed_url("page", "id=".$pag['page_id']."&pg=".$i) : sed_url("page", "al=".$pag['page_alias']."&pg=".($i+1));     
+			$tab_url = empty($pag['page_alias']) ? sed_url("page", "id=".$pag['page_id']."&pg=".$i) : sed_url("page", "al=".$pag['page_alias']."&pg=".($i+1));     
     
-    $pag['page_tabtitles'][] .= "<a href=\"".$tab_url."\">".($i+1).". ".$pag['page_tabtitle'][$i]."</a>";		
+		$pag['page_tabtitles'][] .= "<a href=\"".$tab_url."\">".($i+1).". ".$pag['page_tabtitle'][$i]."</a>";		
 		$pag['page_tabs'][$i] = trim(str_replace('[newpage]', '', $pag['page_tabs'][$i]));
 		$selected = ($i == $pag['page_tab']) ? "selected=\"selected\"" : '';
 		$pag['page_tabselect'] .= "<option $selected value=\"".$tab_url."\">".($i+1)." - ".$pag['page_tabtitle'][$i]."</option>";	
@@ -244,6 +244,10 @@ if (is_array($extp))
 if ($m == 'print') {
 	sed_sendheaders();
 	$mskin = sed_skinfile(array('print.page', $sed_cat[$pag['page_cat']]['tpl'])); 
+}
+elseif (file_exists(sed_skinfile(array('page.alias', $pag['page_alias'])))) {
+	require(SED_ROOT . "/system/header.php");
+	$mskin = sed_skinfile(array('page.alias', $pag['page_alias']));  
 }
 else {
 	require(SED_ROOT . "/system/header.php");
