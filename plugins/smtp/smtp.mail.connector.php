@@ -40,6 +40,7 @@ if ($smtp_active == 'yes')
 		$smtp_from = $cfg['plugin']['smtp']['smtp_from'];
 		$smtp_from_title = $cfg['plugin']['smtp']['smtp_from_title'];
 		$smtp_from_title = (!empty($smtp_from_title)) ? $smtp_from_title : $cfg['maintitle'];
+		$smtp_title = "=?".$cfg['charset']."?B?".base64_encode($smtp_from_title)."?=";
 		$smtp_ssl = ($cfg['plugin']['smtp']['smtp_ssl'] == 'yes') ? 'ssl' : '';   
 		$smtp_connection_timeout = 30;
 		$smtp_response_timeout = 8;
@@ -49,17 +50,16 @@ if ($smtp_active == 'yes')
 		require_once(SED_ROOT . '/plugins/smtp/inc/smtp.class.php');
 
 		$c_body .= ($c_content == "html") ? "<p>".$cfg['maintitle']." - ".$cfg['mainurl']."</p>" : "\n\n".$cfg['maintitle']." - ".$cfg['mainurl'];    
-
 		$mail_type = ($c_content == 'plain') ? false : true;
 
 		$mail = new Email($smtp_host, $smtp_port, $smtp_connection_timeout, $smtp_response_timeout, $smtp_ssl);
     
 		$mail->setLogin($smtp_login, $smtp_pass);
 		$mail->addTo($c_fmail, $c_fmail);
-		
-		$mail->setFrom($smtp_from, $smtp_from_title);
+		$mail->setFrom($smtp_from, $smtp_title);
 		$mail->setSubject($c_subject);
 		$mail->setMessage($c_body, $mail_type);  
+		
 		
 		if (is_array($c_attach)) $mail->setAttach($c_attach);
     		  
