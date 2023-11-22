@@ -4678,7 +4678,7 @@ function sed_userisonline($id)
 /** 
  * Check valid base64 string
  * 
- * @param string $string Text encode base64
+ * @param string $s Text encode base64
  * @return bool 
  */ 	
 function sed_valid_base64($s)
