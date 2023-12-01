@@ -7,7 +7,7 @@ https://seditio.org
 [BEGIN_SED]
 File=plugins/syntaxhighlight/syntaxhighlight.setup.php
 Version=179
-Updated=2012-feb-16
+Updated=2022-aug-31
 Type=Plugin
 Author=Amro
 Description=
@@ -18,7 +18,7 @@ Code=syntaxhighlight
 Name=Syntaxhighlight 1.1
 Description=Syntaxhighlight for Seditio 
 Version=160
-Date=2012-feb-16
+Date=2022-aug-31
 Author=Amro
 Copyright=Amro
 Notes=
@@ -36,6 +36,6 @@ syntaxhighlight_theme=12:select:Default,Django,Eclipse,Emacs,FadeToGrey,Midnight
 
 ==================== */
 
-if (!defined('SED_CODE')) { die('Wrong URL.'); }
-
-?>
+if (!defined('SED_CODE')) {
+    die('Wrong URL.');
+}
