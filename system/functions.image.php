@@ -83,7 +83,7 @@ function sed_resize($filename)
 		{
 		$watermark = (strpos($cfg['gallery_logofile'], "/") == 0) ? SED_ROOT . $cfg['gallery_logofile'] : SED_ROOT .'/'. $cfg['gallery_logofile'];
 		}
-	$watermark = ($set_watermark && is_file($watermark)) ? $watermark : null; 
+	$watermark  = (!empty($watermark) && $set_watermark && is_file($watermark)) ? $watermark : null; 
 
 	if (class_exists('Imagick') && $cfg['use_imagick']) {
 		sed_image_constrain_imagick($originals_dir . $original_file, $preview_dir . $resized_file, $type, $width,
