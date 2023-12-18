@@ -25,6 +25,7 @@ require(SED_ROOT . '/system/functions.php');
 
 if (empty($cfg['mysqlhost']) && empty($cfg['mysqldb']))
 	{
+	error_reporting(E_ALL ^ E_NOTICE);	
 	sed_redirect(sed_url("install", "", "", true));
 	exit;
 	}
