@@ -15,7 +15,7 @@ Description=Functions MySQLi driver
 ==================== */
 
 if (!defined('SED_CODE')) { die('Wrong URL.'); }
-
+mysqli_report(MYSQLI_REPORT_OFF);
 /* ------------------ */
 
 if (function_exists('mysqli_set_charset') === false) {
