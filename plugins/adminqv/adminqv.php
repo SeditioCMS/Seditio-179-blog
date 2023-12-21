@@ -39,12 +39,6 @@ $newusers = sed_sql_result($sql, 0, "COUNT(*)");
 $sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_date >'$timeback'");
 $newpages = sed_sql_result($sql, 0, "COUNT(*)");
 
-$sql = sed_sql_query("SELECT COUNT(*) FROM $db_forum_topics WHERE ft_creationdate>'$timeback'");
-$newtopics = sed_sql_result($sql, 0, "COUNT(*)");
-
-$sql = sed_sql_query("SELECT COUNT(*) FROM $db_forum_posts WHERE fp_updated>'$timeback'");
-$newposts = sed_sql_result($sql, 0, "COUNT(*)");
-
 $sql = sed_sql_query("SELECT COUNT(*) FROM $db_com WHERE com_date>'$timeback'");
 $newcomments = sed_sql_result($sql, 0, "COUNT(*)");
 
@@ -104,16 +98,6 @@ if (!$cfg['disable_page']) {
 		"QV_NEWPAGES_URL" => sed_url("admin", "m=page")
 	));
 	$qv->parse("ADMIN_QV.ADMIN_QV_NEWPAGES");
-}
-
-if (!$cfg['disable_forums']) {
-
-	$qv->assign(array(
-		"QV_NEWTOPICS" => $newtopics,
-		"QV_NEWPOSTS" => $newposts,
-		"QV_NEWFORUMS_URL" => sed_url("forums")
-	));
-	$qv->parse("ADMIN_QV.ADMIN_QV_NEWONFORUMS");
 }
 
 if (!$cfg['disable_comments']) {
