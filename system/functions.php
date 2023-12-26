@@ -2391,7 +2391,7 @@ function sed_htmlmetas($description = '', $keywords = '', $contenttype = 'text/h
 	<meta http-equiv=\"content-type\" content=\"" . $contenttype . "; charset=" . $cfg['charset'] . "\" />
 	<meta name=\"description\" content=\"" . $description . "\" />
 	<meta name=\"keywords\" content=\"" . $keywords . "\" />
-	<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio.org\" />
+	<meta name=\"generator\" content=\"Seditio by Neocrome & Seditio Team https://seditio..com.tr\" />
 	<meta http-equiv=\"pragma\" content=\"no-cache\" />
 	<meta http-equiv=\"cache-control\" content=\"no-cache\" />
 	<meta http-equiv=\"last-modified\" content=\"" . gmdate("D, d M Y H:i:s") . " GMT\" />
