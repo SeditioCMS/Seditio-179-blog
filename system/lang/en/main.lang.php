@@ -59,14 +59,14 @@ $L['Category'] = "Category";
 $L['Categories'] = "Categories";
 $L['Clearstatus'] = "Clear status";
 $L['Close'] = "Close";
-$L['Clone'] = "Clone"; 
+$L['Clone'] = "Clone";
 $L['Code'] = "Code";
 $L['Configuration'] = "Configuration";
 $L['Configname'] = "Config name";
 $L['Comment'] = "Comment";
 $L['Comments'] = "Comments";
 $L['Confirm'] = "Confirm";
-$L['Copy'] = "Copy";   
+$L['Copy'] = "Copy";
 $L['Copyurl'] = "Copy URL";
 $L['Copyright'] = "Copyright";
 $L['Core'] = "Core";
@@ -386,7 +386,7 @@ $L['foo_sqlaverage'] = "Average SQL time";
 
 /* ====== Auth ====== */
 
-$L['aut_usernametooshort']= "The user name must be at least 2 chars long";
+$L['aut_usernametooshort'] = "The user name must be at least 2 chars long";
 $L['aut_passwordtooshort'] = "The password must be at least 4 chars long and must consist of alphanumerical characters and underscore only.";
 $L['aut_emailtooshort'] = "The email is not valid.";
 $L['aut_usernamealreadyindb'] = "The user name you provided is already in the database";
@@ -474,7 +474,7 @@ $L['pfs_resize'] = "Resize if larger than %1\$s pixels";  // New in v150
 
 $L['pm_titletooshort'] = "The title is too short or missing";
 $L['pm_bodytooshort'] = "The body of the private message is too short or missing";
-$L['pm_bodytoolong'] = "The body of the private message is too long, ".$cfg['pm_maxsize']." chars maximum";
+$L['pm_bodytoolong'] = "The body of the private message is too long, " . $cfg['pm_maxsize'] . " chars maximum";
 $L['pm_wrongname'] = "At least one recipient was wrong, and so removed from the list";
 $L['pm_toomanyrecipients'] = "%1\$s recipients maximum please";
 $L['pmsend_title'] = "Send a new private message";
@@ -556,6 +556,7 @@ $L['pro_avatarschoose'] = "Click an image below to set it as your own avatar";
 $L['pro_avataruploadfailed'] = "The upload failed, delete the old avatar before to free the slot !";
 
 /* ====== Rss ====== */
+
 $L['rss_commentauthor'] = "User Comments"; // New in v173
 $L['rss_lastcomments'] = "Recent Comments"; // New in v173
 
@@ -593,8 +594,8 @@ $sed_translit = array(
 	'ч' => 'ch', 'џ' => 'dh', 'ш' => 'sh', 'щ' => 'shh', 'ъ' => '',
 	'ы' => 'y', 'ь' => '', 'э' => 'e', 'ю' => 'yu', 'я' => 'ya',
 	//turk
-	'Ç' => 'c', 'Ş' => 's', 'Ğ' => 'g', 'Ü' => 'u', 'İ' => 'i', 
-	'Ö' => 'o', 'ç' => 'c', 'ş' => 's', 'ğ' => 'g', 'ü' => 'u', 
+	'Ç' => 'c', 'Ş' => 's', 'Ğ' => 'g', 'Ü' => 'u', 'İ' => 'i',
+	'Ö' => 'o', 'ç' => 'c', 'ş' => 's', 'ğ' => 'g', 'ü' => 'u',
 	'ö' => 'o', 'ı' => 'i', '+' => 'plus', '#' => 'sharp'
 );
 
@@ -605,8 +606,6 @@ $sed_months_list = array(
 );
 
 $sed_daysweek_list = array(
-   'sunday', 'monday', 'tuesday', 'wednesday',
-   'thursday', 'friday', 'saturday'
+	'sunday', 'monday', 'tuesday', 'wednesday',
+	'thursday', 'friday', 'saturday'
 );
-
-?>
