@@ -25,7 +25,6 @@ sed_block($usr['isadmin']);
 
 $L['adm_code']['admin'] = $L['Administration'];
 $L['adm_code']['comments'] = $L['Comments'];
-$L['adm_code']['forums'] = $L['Forums'];
 $L['adm_code']['index'] = $L['Home'];
 $L['adm_code']['message'] = $L['Messages'];
 $L['adm_code']['page'] = $L['Pages'];
@@ -38,6 +37,8 @@ $L['adm_code']['ratings'] = $L['Ratings'];
 $L['adm_code']['users'] = $L['Users'];
 $L['adm_code']['dic'] = $L['core_dic'];
 $L['adm_code']['menu'] = $L['core_menu'];
+$L['adm_code']['log'] = $L['Log'];
+$L['adm_code']['trash'] = $L['Trashcan'];
 
 $t = new XTemplate(sed_skinfile('admin.rightsbyitem', false, true)); 
 

@@ -16,7 +16,7 @@ Description=Trash can
 
 if ( !defined('SED_CODE') || !defined('SED_ADMIN') ) { die('Wrong URL.'); }
 
-list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = sed_auth('admin', 'a');
+list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = sed_auth('trash', 'a');
 sed_block($usr['isadmin']);
 
 // ---------- Breadcrumbs
