@@ -196,10 +196,10 @@ if ($usr['id'] > 0) {
 		$t->parse("HEADER.ADMIN_MENU.TRASHCAN_MENU");
 	}
 
-	// Forums menu & other
+	// other
 
 	if (sed_auth('admin', 'a', 'A')) {
-		
+
 		$t->assign(array(
 			"ADMIN_MENU_USERS_URL" => sed_url('admin', "m=users"),
 			"ADMIN_MENU_USERS_URL_CLASS" => ($m == 'users') ? 'current' : ''
