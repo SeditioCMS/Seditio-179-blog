@@ -884,7 +884,6 @@ ul {
     padding: 160px 0 40px 0;
 }
 
-
 #standalone {
     padding: 15px;
 }
@@ -1697,7 +1696,6 @@ a.alfabeta:hover {
     margin-bottom: 24px;
 }
 
-
 .poll-info {
     color: #cccccc;
 }
@@ -1874,7 +1872,7 @@ a.alfabeta:hover {
     text-align: left;
 }
 
-.page-text table {
+ .page-text table {
     margin: 0 5px 15px 5px;
     width: auto !important;
 }
@@ -1974,11 +1972,10 @@ a.alfabeta:hover {
     word-wrap: break-word;
 }
 
+
 /*-------------------------*/
 
-
 /***** FOOTER *****/
-
 
 /*-------------------------*/
 

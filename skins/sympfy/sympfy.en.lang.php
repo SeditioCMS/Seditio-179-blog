@@ -138,7 +138,7 @@ $skinlang['pmsend']['Sendmessage'] = "Send the message now !";
 //pm.tpl
 $skinlang['pm']['State'] = "State";
 $skinlang['pm']['Sender'] = "Sender";
-$skinlang['pm']['SubjectClick'] = "Subject (click to read)";		// New in v125
+$skinlang['pm']['SubjectClick'] = "Subject (click to read)";        // New in v125
 $skinlang['pm']['Date'] = "Date";
 $skinlang['pm']['Action'] = "Action";
 $skinlang['pm']['Recipient'] = "Recipient";
@@ -292,5 +292,3 @@ $skinlang['admintooltip']['pageeditoption'] = "Edit config option";
 
 //service.message.tpl
 $skinlang['message']['gohome'] = "Go home";
-
-?>
