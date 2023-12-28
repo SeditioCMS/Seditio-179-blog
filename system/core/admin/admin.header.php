@@ -179,7 +179,6 @@ if ($usr['id'] > 0) {
 	$t->parse("HEADER.ADMIN_MENU.PAGE_MENU");
 
 	if (sed_auth('log', 'a', 'A')) {
-
 		$t->assign(array(
 			"ADMIN_MENU_LOG_URL" => sed_url('admin', "m=log"),
 			"ADMIN_MENU_LOG_URL_CLASS" => ($m == 'log') ? 'current' : ''
@@ -188,7 +187,6 @@ if ($usr['id'] > 0) {
 	}
 
 	if (sed_auth('trash', 'a', 'A')) {
-
 		$t->assign(array(
 			"ADMIN_MENU_TRASHCAN_URL" => sed_url('admin', "m=trashcan"),
 			"ADMIN_MENU_TRASHCAN_URL_CLASS" => ($m == 'trashcan') ? 'current' : ''
@@ -196,10 +194,18 @@ if ($usr['id'] > 0) {
 		$t->parse("HEADER.ADMIN_MENU.TRASHCAN_MENU");
 	}
 
+	if (sed_auth('manage', 'a', 'A')) {
+		$t->assign(array(
+			"ADMIN_MENU_MANAGE_URL" => sed_url('admin', "m=manage"),
+			"ADMIN_MENU_MANAGE_URL_CLASS" => ($m == 'manage') ? 'current' : ''
+		));
+		$t->parse("HEADER.ADMIN_MENU.MANAGE_MENU");
+	}
+
 	// other
 
 	if (sed_auth('admin', 'a', 'A')) {
-
+		
 		$t->assign(array(
 			"ADMIN_MENU_USERS_URL" => sed_url('admin', "m=users"),
 			"ADMIN_MENU_USERS_URL_CLASS" => ($m == 'users') ? 'current' : ''
@@ -211,12 +217,6 @@ if ($usr['id'] > 0) {
 			"ADMIN_MENU_PLUGINS_URL_CLASS" => ($m == 'plug') ? 'current' : ''
 		));
 		$t->parse("HEADER.ADMIN_MENU.PLUGINS_MENU");
-
-		$t->assign(array(
-			"ADMIN_MENU_TOOLS_URL" => sed_url('admin', "m=tools"),
-			"ADMIN_MENU_TOOLS_URL_CLASS" => ($m == 'tools') ? 'current' : ''
-		));
-		$t->parse("HEADER.ADMIN_MENU.TOOLS_MENU");
 	}
 
 	$t->assign(array(
