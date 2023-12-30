@@ -211,4 +211,11 @@ pip-log.txt
 #Translations
 *.mo
 
+#Mr Developer
+.mr.developer.cfg
+datas/config.php
+datas/users/*
+datas/thumbs/*
+datas/avatars/*
+datas/resized/*
 
