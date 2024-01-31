@@ -100,7 +100,7 @@ if (!empty($p)) {
 		$authentries[$row['auth_code']] = $row['COUNT(*)'];
 	}
 
-	$sql = sed_sql_query("SELECT * FROM $db_core WHERE ct_code NOT IN ('admin', 'message', 'index', 'forums', 'users', 'plug', 'page', 'trash') ORDER BY ct_title ASC");
+	$sql = sed_sql_query("SELECT * FROM $db_core WHERE ct_code NOT IN ('admin', 'message', 'index', 'users', 'plug', 'page', 'trash') ORDER BY ct_title ASC");
 	$lines = array();
 
 	while ($row = sed_sql_fetchassoc($sql)) {
