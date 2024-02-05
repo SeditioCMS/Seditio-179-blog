@@ -25,11 +25,7 @@ $smcfg['lists']['limit']       = 1000;
 $smcfg['index']['changefreq']  = "always";
 $smcfg['index']['priority']    = "1.0";
 
-$smcfg['forums']['changefreq'] = "daily";
-$smcfg['forums']['priority']   = "0.2";
-$smcfg['forums']['limit']      = 3000;
-
-$m = sed_import('m', 'G', 'ALP'); // (index/lists/pages/forums)
+$m = sed_import('m', 'G', 'ALP'); // (index/lists/pages)
 
 $items = array();
 
