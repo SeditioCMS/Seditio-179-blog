@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=plugins/search/search.php
-Version=179
-Date=2022-jul-28
+Version=180
+Date=2024-feb-28
 Type=Plugin
 Author=Amro
 Description=
@@ -120,26 +120,27 @@ if ($a == 'search')
 	
 if (!$cfg['disable_page'])
 	{
-	$page_cats = "<select multiple name=\"pag_sub[]\" size=\"5\">";
-	$page_cats .= "<option value=\"all\" selected=\"selected\">".$L['plu_allcategories']."</option>";
+	$selectboxCatValues = array('all' => $L['plu_allcategories']);
 
 	foreach ($sed_cat as $i =>$x)
 		{
 		if ($i != 'all' && $i != 'system' && sed_auth('page', $i, 'R'))
 			{
-			$selected = (count($checked_catarr) > 0 && in_array($i, $checked_catarr)) ? "selected=\"selected\"" : '';
-			$page_cats .= "<option value=\"".$i."\" $selected> ".$x['tpath']."</option>";
+			$selectboxCatValues[$i] = $x['tpath'];
 			}
 		}
 		
-	$page_cats .= "</select>";
+	$checked_catarr = (empty($checked_catarr)) ? array('all') : $checked_catarr;
+	$additionalAttributes = array(
+		"multiple" => true,
+		"size" => 5
+	);
+	$page_cats = sed_selectbox($checked_catarr, "pag_sub[]", $selectboxCatValues, FALSE, TRUE, TRUE, $additionalAttributes, TRUE);
 
 	$t->assign("PLUGIN_SEARCH_FORM_PAGES", $page_cats);
 	$t->parse("MAIN.PLUGIN_SEARCH_FORM.PLUGIN_SEARCH_FORM_PAGES");
 	}
 
-
-	
 $t->assign(array(
 	"PLUGIN_SEARCH_FORM_SEND" => sed_url("plug", "e=search&a=search"),
 	"PLUGIN_SEARCH_FORM_INPUT" => sed_textbox('sq', sed_cc($sq), 40, 64)

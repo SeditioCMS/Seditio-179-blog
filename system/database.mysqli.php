@@ -242,8 +242,6 @@ function sed_sql_query($query, $halterr = true, $conn_id = null)
 
 	$conn_id = is_null($conn_id) ? $connection_id : $conn_id;
 
-	$sys['qcount'] = 0;
-	$sys['tcount'] = 0;
 	$sys['qcount']++;
 	$xtime = microtime();
 
