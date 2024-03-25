@@ -23,7 +23,7 @@ sed_block($usr['isadmin']);
 
 // ---------- Breadcrumbs
 $urlpaths = array();
-$urlpaths[sed_url("admin", "m=tools")] =  $L['adm_manage'];
+$urlpaths[sed_url("admin", "m=manage")] =  $L['adm_manage'];
 $urlpaths[sed_url("admin", "m=trashcan")] =  $L['Trashcan'];
 
 $admintitle = $L['Trashcan'];
@@ -58,6 +58,16 @@ while ($row = sed_sql_fetchassoc($sql)) {
 		case 'comment':
 			$icon = "comments.png";
 			$typestr = $L['Comment'];
+			break;
+
+		case 'forumpost':
+			$icon = "forums.png";
+			$typestr = $L['Post'];
+			break;
+
+		case 'forumtopic':
+			$icon = "forums.png";
+			$typestr = $L['Topic'];
 			break;
 
 		case 'page':

@@ -202,10 +202,21 @@ if ($usr['id'] > 0) {
 		$t->parse("HEADER.ADMIN_MENU.MANAGE_MENU");
 	}
 
-	// other
+	// Forums menu & other
 
 	if (sed_auth('admin', 'a', 'A')) {
-		
+		$forums_menu = "<ul class=\"arrow_list\">";
+		$forums_menu .= ($m == "forums" && empty($s)) ? "<li>" . sed_linkif(sed_url("admin", "m=forums"), $L['adm_forum_structure_cat'], sed_auth('admin', 'a', 'A'), 'current') . "</li>" : "<li>" . sed_linkif(sed_url("admin", "m=forums"), $L['adm_forum_structure_cat'], sed_auth('admin', 'a', 'A')) . "</li>";
+		$forums_menu .= ($s == "structure") ? "<li>" . sed_linkif(sed_url("admin", "m=forums&s=structure"), $L['adm_forum_structure'], sed_auth('admin', 'a', 'A'), 'current') . "</li>" : "<li>" . sed_linkif(sed_url("admin", "m=forums&s=structure"), $L['adm_forum_structure'], sed_auth('admin', 'a', 'A')) . "</li>";
+		$forums_menu .= "</ul>";
+
+		$t->assign(array(
+			"ADMIN_MENU_FORUMS_URL" => sed_url('admin', "m=forums"),
+			"ADMIN_MENU_FORUMS_URL_CLASS" => ($m == "forums") ? "current" : "",
+			"ADMIN_MENU_FORUMS" => $forums_menu
+		));
+		$t->parse("HEADER.ADMIN_MENU.FORUMS_MENU");
+
 		$t->assign(array(
 			"ADMIN_MENU_USERS_URL" => sed_url('admin', "m=users"),
 			"ADMIN_MENU_USERS_URL_CLASS" => ($m == 'users') ? 'current' : ''

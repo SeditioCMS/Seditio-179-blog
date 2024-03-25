@@ -27,6 +27,7 @@ sed_block($usr['isadmin']);
 
 $L['adm_code']['admin'] = $L['Administration'];
 $L['adm_code']['comments'] = $L['Comments'];
+$L['adm_code']['forums'] = $L['Forums'];
 $L['adm_code']['index'] = $L['Home'];
 $L['adm_code']['message'] = $L['Messages'];
 $L['adm_code']['page'] = $L['Pages'];
@@ -80,6 +81,12 @@ switch ($ic) {
 		$rurl = sed_url('admin', 'm=page&mn=structure');
 		break;
 
+	case 'forums':
+		$forum = sed_forum_info($io);
+		$title = " : " . sed_cc($forum['fs_title']) . " (#" . $io . ")";
+		$rurl = sed_url('admin', 'm=forums');
+		break;
+
 	case 'plug':
 		$extplugin_info = SED_ROOT . "/plugins/" . $io . "/" . $io . ".setup.php";
 		$info = sed_infoget($extplugin_info, 'SED_EXTPLUGIN');
@@ -89,7 +96,7 @@ switch ($ic) {
 
 	default:
 		$title = ($io == 'a') ? '' : $io;
-		$rurl = sed_url('admin', 'm=tools');
+		$rurl = sed_url('admin', 'm=manage');
 		break;
 }
 
