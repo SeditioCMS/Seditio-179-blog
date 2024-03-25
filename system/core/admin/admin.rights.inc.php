@@ -33,7 +33,6 @@ sed_block($usr['isadmin']);
 
 $L['adm_code']['admin'] = $L['Administration'];
 $L['adm_code']['comments'] = $L['Comments'];
-$L['adm_code']['forums'] = $L['Forums'];
 $L['adm_code']['index'] = $L['Home'];
 $L['adm_code']['message'] = $L['Messages'];
 $L['adm_code']['page'] = $L['Pages'];
@@ -111,12 +110,6 @@ $sql1 = sed_sql_query("SELECT a.*, u.user_name FROM $db_auth as a
 
 sed_die(sed_sql_numrows($sql1) == 0);
 
-$sql2 = sed_sql_query("SELECT a.*, u.user_name, f.fs_id, f.fs_title, f.fs_category FROM $db_auth as a
-	LEFT JOIN $db_users AS u ON u.user_id=a.auth_setbyuserid
-	LEFT JOIN $db_forum_sections AS f ON f.fs_id=a.auth_option
-	LEFT JOIN $db_forum_structure AS n ON n.fn_code=f.fs_category
-	WHERE auth_groupid='$g' AND auth_code='forums'
-	ORDER BY fn_path ASC, fs_order ASC, fs_title ASC");
 $sql3 = sed_sql_query("SELECT a.*, u.user_name, s.structure_path FROM $db_auth as a
 	LEFT JOIN $db_users AS u ON u.user_id=a.auth_setbyuserid
 	LEFT JOIN $db_structure AS s ON s.structure_code=a.auth_option
@@ -215,23 +208,6 @@ while ($row = sed_sql_fetchassoc($sql1)) {
 $t->assign(array(
 	"RIGHTS_GROUP_TITLE" => $L['Core'],
 	"RIGHTS_GROUP_CODE" => 'admin'
-));
-
-$t->parse("ADMIN_RIGHTS.RIGHTS_GROUP");
-
-if ($advanced) {
-	$t->parse("ADMIN_RIGHTS.RIGHTS_GROUP.ADVANCED_RIGHTS");
-}
-
-while ($row = sed_sql_fetchassoc($sql2)) {
-	$link = sed_url("admin", "m=forums&n=edit&id=" . $row['auth_option']);
-	$title = sed_build_forums($row['fs_id'], sed_cutstring($row['fs_title'], 24), sed_cutstring($row['fs_category'], 32), FALSE);
-	sed_rights_parseline($row, $title, $link);
-}
-
-$t->assign(array(
-	"RIGHTS_GROUP_TITLE" => $L['Forums'],
-	"RIGHTS_GROUP_CODE" => 'forums'
 ));
 
 $t->parse("ADMIN_RIGHTS.RIGHTS_GROUP");

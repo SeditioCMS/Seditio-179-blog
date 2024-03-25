@@ -60,16 +60,6 @@ while ($row = sed_sql_fetchassoc($sql)) {
 			$typestr = $L['Comment'];
 			break;
 
-		case 'forumpost':
-			$icon = "forums.png";
-			$typestr = $L['Post'];
-			break;
-
-		case 'forumtopic':
-			$icon = "forums.png";
-			$typestr = $L['Topic'];
-			break;
-
 		case 'page':
 			$icon = "page.png";
 			$typestr = $L['Page'];
