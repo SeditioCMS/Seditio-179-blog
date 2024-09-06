@@ -2797,33 +2797,34 @@ function sed_textarea($name, $value, $rows, $cols, $editor = "noeditor", $disabl
  */
 function sed_checkbox($name, $data = '', $check_data = FALSE, $disabled = FALSE, $additionalAttributes = array())
 {
-	if (empty($data) || !is_array($data)) {
-		$val = (empty($data)) ? "1" : $data;
+    if (empty($data) || !is_array($data)) {
+        $val = (empty($data)) ? "1" : $data;
 
-		$checked = ($check_data) ? " checked" : "";
-		$disabledAttr = ($disabled) ? " disabled" : "";
-		$htmlAttributes = "";
-		foreach ($additionalAttributes as $attribute => $attrValue) {
-			$htmlAttributes .= " " . $attribute . "=\"" . $attrValue . "\"";
-		}
-		$result = "<span class=\"checkbox-item\"><input type=\"checkbox\" class=\"checkbox\" id=\"" . $name . "\" name=\"" . $name . "\"" . $checked . $disabledAttr . " value=\"" . $val . "\"" . $htmlAttributes . " /><label for=\"" . $name . "\">&nbsp;</label></span>";
-	} else {
-		if (!is_array($data)) $data = explode(',', $data);
-		if (!is_array($check_data)) $check_data = explode(',', $check_data);
-		$jj = 0;
-		$result = '';
-		
-		foreach ($data as $key => $v) {
-			$jj++;
-			
-			$isChecked = (is_array($check_data) && in_array($key, $check_data)) ? " checked" : "";
-			$htmlAttributes = "";
-			foreach ($additionalAttributes as $attribute => $attrValue) {
-				$htmlAttributes .= " " . $attribute . "=\"" . $attrValue . "\"";
-				}
-		$result .= '<span class="checkbox-item"><input type="checkbox" class="checkbox" id="' . $name . "_" . $jj . '" name="' . $name . '[]' . '" value="' . $key . '"' . $isChecked . $htmlAttributes . ' /><label for="' . $name . "_" . $jj . '">' . $v . '</label></span>';	
-	}
-	return ($result);
+        $checked = ($check_data) ? " checked" : "";
+        $disabledAttr = ($disabled) ? " disabled" : "";
+        $htmlAttributes = "";
+        foreach ($additionalAttributes as $attribute => $attrValue) {
+            $htmlAttributes .= " " . $attribute . "=\"" . $attrValue . "\"";
+        }
+        $result = "<span class=\"checkbox-item\"><input type=\"checkbox\" class=\"checkbox\" id=\"" . $name . "\" name=\"" . $name . "\"" . $checked . $disabledAttr . " value=\"" . $val . "\"" . $htmlAttributes . " /><label for=\"" . $name . "\">&nbsp;</label></span>";
+    } else {
+        if (!is_array($data)) $data = explode(',', $data);
+        if (!is_array($check_data)) $check_data = explode(',', $check_data);
+        $jj = 0;
+        $result = '';
+        
+        foreach ($data as $key => $v) {
+            $jj++;
+            
+            $isChecked = (is_array($check_data) && in_array($key, $check_data)) ? " checked" : "";
+            $htmlAttributes = "";
+            foreach ($additionalAttributes as $attribute => $attrValue) {
+                $htmlAttributes .= " " . $attribute . "=\"" . $attrValue . "\"";
+            }
+            $result .= '<span class="checkbox-item"><input type="checkbox" class="checkbox" id="' . $name . "_" . $jj . '" name="' . $name . '[]' . '" value="' . $key . '"' . $isChecked . $htmlAttributes . ' /><label for="' . $name . "_" . $jj . '">' . $v . '</label></span>';  
+        }
+    }
+    return $result; 
 }
 
 /** 
