@@ -259,7 +259,6 @@ if ($rc != '') {
 	$r['100'] = sed_url("admin", "m=plug", "", true, true);
 	$r['101'] = sed_url("admin", "m=hitsperday", "", true, true);
 	$r['102'] = sed_url("admin", "m=polls", "", true, true);
-	$r['103'] = sed_url("admin", "m=forums", "", true, true);
 	$r['200'] = sed_url("users", "", "", true, true);
 
 	$moremetas .= "<meta http-equiv=\"refresh\" content=\"2;url=" . $r["$rc"] . "\" /><br />";
