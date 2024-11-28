@@ -468,7 +468,7 @@ $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (12, 'users
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (13, 'trash', 'Trash Can', '110', 1, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (14, 'gallery', 'Gallery', '150', 1, 0);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (15, 'dic', 'Directories', '177', 1, 0);");
-$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (15, 'menu', 'Menu manager', '178', 1, 0);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (16, 'menu', 'Menu manager', '178', 1, 0);");
 
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "groups VALUES (1, 'guests', 0, 0, 0, 'Guests', '', '', 'darkmagenta', 0, 0, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "groups VALUES (2, 'inactive', 1, 0, 0, 'Inactive', '', '', 'white', 0, 0, 1);");
