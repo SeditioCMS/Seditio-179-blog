@@ -113,6 +113,18 @@ $sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "dic (
   PRIMARY KEY  (dic_id)
 ) ENGINE=" . $cfg['mysqlengine'] . " DEFAULT CHARSET=" . $cfg['mysqlcharset'] . " COLLATE=" . $cfg['mysqlcollate'] . ";");
 
+$sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "dic_items (
+  ditem_id mediumint(8) NOT NULL auto_increment,
+  ditem_dicid mediumint(8) NOT NULL default '0',
+  ditem_title varchar(255) NOT NULL default '',
+  ditem_code varchar(255) NOT NULL default '',
+  ditem_children mediumint(8) NOT NULL default '0',  
+  ditem_defval tinyint(1) default '0',
+  KEY ditem_dicid (ditem_dicid),
+  KEY ditem_children (ditem_children), 
+  PRIMARY KEY  (ditem_id)
+) ENGINE=" . $cfg['mysqlengine'] . " DEFAULT CHARSET=" . $cfg['mysqlcharset'] . " COLLATE=" . $cfg['mysqlcollate'] . ";");
+
 $sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "groups (
   grp_id int(11) NOT NULL auto_increment,
   grp_alias varchar(24) NOT NULL default '',
