@@ -467,6 +467,7 @@ $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (11, 'ratin
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (12, 'users', 'Users', '100', 1, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (13, 'trash', 'Trash Can', '110', 1, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (14, 'gallery', 'Gallery', '150', 1, 0);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (15, 'dic', 'Directories', '177', 1, 0);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "core VALUES (15, 'menu', 'Menu manager', '178', 1, 0);");
 
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "groups VALUES (1, 'guests', 0, 0, 0, 'Guests', '', '', 'darkmagenta', 0, 0, 1);");
@@ -573,6 +574,13 @@ $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (93, 3, 'ga
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (94, 4, 'gallery', 'a', 1, 128, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (95, 5, 'gallery', 'a', 255, 255, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (96, 6, 'gallery', 'a', 131, 0, 1);");
+
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (97, 1, 'dic', 'a', 1, 254, 1);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (98, 2, 'dic', 'a', 1, 254, 1);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (99, 3, 'dic', 'a', 0, 255, 1);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (100, 4, 'dic', 'a', 3, 128, 1);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (101, 5, 'dic', 'a', 255, 255, 1);");
+$sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (102, 6, 'dic', 'a', 131, 0, 1);");
 
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (103, 1, 'menu', 'a', 1, 254, 1);");
 $sql = sed_sql_query("INSERT INTO " . $cfg['mysqldb'] . "auth VALUES (104, 2, 'menu', 'a', 1, 254, 1);");
