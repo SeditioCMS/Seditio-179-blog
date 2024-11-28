@@ -91,6 +91,28 @@ $sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "core (
   KEY ct_code (ct_code)
 ) ENGINE=" . $cfg['mysqlengine'] . " DEFAULT CHARSET=" . $cfg['mysqlcharset'] . " COLLATE=" . $cfg['mysqlcollate'] . ";");
 
+$sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "dic (
+  dic_id mediumint(8) NOT NULL auto_increment,
+  dic_title varchar(255) NOT NULL default '',
+  dic_code varchar(255) NOT NULL default '',
+  dic_type tinyint(1) default '0',
+  dic_values text NOT NULL,
+  dic_parent mediumint(8) NOT NULL default '0',
+  dic_mera varchar(16) NOT NULL default '',
+  dic_form_title varchar(255) NOT NULL default '', 
+  dic_form_desc varchar(255) NOT NULL default '',
+  dic_form_size smallint(5) NOT NULL default '0',
+  dic_form_maxsize smallint(5) NOT NULL default '0',
+  dic_form_cols smallint(5) NOT NULL default '0',
+  dic_form_rows smallint(5) NOT NULL default '0',
+  dic_extra_location varchar(40) NOT NULL default '',
+  dic_extra_type varchar(20) NOT NULL default '',
+  dic_extra_size smallint(5) NOT NULL default '0',
+  KEY dic_code (dic_code), 
+  KEY dic_parent (dic_parent),
+  PRIMARY KEY  (dic_id)
+) ENGINE=" . $cfg['mysqlengine'] . " DEFAULT CHARSET=" . $cfg['mysqlcharset'] . " COLLATE=" . $cfg['mysqlcollate'] . ";");
+
 $sql = sed_sql_query("CREATE TABLE " . $cfg['mysqldb'] . "groups (
   grp_id int(11) NOT NULL auto_increment,
   grp_alias varchar(24) NOT NULL default '',
