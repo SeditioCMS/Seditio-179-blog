@@ -41,6 +41,7 @@ $L['core_users'] = "Üyeler";
 $L['core_meta'] = "HTML Meta";
 $L['core_index'] = "Ana sayfa";
 $L['core_menu'] = "Menü Yöneticisi"; // New in v178
+$L['core_dic'] = "Directories & Extra fields";             // New in v173
 
 /* ====== Upgrade ====== */
 
