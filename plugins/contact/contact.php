@@ -7,7 +7,7 @@ https://seditio.org
 [BEGIN_SED]
 File=plugins/contact/contact.php
 Version=180
-Updated=2024-feb-15
+Updated=2024-feb-21
 Type=Plugin
 Author=Seditio Team
 Description=
@@ -75,6 +75,7 @@ if ($a == 'send') {
 	if (empty($error_string)) {
 
 		$ffrom = (!empty($sender_name)) ? $sender_name : $cfg['maintitle'];
+
 		$hdrs   = array();  // new in 180
 		$hdrs[] = "MIME-Version: 1.0";
 		$hdrs[] = "Content-type: text/plain; charset=" . $cfg['charset'];
@@ -83,8 +84,9 @@ if ($a == 'send') {
 		$hdrs[] = "Message-ID: <" . md5(uniqid(microtime())) . "@" . $_SERVER['SERVER_NAME'] . ">";
 		$hdrs[] = "From: =?" . $cfg['charset'] . "?B?" . base64_encode($ffrom) . "?= <" . $sender_email . ">";
 		$hdrs[] = "X-Mailer: PHP/" . phpversion();
+
 		$fheaders = implode("\r\n", $hdrs);
-		
+
 		$fbody = $L['plu_notice'];
 
 		$fbody .= $sender_name . "\n" . $L['plu_recipients_title'] . " : " . $cfg_names[$sender_recip] . "\n" . $L['plu_email_title'] . " : " . $sender_email . "\n" . $L['plu_phone_title'] . " : " . $sender_tel . "\n\n";
