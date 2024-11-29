@@ -37,6 +37,12 @@ if (is_array($extp)) {
 }
 /* ===== */
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('pages');
+$number_of_extrafields = count($extrafields);
+// ----------------------
+
 if ($a == 'add') {
 	sed_shield_protect();
 
@@ -88,6 +94,10 @@ if ($a == 'add') {
 	$newpageexpire = ($newpageexpire <= $newpagebegin) ? 1861916400 : $newpageexpire;
 	$newpagebegin = ($newpagebegin < 0) ? 0 : $newpagebegin;
 
+	// --------- Extra fields     
+	if ($number_of_extrafields > 0) $newpageextrafields = sed_extrafield_buildvar($extrafields, 'newpage', 'page');
+	// ----------------------
+
 	list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = sed_auth('page', $newpagecat);
 	sed_block($usr['auth_write']);
 
@@ -105,6 +115,17 @@ if ($a == 'add') {
 			$sql = sed_sql_query("SELECT page_id FROM $db_pages WHERE page_alias='" . sed_sql_prep($newpagealias) . "'");
 			$newpagealias = (sed_sql_numrows($sql) > 0) ? "alias" . rand(1000, 9999) : $newpagealias;
 		}
+
+		// ------ Extra fields 
+		$ssql_extra_columns = '';
+		$ssql_extra_values = '';
+		if (count($extrafields) > 0) {
+			foreach ($extrafields as $i => $row) {
+				$ssql_extra_columns .= ', page_' . $row['code'];
+				$ssql_extra_values .= ", '" . sed_sql_prep($newpageextrafields['page_' . $row['code']]) . "'";
+			}
+		}
+		// ----------------------
 
 		$sql = sed_sql_query("INSERT into $db_pages
 			(page_state,
@@ -129,7 +150,7 @@ if ($a == 'add') {
 			page_seo_desc,
 			page_seo_keywords,
 			page_seo_h1,
-			page_thumb
+			page_thumb" . $ssql_extra_columns . "
 			)
 			VALUES
 			(" . (int)$newpagestate . ",
@@ -154,7 +175,7 @@ if ($a == 'add') {
 			'" . sed_sql_prep($newpageseodesc) . "',			
 			'" . sed_sql_prep($newpageseokeywords) . "',  
 			'" . sed_sql_prep($newpageseoh1) . "', 			
-			'" . sed_sql_prep($newpagethumb) . "')");
+			'" . sed_sql_prep($newpagethumb) . "'" . $ssql_extra_values . ")");
 
 		/* === Hook === */
 		$extp = sed_getextplugins('page.add.add.done');
@@ -212,6 +233,15 @@ if (($a == 'clone') && ($id > 0)) {
 	$newpageseodesc = $row1['page_seo_desc'];
 	$newpageseokeywords = $row1['page_seo_keywords'];
 	$newpageseoh1 = $row1['page_seo_h1'];
+
+	if (count($extrafields) > 0) {
+		foreach ($extrafields as $row) {
+			$a = 'newpage' . $row['code'];
+			$$a = $row1['page_' . $row['code']];
+		}
+		$newpageextrafields = $row1;
+	}
+}
 
 if (empty($newpagecat) && !empty($c)) {
 	$newpagecat = $c;
@@ -306,6 +336,13 @@ $t->assign(array(
 	"PAGEADD_FORM_TEXT2" => sed_textarea('newpagetext2', isset($newpagetext2) ? $newpagetext2 : '', $cfg['textarea_default_height'], $cfg['textarea_default_width'], 'Extended'),
 	"PAGEADD_FORM_MYPFS" => $pfs
 ));
+
+// Extra fields 
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields('page', 'PAGEADD_FORM', $extrafields, isset($newpageextrafields) ? $newpageextrafields : array(), 'newpage');
+}
+
+$t->assign($extra_array);
 
 /* === Hook === */
 $extp = sed_getextplugins('page.add.tags');
