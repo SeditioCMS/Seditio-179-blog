@@ -24,6 +24,12 @@ sed_block($usr['auth_read']);
 $id = sed_import('id', 'G', 'INT');
 $c = sed_import('c', 'G', 'TXT');
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('pages');
+$number_of_extrafields = count($extrafields);
+// ----------------------
+
 if ($a == 'update') {
 	sed_check_xg();
 
@@ -91,6 +97,11 @@ if ($a == 'update') {
 
 	$rpagedelete = sed_import('rpagedelete', 'P', 'BOL');
 
+	// --------- Extra fields     
+	if ($number_of_extrafields > 0) $rpageextrafields = sed_extrafield_buildvar($extrafields, 'rpage', 'page');
+
+	// ----------------------	
+
 	$error_string .= (empty($rpagecat)) ? $L['pag_catmissing'] . "<br />" : '';
 	$error_string .= (mb_strlen($rpagetitle) < 2) ? $L['pag_titletooshort'] . "<br />" : '';
 
@@ -138,6 +149,16 @@ if ($a == 'update') {
 				$rpagealias = (sed_sql_numrows($sql) > 0) ? "alias" . rand(1000, 9999) : $rpagealias;
 			}
 
+			// ------ Extra fields 
+			$ssql_extra = '';
+			if (count($extrafields) > 0) {
+				foreach ($extrafields as $i => $row) {
+					$ssql_extra .= ", page_" . $row['code'] . " = " . "'" . sed_sql_prep($rpageextrafields['page_' . $row['code']]) . "'";
+				}
+			}
+			// ----------------------				
+
+
 			$sql = sed_sql_query("UPDATE $db_pages SET
 				page_state = '$rpagestate',
 				page_cat = '" . sed_sql_prep($rpagecat) . "',
@@ -163,7 +184,7 @@ if ($a == 'update') {
 				page_seo_desc = '" . sed_sql_prep($rpageseodesc) . "',				
 				page_seo_keywords = '" . sed_sql_prep($rpageseokeywords) . "',
 				page_seo_h1 = '" . sed_sql_prep($rpageseoh1) . "',
-				page_thumb = '" . sed_sql_prep($rpagethumb) . "'         				
+				page_thumb = '" . sed_sql_prep($rpagethumb) . "'" . $ssql_extra . "          				
 				WHERE page_id='$id'");
 
 			/* === Hook === */
@@ -308,6 +329,13 @@ $t->assign(array(
 	"PAGEEDIT_FORM_MYPFS" => $pfs,
 	"PAGEEDIT_FORM_DELETE" => $page_form_delete
 ));
+
+// Extra fields 
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields('page', 'PAGEEDIT_FORM', $extrafields, $pag, 'rpage');
+}
+
+$t->assign($extra_array);
 
 /* === Hook === */
 $extp = sed_getextplugins('page.edit.tags');

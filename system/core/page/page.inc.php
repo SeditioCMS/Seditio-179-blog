@@ -302,6 +302,18 @@ if (!empty($ratings_link)) {
 	$t->parse("MAIN.PAGE_RATINGS");
 }
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('pages');
+$number_of_extrafields = count($extrafields);
+
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields_data('page', 'PAGE', $extrafields, $pag);
+	$t->assign($extra_array);
+}
+
+// ----------------------
+
 if (count($page_thumbs_array) > 0) {
 	$t->assign("PAGE_THUMB", $page_thumbs_array[0]);
 	$t->parse("MAIN.PAGE_THUMB");
