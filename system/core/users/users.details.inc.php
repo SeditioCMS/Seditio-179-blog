@@ -117,6 +117,17 @@ $t->assign(array(
 	"USERS_DETAILS_LASTIP" => $urr['user_lastip']
 ));
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('users');
+$number_of_extrafields = count($extrafields);
+
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields_data('user', 'USERS_DETAILS', $extrafields, $urr);
+	$t->assign($extra_array);
+}
+// ----------------------
+
 /* === Hook === */
 $extp = sed_getextplugins('users.details.tags');
 if (is_array($extp)) {

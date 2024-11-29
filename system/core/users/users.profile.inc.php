@@ -37,6 +37,12 @@ if (is_array($extp)) {
 }
 /* ===== */
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('users');
+$number_of_extrafields = count($extrafields);
+// ----------------------	
+
 $id = sed_import('id', 'G', 'TXT');
 $a = sed_import('a', 'G', 'ALP');
 
@@ -296,6 +302,10 @@ switch ($a) {
 		$rnewpass2 = sed_import('rnewpass2', 'P', 'TXT');
 		$rusertext = mb_substr($rusertext, 0, $cfg['usertextmax']);
 
+		// --------- Extra fields     
+		if ($number_of_extrafields > 0) $ruserextrafields = sed_extrafield_buildvar($extrafields, 'ruser', 'user');
+		// ----------------------	
+
 		if (!empty($rnewpass1) && !empty($rnewpass2)) {
 			$rnewpass1 = sed_import('rnewpass1', 'P', 'TXT');
 			$rnewpass2 = sed_import('rnewpass2', 'P', 'TXT');
@@ -334,6 +344,15 @@ switch ($a) {
 				$ruseremail = $urr['user_email'];
 			}
 
+			// ------ Extra fields 
+			$ssql_extra = '';
+			if (count($extrafields) > 0) {
+				foreach ($extrafields as $i => $row) {
+					$ssql_extra .= ", user_" . $row['code'] . " = " . "'" . sed_sql_prep($ruserextrafields['user_' . $row['code']]) . "'";
+				}
+			}
+			// ----------------------		
+
 			$sql = sed_sql_query("UPDATE $db_users SET
 			user_firstname='" . sed_sql_prep($ruserfirstname) . "', 
 			user_lastname='" . sed_sql_prep($ruserlastname) . "',       
@@ -351,7 +370,7 @@ switch ($a) {
 			user_email='" . sed_sql_prep($ruseremail) . "',
 			user_hideemail='$ruserhideemail',
 			user_pmnotify='$ruserpmnotify',
-			user_auth=''
+			user_auth=''" . $ssql_extra . "
 			WHERE user_id='" . $usr['id'] . "'");
 
 			/* === Hook === */
@@ -493,6 +512,12 @@ $t->assign(array(
 	"USERS_PROFILE_NEWPASS1" => sed_textbox("rnewpass1", "", 16, 32, "password", false, "password"),
 	"USERS_PROFILE_NEWPASS2" => sed_textbox("rnewpass2", "", 16, 32, "password", false, "password")
 ));
+
+// Extra fields 
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields('user', 'USERS_PROFILE', $extrafields, $urr, 'ruser');
+	$t->assign($extra_array);
+}
 
 /* === Hook === */
 $extp = sed_getextplugins('profile.tags');

@@ -39,6 +39,12 @@ if (is_array($extp)) {
 }
 /* ===== */
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('users');
+$number_of_extrafields = count($extrafields);
+// ----------------------	
+
 if ($a == 'add') {
 	$bannedreason = FALSE;
 	sed_shield_protect();
@@ -72,6 +78,10 @@ if ($a == 'add') {
 	$ruserskype = sed_import('ruserskype', 'P', 'TXT');
 	$ruserwebsite = sed_import('ruserwebsite', 'P', 'TXT');
 	$ruseremail = mb_strtolower($ruseremail);
+
+	// --------- Extra fields     
+	if ($number_of_extrafields > 0) $ruserextrafields = sed_extrafield_buildvar($extrafields, 'ruser', 'user');
+	// ----------------------		
 
 	$sql = sed_sql_query("SELECT banlist_reason, banlist_email FROM $db_banlist WHERE banlist_email!=''");
 
@@ -114,6 +124,15 @@ if ($a == 'add') {
 		$validationkey = md5(microtime());
 		sed_shield_update(20, "Registration");
 
+		// ------ Extra fields 
+		if (count($extrafields) > 0) {
+			foreach ($extrafields as $i => $row) {
+				$ssql_extra_columns .= ', user_' . $row['code'];
+				$ssql_extra_values .= ", '" . sed_sql_prep($ruserextrafields['user_' . $row['code']]) . "'";
+			}
+		}
+		// ----------------------		
+
 		$sql = sed_sql_query("INSERT into $db_users
 			(user_name,
 			user_firstname,
@@ -140,7 +159,7 @@ if ($a == 'add') {
 			user_birthdate,
 			user_skype,
 			user_website,
-			user_lastip
+			user_lastip" . $ssql_extra_columns . "
 			)
 			VALUES
 			('" . sed_sql_prep($rusername) . "',
@@ -168,7 +187,7 @@ if ($a == 'add') {
 			" . (int)$ruserbirthdate . ",
 			'" . sed_sql_prep($ruserskype) . "',
 			'" . sed_sql_prep($ruserwebsite) . "',
-			'" . $usr['ip'] . "')");
+			'" . $usr['ip'] . "'" . $ssql_extra_values . ")");
 
 		$userid = sed_sql_insertid();
 		$sql = sed_sql_query("INSERT INTO $db_groups_users (gru_userid, gru_groupid) VALUES (" . (int)$userid . ", " . (int)$defgroup . ")");
@@ -288,6 +307,12 @@ $t->assign(array(
 	"USERS_REGISTER_WEBSITE" => sed_textbox("ruserwebsite", isset($ruserwebsite) ? $ruserwebsite : '', 56, 128),
 	"USERS_REGISTER_SKYPE" => sed_textbox("ruserskype", isset($ruserskype) ? $ruserskype : '', 32, 64)
 ));
+
+// Extra fields 
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields('user', 'USERS_REGISTER', $extrafields, $ruserextrafields, 'ruser');
+	$t->assign($extra_array);
+}
 
 /* === Hook === */
 $extp = sed_getextplugins('users.register.tags');

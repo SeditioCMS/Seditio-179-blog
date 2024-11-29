@@ -38,6 +38,12 @@ if (is_array($extp)) {
 }
 /* ===== */
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('users');
+$number_of_extrafields = count($extrafields);
+// ----------------------	
+
 $sql = sed_sql_query("SELECT * FROM $db_users WHERE user_id='$id' LIMIT 1");
 sed_die(sed_sql_numrows($sql) == 0);
 $urr = sed_sql_fetchassoc($sql);
@@ -96,6 +102,10 @@ if ($a == 'update') {
 	$ruserdelpfs = sed_import('ruserdelpfs', 'P', 'BOL');
 	$rusernewpass = sed_import('rusernewpass', 'P', 'TXT', 16);
 	$rusergroupsms = sed_import('rusergroupsms', 'P', 'ARR');
+
+	// --------- Extra fields     
+	if ($number_of_extrafields > 0) $ruserextrafields = sed_extrafield_buildvar($extrafields, 'ruser', 'user');
+	// ----------------------	
 
 	$error_string .= (mb_strlen($rusername) < 2 || mb_strpos($rusername, ",") !== FALSE || mb_strpos($rusername, "'") !== FALSE) ? $L['aut_usernametooshort'] . "<br />" : '';
 	$error_string .= (!empty($rusernewpass) && (mb_strlen($rusernewpass) < 4 || sed_alphaonly($rusernewpass) != $rusernewpass)) ? $L['aut_passwordtooshort'] . "<br />" : '';
@@ -170,6 +180,15 @@ if ($a == 'update') {
 			$ruseravatar = ($gen_avatar['status']) ? $gen_avatar['imagepath'] : $ruseravatar;
 		}
 
+		// ------ Extra fields 
+		$ssql_extra = '';
+		if (count($extrafields) > 0) {
+			foreach ($extrafields as $i => $row) {
+				$ssql_extra .= ", user_" . $row['code'] . " = " . "'" . sed_sql_prep($ruserextrafields['user_' . $row['code']]) . "'";
+			}
+		}
+		// ----------------------			
+
 		$sql = sed_sql_query("UPDATE $db_users SET
 			user_banexpire='$rbanexpire',
 			user_name='" . sed_sql_prep($rusername) . "',
@@ -195,7 +214,7 @@ if ($a == 'update') {
 			user_timezone='" . sed_sql_prep($rusertimezone) . "',
 			user_location='" . sed_sql_prep($ruserlocation) . "',
 			user_occupation='" . sed_sql_prep($ruseroccupation) . "',
-			user_auth='' 
+			user_auth=''" . $ssql_extra . " 
 			WHERE user_id='$id'");
 
 		if ($sys['user_istopadmin']) {
@@ -327,6 +346,11 @@ $t->assign(array(
 	"USERS_EDIT_DELETE" => $user_form_delete,
 ));
 
+// Extra fields 
+if (count($extrafields) > 0) {
+	$extra_array = sed_build_extrafields('user', 'USERS_EDIT', $extrafields, $urr, 'ruser');
+	$t->assign($extra_array);
+}
 
 /* === Hook === */
 $extp = sed_getextplugins('users.edit.tags');
@@ -336,6 +360,7 @@ if (is_array($extp)) {
 	}
 }
 /* ===== */
+
 
 $t->parse("MAIN");
 $t->out("MAIN");

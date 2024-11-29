@@ -33,6 +33,28 @@ unset($localskin, $grpms);
 list($usr['auth_read'], $usr['auth_write'], $usr['isadmin']) = sed_auth('users', 'a');
 sed_block($usr['auth_read']);
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('users');
+$number_of_extrafields = count($extrafields);
+
+$filter_vars = array();
+$filter_sql = array();
+$sql_where = "";
+
+if (count($extrafields) > 0) {
+	foreach ($extrafields as $key => $val) {
+		if (in_array($val['vartype'], array('INT', 'BOL'))) {
+			$filter_vars['filter_' . $key] = sed_import('filter_' . $key, 'G', $val['vartype']);
+			if (!empty($filter_vars['filter_' . $key])) $filter_sql[] = " AND user_" . $key . " = '" . $filter_vars['filter_' . $key] . "'";
+		}
+	}
+}
+
+$sql_where = (count($filter_sql) > 0) ? implode(',', $filter_sql) : " ";
+
+// ----------------------
+
 /* === Hook === */
 $extp = sed_getextplugins('users.first');
 if (is_array($extp)) {
@@ -231,6 +253,15 @@ $t->assign(array(
 	"USERS_TOP_TIMEZONE" => "<a href=\"" . sed_url("users", "f=" . $f . "&s=timezone&w=asc&g=" . $g . "&gm=" . $gm . "&sq=" . $sq) . "\">" . $out['ic_arrow_down'] . "</a><a href=\"" . sed_url("users", "f=" . $f . "&s=timezone&w=desc&g=" . $g . "&gm=" . $gm . "&sq=" . $sq) . "\">" . $out['ic_arrow_up'] . "</a> " . $L['Timezone']
 ));
 
+// ----- Extra fields 
+if ($number_of_extrafields > 0) {
+	foreach ($extrafields as $row) {
+		$extratitle = isset($L['user_' . $row['code'] . '_title']) ? $L['user_' . $row['code'] . '_title'] : $row['title'];
+		$t->assign('USERS_TOP_' . strtoupper($row['code']), "<a href=\"" . sed_url('users', "f=" . $f . "&s=" . $row['code'] . "&w=asc&g=" . $g . "&gm=" . $gm . "&sq=" . $sq) . "\">" . $out['ic_arrow_down'] . "</a><a href=\"" . sed_url('users', "f=" . $f . "&s=" . $row['code'] . "&w=desc&g=" . $g . "&gm=" . $gm . "&sq=" . $sq) . "\">" . $out['ic_arrow_up'] . "</a> $extratitle");
+	}
+}
+//--------------- 
+
 $jj = 0;
 
 /* === Hook - Part1 : Set === */
@@ -277,6 +308,13 @@ while ($urr = sed_sql_fetchassoc($sql) and $jj < $cfg['maxusersperpage']) {
 		"USERS_ROW_ODDEVEN" => sed_build_oddeven($jj),
 		"USERS_ROW" => $urr
 	));
+
+	// ---------- Extra fields - getting
+	if (count($extrafields) > 0) {
+		$extra_array = sed_build_extrafields_data('user', 'USERS_ROW', $extrafields, $urr);
+		$t->assign($extra_array);
+	}
+	// ----------------------		
 
 	/* === Hook - Part2 : Include === */
 	if (is_array($extp)) {
