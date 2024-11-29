@@ -29,6 +29,36 @@ $w = sed_import('w', 'G', 'ALP', 4);
 $o = sed_import('o', 'G', 'ALP', 16);
 $p = sed_import('p', 'G', 'ALP', 16);
 
+// ---------- Extra fields - getting
+$extrafields = array();
+$extrafields = sed_extrafield_get('pages');
+$number_of_extrafields = count($extrafields);
+
+$filter_vars = array();
+$filter_sql = array();
+$filter_urlspar = array();
+$filter_urlparams_arr = array();
+$filter_urlparams = "";
+
+$sql_where = "";
+
+if (count($extrafields) > 0) {
+	foreach ($extrafields as $key => $val) {
+		array_push($available_sort, $key);
+		if (in_array($val['vartype'], array('INT', 'BOL', 'TXT'))) {
+			$filter_vars['filter_' . $key] = sed_import('filter_' . $key, 'G', $val['vartype']);
+			if (!empty($filter_vars['filter_' . $key])) {
+				$filter_sql[] = "page_" . $key . " = '" . sed_sql_prep($filter_vars['filter_' . $key]) . "'";
+				$filter_urlspar['filter_' . $key] = $filter_vars['filter_' . $key];
+				$filter_urlparams_arr[] = $key . " = '" . $filter_vars['filter_' . $key] . "'";
+			}
+		}
+	}
+}
+
+$filter_urlparams = (count($filter_urlparams_arr) > 0) ? "&" . implode('&', $filter_urlparams_arr) : "";
+$sql_where = (count($filter_sql) > 0) ? " AND " . implode(' AND ', $filter_sql) : " ";
+
 if (!array_key_exists($c, $sed_cat) && !($c == 'all')) {
 	sed_die(true, 404);
 }
@@ -75,23 +105,23 @@ $join_ratings_columns = ($cfg['disable_ratings']) ? '' : ", r.rating_average";
 $join_ratings_condition = ($cfg['disable_ratings']) ? '' : "LEFT JOIN $db_ratings as r ON r.rating_code=CONCAT('p',p.page_id)";
 
 if ($c == 'all') {
-	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_state='0'");
+	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_state='0' $sql_where");
 	$totallines = sed_sql_result($sql, 0, "COUNT(*)");
 
 	$sql = sed_sql_query("SELECT p.*, u.user_name, u.user_maingrp, u.user_avatar " . $join_ratings_columns . "
 		FROM $db_pages as p " . $join_ratings_condition . "
 		LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid
 		WHERE page_state='0'
-		ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
+		$sql_where ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
 } elseif (!empty($o) && !empty($p) && $p != 'password') {
-	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat='$c' AND (page_state='0' OR page_state='2') AND page_$o='$p'");
+	$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat='$c' AND (page_state='0' OR page_state='2') AND page_$o='$p' $sql_where");
 	$totallines = sed_sql_result($sql, 0, "COUNT(*)");
 
 	$sql = sed_sql_query("SELECT p.*, u.user_name, u.user_maingrp, u.user_avatar " . $join_ratings_columns . "
 		FROM $db_pages as p " . $join_ratings_condition . "
 		LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid
 		WHERE page_cat='$c' AND (page_state='0' OR page_state='2') AND page_$o='$p'
-		ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
+		$sql_where ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
 } else {
 	sed_die(empty($sed_cat[$c]['title']), 950);
 	if (($sed_cat[$c]['group']) && ($cfg['showpagesubcatgroup'] == 1)) {
@@ -104,23 +134,23 @@ if ($c == 'all') {
 				$catsub[] = $i;
 			}
 		}
-		$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat IN ('" . implode("','", $catsub) . "') AND (page_state='0' OR page_state='2')");
+		$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat IN ('" . implode("','", $catsub) . "') AND (page_state='0' OR page_state='2') $sql_where");
 		$totallines = sed_sql_result($sql, 0, "COUNT(*)");
 
 		$sql = sed_sql_query("SELECT p.*, u.user_name, u.user_maingrp, u.user_avatar " . $join_ratings_columns . "
 		  FROM $db_pages as p " . $join_ratings_condition . "
 		  LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid
 		  WHERE page_cat IN ('" . implode("','", $catsub) . "') AND (page_state='0' OR page_state='2')
-		  ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
+		  $sql_where ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
 	} else {
-		$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat='$c' AND (page_state='0' OR page_state='2')");
+		$sql = sed_sql_query("SELECT COUNT(*) FROM $db_pages WHERE page_cat='$c' AND (page_state='0' OR page_state='2') $sql_where");
 		$totallines = sed_sql_result($sql, 0, "COUNT(*)");
 
 		$sql = sed_sql_query("SELECT p.*, u.user_name, u.user_maingrp, u.user_avatar " . $join_ratings_columns . "
 		  FROM $db_pages as p " . $join_ratings_condition . "
 		  LEFT JOIN $db_users AS u ON u.user_id=p.page_ownerid
 		  WHERE page_cat='$c' AND (page_state='0' OR page_state='2')
-		  ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
+		  $sql_where ORDER BY page_$s $w LIMIT $d," . $cfg['maxrowsperpage']);
 	}
 }
 
@@ -301,6 +331,14 @@ if (!$sed_cat[$c]['group']) {
 		<a href=\"" . sed_url("list", "c=" . $c . "&s=filecount&w=desc&o=" . $o . "&p=" . $p . $filter_urlparams) . "\">" . $out['ic_arrow_up'] . "</a> " . $L['Hits']
 	));
 
+	// ----- Extra fields 
+	if ($number_of_extrafields > 0) {
+		foreach ($extrafields as $row) {
+			$extratitle = isset($L['page_' . $row['code'] . '_title']) ? $L['page_' . $row['code'] . '_title'] : $row['title'];
+			$t->assign('LIST_TOP_' . strtoupper($row['code']), "<a href=\"" . sed_url('list', "c=$c&s=" . $row['code'] . "&w=asc&o=$o&p=$p" . $filter_urlparams) . "\">" . $out['ic_arrow_down'] . "</a><a href=\"" . sed_url('list', "c=$c&s=" . $row['code'] . "&w=desc&o=$o&p=$p" . $filter_urlparams) . "\">" . $out['ic_arrow_up'] . "</a> $extratitle");
+		}
+	}
+	//--------------- 
 }
 
 $ii = 0;
@@ -419,6 +457,13 @@ while ($pag = sed_sql_fetchassoc($sql) and ($jj <= $cfg['maxrowsperpage'])) {
 	} else {
 		$t->assign("LIST_ROW_THUMB", "noimg.jpg");
 	}
+
+	// ---------- Extra fields - getting
+	if (count($extrafields) > 0) {
+		$extra_array = sed_build_extrafields_data('page', 'LIST_ROW', $extrafields, $pag);
+		$t->assign($extra_array);
+	}
+	// ----------------------			
 
 	/* === Hook - Part2 : Include === */
 	if (is_array($extp)) {
