@@ -477,7 +477,7 @@ $L['pfs_insertasthumbnail'] = "Вставить как эскиз"; // New in v1
 $L['pfs_insertasimage'] = "Вставить изображение"; // New in v175
 $L['pfs_insertaslink'] = "Вставить ссылку на файл"; // New in v175
 $L['pfs_multiuploading'] = "Мультизагрузка файлов"; // New in v175
-$L['pfs_insertasvideo'] = "Insert as video"; // New in v180
+$L['pfs_insertasvideo'] = "Вставить видео"; // New in v180
 
 $L['pfs_setassample'] = "Образец";  // New in v150
 $L['pfs_addlogo'] = "Добавить лого";  // New in v150
