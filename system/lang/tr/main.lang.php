@@ -443,6 +443,7 @@ $L['pfs_insertasthumbnail'] = "Küçük resim olarak ekle"; // New in v175
 $L['pfs_insertasimage'] = "Tam boyutlu resim olarak ekle"; // New in v175
 $L['pfs_insertaslink'] = "Dosyaya bağlantı olarak ekle"; // New in v175
 $L['pfs_multiuploading'] = "Çoklu Dosya Yükleme"; // New in v175
+$L['pfs_insertasvideo'] = "Insert as video"; // New in v180
 
 $L['pfs_setassample'] = "Örnek olarak ayarla";  // New in v150
 $L['pfs_addlogo'] = "Logo ekle";  // New in v150

@@ -469,7 +469,7 @@ $out['ic_folder'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-folde
 $out['ic_pastethumb'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-pastethumb.gif\" alt=\"" . $L['pfs_insertasthumbnail'] . "\" />";
 $out['ic_pastefile'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-pastefile.gif\" alt=\"" . $L['pfs_insertaslink'] . "\" />";
 $out['ic_pasteimage'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-pasteimage.gif\" alt=\"" . $L['pfs_insertasimage'] . "\" />";
-
+$out['ic_pastevideo'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-pastevideo.gif\" alt=\"" . $L['pfs_insertasvideo'] . "\" />";
 $out['ic_comment'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/icon-comment.gif\" alt=\"\" />";
 
 $out['ic_posts_moved'] = "<img src=\"skins/" . $usr['skin'] . "/img/system/posts_moved.gif\" alt=\"\" />";

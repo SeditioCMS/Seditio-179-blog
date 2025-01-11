@@ -20,7 +20,7 @@ $cfg['pagination'] = '<li class="page-item">%s</li>';
 $cfg['pagination_cur'] = '<li class="page-item active"><span class="page-link">%s</span></li>';
 $cfg['pagination_arrowleft'] = "<i class=\"ic-chevron-left\"></i>";
 $cfg['pagination_arrowright'] = "<i class=\"ic-chevron-right\"></i>";
-
+$out['ic_pastevideo'] = "<i class=\"ic-movie\"></i>";
 $cfg['separator'] = "<i class=\"ic-arrow-right\"></i>";
 
 $out['ic_arrow_up'] = "<i class=\"ic-arrow-narrow-up\"></i>";

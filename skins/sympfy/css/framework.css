@@ -1530,3 +1530,10 @@ blockquote cite {
 blockquote cite:before {
 	content: "\2014 \2009";
 }
+
+video {
+	max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
