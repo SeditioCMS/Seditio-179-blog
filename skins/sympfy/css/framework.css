@@ -39,10 +39,12 @@ video {
   display: inline-block;
   vertical-align: baseline;
 }
+video {
+	max-width: 100%;
+}
 audio:not([controls]) {
   display: none;
   height: 0;
-}
 [hidden],
 template {
   display: none;
@@ -1530,10 +1532,3 @@ blockquote cite {
 blockquote cite:before {
 	content: "\2014 \2009";
 }
-
-video {
-	max-width: 100%;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
