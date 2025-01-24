@@ -7,8 +7,8 @@ https://seditio.org
 
 [BEGIN_SED]
 File=plugins/uploader/uploader.pfs.stndl.php
-Version=179
-Updated=2021-jun-23
+Version=180
+Updated=2025-jan-23
 Type=Plugin
 Author=Amro
 Description=
@@ -37,9 +37,9 @@ $pfs_header1 .= "
 <script type=\"text/javascript\">
 <!--
 
-function upl_addimg(gfilepath, gid, gfile)
+function upl_addimg(gfilepath, gid, gfile, uploaderId)
 	{ 
-	window." . $openerparent . ".upl_insertimg(gfilepath, gfile);
+	window." . $openerparent . ".upl_insertimg(gfilepath, gfile, uploaderId);
 	" . $openerparent_close . "
 	}
 
