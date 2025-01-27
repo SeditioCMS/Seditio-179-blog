@@ -6,8 +6,8 @@ Copyright Neocrome & Seditio Team
 https://seditio.org
 [BEGIN_SED]
 File=pfs.inc.php
-Version=179
-Updated=2022-jul-20
+Version=180
+Updated=2025-jan-25
 Type=Core
 Author=Seditio Team
 Description=PFS
@@ -509,11 +509,10 @@ while ($row = sed_sql_fetchassoc($sql)) {
 			$add_thumbnail .= "<a href=\"javascript:addthumb('" . $cfg['th_dir'] . $pfs_file . "', '" . $pfs_file . "')\" title=\"" . $L['pfs_insertasthumbnail'] . "\" class=\"btn-icon\">" . $out['ic_pastethumb'] . "</a>";
 			$add_image = "<a href=\"javascript:addpix('" . $pfs_fullfile . "')\" title=\"" . $L['pfs_insertasimage'] . "\" class=\"btn-icon\">" . $out['ic_pasteimage'] . "</a>";
 		}
-	} 
-	elseif (in_array($pfs_extension, $cfg['video_supported'])) {
+	} elseif (in_array($pfs_extension, $cfg['video_supported'])) {
 		if ($standalone) {
 			$add_video = "<a href=\"javascript:addvideo('" . $pfs_fullfile . "')\" title=\"" . $L['pfs_insertasvideo'] . "\" class=\"btn-icon\">" . $out['ic_pastevideo'] . "</a>";
-		}		
+		}
 	}
 
 	$add_file = ($standalone) ? "<a href=\"javascript:addfile('" . $pfs_file . "','" . $pfs_fullfile . "')\" title=\"" . $L['pfs_insertaslink'] . "\" class=\"btn-icon\">" . $out['ic_pastefile'] . "</a>" : '';

@@ -70,8 +70,8 @@ $cfg['textarea_default_width'] = 75;
 $cfg['textarea_default_height'] = 16;
 $cfg['sqldb'] = 'mysql';
 $cfg['sqldbprefix'] = 'sed_';
-$cfg['version'] = '179';
-$cfg['versions_list'] = array(120, 121, 125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178, 179);
+$cfg['version'] = '180';
+$cfg['versions_list'] = array(125, 126, 130, 150, 159, 160, 161, 162, 170, 171, 172, 173, 175, 177, 178, 179, 180);
 $cfg['group_colors'] = array('red', 'yellow', 'black', 'blue', 'white', 'green', 'gray', 'navy', 'darkmagenta', 'pink', 'cadetblue', 'linen', 'deepskyblue', 'inherit');
 $cfg['separator_symbol'] = "&raquo;";
 
@@ -2297,20 +2297,20 @@ function sed_getcurrenturl()
 }
 
 /** 
- * Hashes a value with given salt. 
+ * Hashes a value with given salt using the specified algorithm.
  * 
- * @param  string $data Data to be hash-protected
- * @param  int $type Type algoritm hashing (1 - double md5 with salt, 2 - double md5 with salt & site secret, 3 - only md5)
- * @param  string $salt Hashing salt, usually a random value 
- * @return string $res Hashed value 
+ * @param  int $type Type of hashing algorithm (1 - double hash with salt, 2 - double hash with salt & site secret)
+ * @param  string $salt Hashing salt, usually a random value
+ * @param  string $algorithm The hashing algorithm to use (e.g., 'md5', 'sha256', 'sha512'). Default is 'md5'.
+ * @return string $res Hashed value
  */
-function sed_hash($data, $type = 1, $salt = '')
+function sed_hash($data, $type = 1, $salt = '', $algorithm = 'md5')
 {
 	global $cfg;
 	if (isset($cfg['site_secret']) && !empty($cfg['site_secret']) && ($type == 2)) {
-		$res = md5(md5($data) . $cfg['site_secret'] . $salt);
+		$res = hash($algorithm, hash($algorithm, $data) . $cfg['site_secret'] . $salt);
 	} else {
-		$res = ($type == 1) ?  md5(md5($data) . $salt) : md5($data);
+		$res = ($type == 1) ? hash($algorithm, hash($algorithm, $data) . $salt) : hash($algorithm, $data);
 	}
 
 	return $res;
@@ -3848,21 +3848,25 @@ function sed_selectbox_users($to)
 }
 
 /** 
- * Sends standard HTTP headers and disables browser cache 
- * 
- * @return bool 
+ * Sends standard HTTP headers and disables browser cache
+ *
+ * @param string $content_type The content type of the response (default is 'text/html')
+ * @param string $response_code The HTTP response code (default is '200 OK')
+ * @return bool Always returns TRUE
  */
 function sed_sendheaders($content_type = 'text/html', $response_code = '200 OK')
 {
+	// Determine the protocol (HTTP/1.1 or HTTP/2)
 	$protocol = (isset($_SERVER['SERVER_PROTOCOL'])) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.1';
+	// Send the HTTP response code
 	header($protocol . ' ' . $response_code);
-	header('Expires: Mon, Apr 01 1974 00:00:00 GMT');
+	// Send headers to disable browser caching
+	header('Expires: Mon, 01 Apr 1974 00:00:00 GMT');
 	header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
-	header('Cache-Control: post-check=0,pre-check=0', FALSE);
-	header('Content-Type: ' . $content_type . '; charset=UTF-8');
-	header('Cache-Control: no-store,no-cache,must-revalidate');
-	header('Cache-Control: post-check=0,pre-check=0', FALSE);
+	header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
 	header('Pragma: no-cache');
+	// Send the content type header
+	header('Content-Type: ' . $content_type . '; charset=UTF-8');
 	return TRUE;
 }
 
